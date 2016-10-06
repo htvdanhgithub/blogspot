@@ -1,0 +1,2624 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.37 build -260352376 
+                                                                                               Wed Aug 31 09:42:12 2016
+
+Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
+     1                           	processor	16F886
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK3,global,class=CODE,delta=2
+     5                           	psect	strings,global,class=STRING,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	bssBANK1,global,class=BANK1,space=1,delta=1
+     9                           	psect	dataBANK3,global,class=BANK3,space=1,delta=1
+    10                           	psect	clrtext,global,class=CODE,delta=2
+    11                           	psect	inittext,global,class=CODE,delta=2
+    12                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    13                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    14                           	psect	maintext,global,class=CODE,split=1,delta=2
+    15                           	psect	text1,local,class=CODE,merge=1,delta=2
+    16                           	psect	text2,local,class=CODE,merge=1,delta=2
+    17                           	psect	text3,local,class=CODE,merge=1,delta=2
+    18                           	psect	text4,local,class=CODE,merge=1,delta=2
+    19                           	psect	text5,local,class=CODE,merge=1,delta=2
+    20                           	psect	text6,local,class=CODE,merge=1,delta=2
+    21                           	psect	text7,local,class=CODE,merge=1,delta=2
+    22                           	psect	text8,local,class=CODE,merge=1,delta=2
+    23                           	psect	text9,local,class=CODE,merge=1,delta=2
+    24                           	psect	text10,local,class=CODE,merge=1,delta=2
+    25                           	psect	text11,local,class=CODE,merge=1,delta=2
+    26                           	psect	text12,local,class=CODE,merge=1,delta=2
+    27                           	psect	text13,local,class=CODE,merge=1,delta=2
+    28                           	psect	text14,local,class=CODE,merge=1,delta=2
+    29                           	psect	text15,local,class=CODE,merge=1,delta=2
+    30                           	psect	text16,local,class=CODE,merge=1,delta=2
+    31                           	dabs	1,0x7E,2
+    32  0000                     	;# 
+    33  0001                     	;# 
+    34  0002                     	;# 
+    35  0003                     	;# 
+    36  0004                     	;# 
+    37  0005                     	;# 
+    38  0006                     	;# 
+    39  0007                     	;# 
+    40  0009                     	;# 
+    41  000A                     	;# 
+    42  000B                     	;# 
+    43  000C                     	;# 
+    44  000D                     	;# 
+    45  000E                     	;# 
+    46  000E                     	;# 
+    47  000F                     	;# 
+    48  0010                     	;# 
+    49  0011                     	;# 
+    50  0012                     	;# 
+    51  0013                     	;# 
+    52  0014                     	;# 
+    53  0015                     	;# 
+    54  0015                     	;# 
+    55  0016                     	;# 
+    56  0017                     	;# 
+    57  0018                     	;# 
+    58  0019                     	;# 
+    59  001A                     	;# 
+    60  001B                     	;# 
+    61  001B                     	;# 
+    62  001C                     	;# 
+    63  001D                     	;# 
+    64  001E                     	;# 
+    65  001F                     	;# 
+    66  0081                     	;# 
+    67  0085                     	;# 
+    68  0086                     	;# 
+    69  0087                     	;# 
+    70  0089                     	;# 
+    71  008C                     	;# 
+    72  008D                     	;# 
+    73  008E                     	;# 
+    74  008F                     	;# 
+    75  0090                     	;# 
+    76  0091                     	;# 
+    77  0092                     	;# 
+    78  0093                     	;# 
+    79  0093                     	;# 
+    80  0093                     	;# 
+    81  0094                     	;# 
+    82  0095                     	;# 
+    83  0096                     	;# 
+    84  0097                     	;# 
+    85  0098                     	;# 
+    86  0099                     	;# 
+    87  009A                     	;# 
+    88  009B                     	;# 
+    89  009C                     	;# 
+    90  009D                     	;# 
+    91  009E                     	;# 
+    92  009F                     	;# 
+    93  0105                     	;# 
+    94  0107                     	;# 
+    95  0108                     	;# 
+    96  0109                     	;# 
+    97  010C                     	;# 
+    98  010C                     	;# 
+    99  010D                     	;# 
+   100  010E                     	;# 
+   101  010F                     	;# 
+   102  0185                     	;# 
+   103  0187                     	;# 
+   104  0188                     	;# 
+   105  0189                     	;# 
+   106  018C                     	;# 
+   107  018D                     	;# 
+   108  0000                     	;# 
+   109  0001                     	;# 
+   110  0002                     	;# 
+   111  0003                     	;# 
+   112  0004                     	;# 
+   113  0005                     	;# 
+   114  0006                     	;# 
+   115  0007                     	;# 
+   116  0009                     	;# 
+   117  000A                     	;# 
+   118  000B                     	;# 
+   119  000C                     	;# 
+   120  000D                     	;# 
+   121  000E                     	;# 
+   122  000E                     	;# 
+   123  000F                     	;# 
+   124  0010                     	;# 
+   125  0011                     	;# 
+   126  0012                     	;# 
+   127  0013                     	;# 
+   128  0014                     	;# 
+   129  0015                     	;# 
+   130  0015                     	;# 
+   131  0016                     	;# 
+   132  0017                     	;# 
+   133  0018                     	;# 
+   134  0019                     	;# 
+   135  001A                     	;# 
+   136  001B                     	;# 
+   137  001B                     	;# 
+   138  001C                     	;# 
+   139  001D                     	;# 
+   140  001E                     	;# 
+   141  001F                     	;# 
+   142  0081                     	;# 
+   143  0085                     	;# 
+   144  0086                     	;# 
+   145  0087                     	;# 
+   146  0089                     	;# 
+   147  008C                     	;# 
+   148  008D                     	;# 
+   149  008E                     	;# 
+   150  008F                     	;# 
+   151  0090                     	;# 
+   152  0091                     	;# 
+   153  0092                     	;# 
+   154  0093                     	;# 
+   155  0093                     	;# 
+   156  0093                     	;# 
+   157  0094                     	;# 
+   158  0095                     	;# 
+   159  0096                     	;# 
+   160  0097                     	;# 
+   161  0098                     	;# 
+   162  0099                     	;# 
+   163  009A                     	;# 
+   164  009B                     	;# 
+   165  009C                     	;# 
+   166  009D                     	;# 
+   167  009E                     	;# 
+   168  009F                     	;# 
+   169  0105                     	;# 
+   170  0107                     	;# 
+   171  0108                     	;# 
+   172  0109                     	;# 
+   173  010C                     	;# 
+   174  010C                     	;# 
+   175  010D                     	;# 
+   176  010E                     	;# 
+   177  010F                     	;# 
+   178  0185                     	;# 
+   179  0187                     	;# 
+   180  0188                     	;# 
+   181  0189                     	;# 
+   182  018C                     	;# 
+   183  018D                     	;# 
+   184                           
+   185                           	psect	idataBANK3
+   186  0664                     __pidataBANK3:	
+   187                           
+   188                           ;initializer for _g_matrix88
+   189  0664  3400               	retlw	0
+   190  0665  3400               	retlw	0
+   191  0666  3401               	retlw	1
+   192  0667  3401               	retlw	1
+   193  0668  3401               	retlw	1
+   194  0669  3401               	retlw	1
+   195  066A  3400               	retlw	0
+   196  066B  3400               	retlw	0
+   197  066C  3400               	retlw	0
+   198  066D  3401               	retlw	1
+   199  066E  3400               	retlw	0
+   200  066F  3400               	retlw	0
+   201  0670  3400               	retlw	0
+   202  0671  3400               	retlw	0
+   203  0672  3401               	retlw	1
+   204  0673  3400               	retlw	0
+   205  0674  3400               	retlw	0
+   206  0675  3401               	retlw	1
+   207  0676  3400               	retlw	0
+   208  0677  3400               	retlw	0
+   209  0678  3400               	retlw	0
+   210  0679  3400               	retlw	0
+   211  067A  3401               	retlw	1
+   212  067B  3400               	retlw	0
+   213  067C  3400               	retlw	0
+   214  067D  3401               	retlw	1
+   215  067E  3401               	retlw	1
+   216  067F  3401               	retlw	1
+   217  0680  3401               	retlw	1
+   218  0681  3401               	retlw	1
+   219  0682  3401               	retlw	1
+   220  0683  3400               	retlw	0
+   221  0684  3400               	retlw	0
+   222  0685  3401               	retlw	1
+   223  0686  3400               	retlw	0
+   224  0687  3400               	retlw	0
+   225  0688  3400               	retlw	0
+   226  0689  3400               	retlw	0
+   227  068A  3401               	retlw	1
+   228  068B  3400               	retlw	0
+   229  068C  3400               	retlw	0
+   230  068D  3401               	retlw	1
+   231  068E  3400               	retlw	0
+   232  068F  3400               	retlw	0
+   233  0690  3400               	retlw	0
+   234  0691  3400               	retlw	0
+   235  0692  3401               	retlw	1
+   236  0693  3400               	retlw	0
+   237  0694  3400               	retlw	0
+   238  0695  3401               	retlw	1
+   239  0696  3400               	retlw	0
+   240  0697  3400               	retlw	0
+   241  0698  3400               	retlw	0
+   242  0699  3400               	retlw	0
+   243  069A  3401               	retlw	1
+   244  069B  3400               	retlw	0
+   245  069C  3400               	retlw	0
+   246  069D  3401               	retlw	1
+   247  069E  3400               	retlw	0
+   248  069F  3400               	retlw	0
+   249  06A0  3400               	retlw	0
+   250  06A1  3400               	retlw	0
+   251  06A2  3401               	retlw	1
+   252  06A3  3400               	retlw	0
+   253  000C                     _PIR1bits	set	12
+   254  001A                     _RCREG	set	26
+   255  0018                     _RCSTAbits	set	24
+   256  0019                     _TXREG	set	25
+   257  005F                     _GIE	set	95
+   258  005E                     _PEIE	set	94
+   259  0029                     _RA1	set	41
+   260  002A                     _RA2	set	42
+   261  002B                     _RA3	set	43
+   262  0099                     _SPBRG	set	153
+   263  0085                     _TRISAbits	set	133
+   264  0098                     _TXSTAbits	set	152
+   265  0465                     _RCIE	set	1125
+   266  0188                     _ANSELbits	set	392
+   267                           
+   268                           	psect	strings
+   269  0003                     __pstrings:	
+   270  0003                     stringtab:	
+   271  0003                     __stringtab:	
+   272  0003                     stringcode:	
+   273                           ;	String table - string pointers are 1 byte each
+   274                           
+   275  0003                     stringdir:	
+   276  0003  3000               	movlw	high stringdir
+   277  0004  008A               	movwf	10
+   278  0005  0804               	movf	4,w
+   279  0006  0A84               	incf	4,f
+   280  0007  0782               	addwf	2,f
+   281  0008                     __stringbase:	
+   282  0008  3400               	retlw	0
+   283  0009                     __end_of__stringtab:	
+   284  0009                     STR_2:	
+   285  0009  343C               	retlw	60	;'<'
+   286  000A  343C               	retlw	60	;'<'
+   287  000B  343C               	retlw	60	;'<'
+   288  000C  343C               	retlw	60	;'<'
+   289  000D  343C               	retlw	60	;'<'
+   290  000E  343C               	retlw	60	;'<'
+   291  000F  343C               	retlw	60	;'<'
+   292  0010  343C               	retlw	60	;'<'
+   293  0011  343C               	retlw	60	;'<'
+   294  0012  343C               	retlw	60	;'<'
+   295  0013  343C               	retlw	60	;'<'
+   296  0014  343C               	retlw	60	;'<'
+   297  0015  343C               	retlw	60	;'<'
+   298  0016  343C               	retlw	60	;'<'
+   299  0017  343C               	retlw	60	;'<'
+   300  0018  343C               	retlw	60	;'<'
+   301  0019  343C               	retlw	60	;'<'
+   302  001A  343C               	retlw	60	;'<'
+   303  001B  343C               	retlw	60	;'<'
+   304  001C  343C               	retlw	60	;'<'
+   305  001D  344D               	retlw	77	;'M'
+   306  001E  3441               	retlw	65	;'A'
+   307  001F  3454               	retlw	84	;'T'
+   308  0020  3452               	retlw	82	;'R'
+   309  0021  3449               	retlw	73	;'I'
+   310  0022  3458               	retlw	88	;'X'
+   311  0023  3438               	retlw	56	;'8'
+   312  0024  3438               	retlw	56	;'8'
+   313  0025  340D               	retlw	13
+   314  0026  340A               	retlw	10
+   315  0027  3400               	retlw	0
+   316  0028                     STR_6:	
+   317  0028  343E               	retlw	62	;'>'
+   318  0029  343E               	retlw	62	;'>'
+   319  002A  343E               	retlw	62	;'>'
+   320  002B  343E               	retlw	62	;'>'
+   321  002C  343E               	retlw	62	;'>'
+   322  002D  343E               	retlw	62	;'>'
+   323  002E  343E               	retlw	62	;'>'
+   324  002F  343E               	retlw	62	;'>'
+   325  0030  343E               	retlw	62	;'>'
+   326  0031  343E               	retlw	62	;'>'
+   327  0032  343E               	retlw	62	;'>'
+   328  0033  343E               	retlw	62	;'>'
+   329  0034  343E               	retlw	62	;'>'
+   330  0035  343E               	retlw	62	;'>'
+   331  0036  343E               	retlw	62	;'>'
+   332  0037  343E               	retlw	62	;'>'
+   333  0038  343E               	retlw	62	;'>'
+   334  0039  343E               	retlw	62	;'>'
+   335  003A  343E               	retlw	62	;'>'
+   336  003B  343E               	retlw	62	;'>'
+   337  003C  340D               	retlw	13
+   338  003D  340A               	retlw	10
+   339  003E  3400               	retlw	0
+   340  003F                     STR_7:	
+   341  003F  344D               	retlw	77	;'M'
+   342  0040  3461               	retlw	97	;'a'
+   343  0041  3469               	retlw	105	;'i'
+   344  0042  346E               	retlw	110	;'n'
+   345  0043  3420               	retlw	32	;' '
+   346  0044  3453               	retlw	83	;'S'
+   347  0045  3463               	retlw	99	;'c'
+   348  0046  3472               	retlw	114	;'r'
+   349  0047  3465               	retlw	101	;'e'
+   350  0048  3465               	retlw	101	;'e'
+   351  0049  346E               	retlw	110	;'n'
+   352  004A  3400               	retlw	0
+   353  004B                     STR_1:	
+   354  004B  343A               	retlw	58	;':'
+   355  004C  340D               	retlw	13
+   356  004D  340A               	retlw	10
+   357  004E  3400               	retlw	0
+   358  004F                     STR_3:	
+   359  004F  342A               	retlw	42	;'*'
+   360  0050  3400               	retlw	0
+   361  0051                     STR_4:	
+   362  0051  345F               	retlw	95	;'_'
+   363  0052  3400               	retlw	0
+   364  0025                     
+   365                           	psect	cinit
+   366  07DF                     start_initialization:	
+   367                           ; #config settings
+   368                           
+   369  07DF                     __initialization:	
+   370                           
+   371                           ; Clear objects allocated to BANK0
+   372  07DF  1383               	bcf	3,7	;select IRP bank0
+   373  07E0  3020               	movlw	low __pbssBANK0
+   374  07E1  0084               	movwf	4
+   375  07E2  3047               	movlw	low (__pbssBANK0+39)
+   376  07E3  120A  118A  2533  120A  118A  	fcall	clear_ram0
+   377                           
+   378                           ; Clear objects allocated to BANK1
+   379  07E8  30A0               	movlw	low __pbssBANK1
+   380  07E9  0084               	movwf	4
+   381  07EA  30E0               	movlw	low (__pbssBANK1+64)
+   382  07EB  120A  118A  2533  120A  118A  	fcall	clear_ram0
+   383                           
+   384                           ; Initialize objects allocated to BANK3
+   385  07F0  1783               	bsf	3,7	;select IRP bank2
+   386  07F1  30D0               	movlw	low (__pdataBANK3+64)
+   387  07F2  00FD               	movwf	btemp+-1
+   388  07F3  3006               	movlw	high __pidataBANK3
+   389  07F4  00FE               	movwf	btemp
+   390  07F5  3064               	movlw	low __pidataBANK3
+   391  07F6  00FF               	movwf	btemp+1
+   392  07F7  3090               	movlw	low __pdataBANK3
+   393  07F8  0084               	movwf	4
+   394  07F9  120A  118A  2548   	fcall	init_ram0
+   395  07FC                     end_of_initialization:	
+   396                           ;End of C runtime variable initialization code
+   397                           
+   398  07FC                     __end_of__initialization:	
+   399  07FC  0183               	clrf	3
+   400  07FD  120A  118A  2D8E   	ljmp	_main	;jump to C main() function
+   401                           
+   402                           	psect	bssBANK0
+   403  0020                     __pbssBANK0:	
+   404  0020                     _URBuff:	
+   405  0020                     	ds	32
+   406  0040                     USARTWriteInt@F1617:	
+   407  0040                     	ds	5
+   408  0045                     _UQEnd:	
+   409  0045                     	ds	1
+   410  0046                     _UQFront:	
+   411  0046                     	ds	1
+   412                           
+   413                           	psect	bssBANK1
+   414  00A0                     __pbssBANK1:	
+   415  00A0                     _g_debug:	
+   416  00A0                     	ds	64
+   417                           
+   418                           	psect	dataBANK3
+   419  0190                     __pdataBANK3:	
+   420  0190                     _g_matrix88:	
+   421  0190                     	ds	64
+   422                           
+   423                           	psect	clrtext
+   424  0533                     clear_ram0:	
+   425                           ;	Called with FSR containing the base address, and
+   426                           ;	W with the last address+1
+   427                           
+   428  0533  0064               	clrwdt	;clear the watchdog before getting into this loop
+   429  0534                     clrloop0:	
+   430  0534  0180               	clrf	0	;clear RAM location pointed to by FSR
+   431  0535  0A84               	incf	4,f	;increment pointer
+   432  0536  0604               	xorwf	4,w	;XOR with final address
+   433  0537  1903               	btfsc	3,2	;have we reached the end yet?
+   434  0538  3400               	retlw	0	;all done for this memory range, return
+   435  0539  0604               	xorwf	4,w	;XOR again to restore value
+   436  053A  2D34               	goto	clrloop0	;do the next byte
+   437                           
+   438                           	psect	inittext
+   439  0544                     init_fetch0:	
+   440                           ;	Called with low address in FSR and high address in W
+   441                           
+   442  0544  087E               	movf	126,w
+   443  0545  008A               	movwf	10
+   444  0546  087F               	movf	127,w
+   445  0547  0082               	movwf	2
+   446  0548                     init_ram0:	
+   447                           ;Called with:
+   448                           ;	high address of idata address in btemp 
+   449                           ;	low address of idata address in btemp+1 
+   450                           ;	low address of data in FSR
+   451                           ;	high address + 1 of data in btemp-1
+   452                           
+   453  0548  2544  120A  118A   	fcall	init_fetch0
+   454  054B  0080               	movwf	0
+   455  054C  0A84               	incf	4,f
+   456  054D  0804               	movf	4,w
+   457  054E  067D               	xorwf	125,w
+   458  054F  1903               	btfsc	3,2
+   459  0550  3400               	retlw	0
+   460  0551  0AFF               	incf	127,f
+   461  0552  1903               	btfsc	3,2
+   462  0553  0AFE               	incf	126,f
+   463  0554  2D48               	goto	init_ram0
+   464                           
+   465                           	psect	cstackCOMMON
+   466  0070                     __pcstackCOMMON:	
+   467  0070                     ?_USARTInit:	
+   468  0070                     ?_USARTWriteString:	
+   469                           ; 1 bytes @ 0x0
+   470                           
+   471  0070                     ?_SPI1_write:	
+   472                           ; 1 bytes @ 0x0
+   473                           
+   474  0070                     ??_SPI1_write:	
+   475                           ; 1 bytes @ 0x0
+   476                           
+   477  0070                     ?_max7219_init1:	
+   478                           ; 1 bytes @ 0x0
+   479                           
+   480  0070                     ?_dbg_init:	
+   481                           ; 1 bytes @ 0x0
+   482                           
+   483  0070                     ?_dbg_close:	
+   484                           ; 1 bytes @ 0x0
+   485                           
+   486  0070                     ??_dbg_close:	
+   487                           ; 1 bytes @ 0x0
+   488                           
+   489  0070                     ?_hal_MATRIX88_to_MATRIX7219:	
+   490                           ; 1 bytes @ 0x0
+   491                           
+   492  0070                     ?_hal_print_MATRIX7219:	
+   493                           ; 1 bytes @ 0x0
+   494                           
+   495  0070                     ?_hal_print_MATRIX88:	
+   496                           ; 1 bytes @ 0x0
+   497                           
+   498  0070                     ?_hal_print_Main_Screen:	
+   499                           ; 1 bytes @ 0x0
+   500                           
+   501  0070                     ?_main_init:	
+   502                           ; 1 bytes @ 0x0
+   503                           
+   504  0070                     ?_main_close:	
+   505                           ; 1 bytes @ 0x0
+   506                           
+   507  0070                     ??_main_close:	
+   508                           ; 1 bytes @ 0x0
+   509                           
+   510  0070                     ?_USARTWriteChar:	
+   511                           ; 1 bytes @ 0x0
+   512                           
+   513  0070                     ??_USARTWriteChar:	
+   514                           ; 1 bytes @ 0x0
+   515                           
+   516  0070                     ?_sprintf:	
+   517                           ; 1 bytes @ 0x0
+   518                           
+   519  0070                     ?_main:	
+   520                           ; 2 bytes @ 0x0
+   521                           
+   522  0070                     hal_MATRIX88_to_MATRIX7219@matrix7219:	
+   523                           ; 2 bytes @ 0x0
+   524                           
+   525  0070                     USARTWriteChar@ch:	
+   526                           ; 1 bytes @ 0x0
+   527                           
+   528  0070                     sprintf@f:	
+   529                           ; 1 bytes @ 0x0
+   530                           
+   531  0070                     USARTInit@baud_rate:	
+   532                           ; 1 bytes @ 0x0
+   533                           
+   534                           
+   535                           ; 2 bytes @ 0x0
+   536  0070                     	ds	1
+   537  0071                     ??_sprintf:	
+   538  0071                     ??_USARTWriteString:	
+   539                           ; 1 bytes @ 0x1
+   540                           
+   541  0071                     ??_hal_MATRIX88_to_MATRIX7219:	
+   542                           ; 1 bytes @ 0x1
+   543                           
+   544  0071                     SPI1_write@data:	
+   545                           ; 1 bytes @ 0x1
+   546                           
+   547                           
+   548                           ; 1 bytes @ 0x1
+   549  0071                     	ds	1
+   550  0072                     ??_USARTInit:	
+   551  0072                     SPI1_write@mask:	
+   552                           ; 1 bytes @ 0x2
+   553                           
+   554  0072                     USARTWriteString@str:	
+   555                           ; 1 bytes @ 0x2
+   556                           
+   557  0072                     sprintf@ap:	
+   558                           ; 1 bytes @ 0x2
+   559                           
+   560                           
+   561                           ; 1 bytes @ 0x2
+   562  0072                     	ds	1
+   563  0073                     ??_dbg_init:	
+   564  0073                     SPI1_write@i:	
+   565                           ; 1 bytes @ 0x3
+   566                           
+   567  0073                     sprintf@flag:	
+   568                           ; 1 bytes @ 0x3
+   569                           
+   570                           
+   571                           ; 1 bytes @ 0x3
+   572  0073                     	ds	1
+   573  0074                     ?_Write_Byte:	
+   574  0074                     Write_Byte@myValue:	
+   575                           ; 1 bytes @ 0x4
+   576                           
+   577  0074                     hal_MATRIX88_to_MATRIX7219@matrix88:	
+   578                           ; 1 bytes @ 0x4
+   579                           
+   580  0074                     sprintf@c:	
+   581                           ; 1 bytes @ 0x4
+   582                           
+   583                           
+   584                           ; 1 bytes @ 0x4
+   585  0074                     	ds	1
+   586  0075                     ??_Write_Byte:	
+   587  0075                     Write_Byte@myColumn:	
+   588                           ; 1 bytes @ 0x5
+   589                           
+   590  0075                     hal_MATRIX88_to_MATRIX7219@mask:	
+   591                           ; 1 bytes @ 0x5
+   592                           
+   593  0075                     sprintf@sp:	
+   594                           ; 1 bytes @ 0x5
+   595                           
+   596                           
+   597                           ; 1 bytes @ 0x5
+   598  0075                     	ds	1
+   599  0076                     ??_max7219_init1:	
+   600  0076                     ?_dbg_print_MATRIX88:	
+   601                           ; 1 bytes @ 0x6
+   602                           
+   603  0076                     ??_hal_print_MATRIX7219:	
+   604                           ; 1 bytes @ 0x6
+   605                           
+   606  0076                     dbg_print_MATRIX88@lable:	
+   607                           ; 1 bytes @ 0x6
+   608                           
+   609  0076                     hal_MATRIX88_to_MATRIX7219@row:	
+   610                           ; 1 bytes @ 0x6
+   611                           
+   612                           
+   613                           ; 1 bytes @ 0x6
+   614  0076                     	ds	1
+   615  0077                     ??_main_init:	
+   616  0077                     dbg_print_MATRIX88@matrix:	
+   617                           ; 1 bytes @ 0x7
+   618                           
+   619  0077                     hal_MATRIX88_to_MATRIX7219@col:	
+   620                           ; 1 bytes @ 0x7
+   621                           
+   622                           
+   623                           ; 1 bytes @ 0x7
+   624  0077                     	ds	1
+   625  0078                     ??_dbg_print_MATRIX88:	
+   626  0078                     hal_print_MATRIX7219@matrix:	
+   627                           ; 1 bytes @ 0x8
+   628                           
+   629                           
+   630                           ; 1 bytes @ 0x8
+   631  0078                     	ds	1
+   632  0079                     hal_print_MATRIX7219@col:	
+   633                           
+   634                           ; 1 bytes @ 0x9
+   635  0079                     	ds	1
+   636  007A                     ??_hal_print_MATRIX88:	
+   637                           
+   638                           ; 1 bytes @ 0xA
+   639  007A                     	ds	1
+   640  007B                     ??_hal_print_Main_Screen:	
+   641  007B                     dbg_print_MATRIX88@row:	
+   642                           ; 1 bytes @ 0xB
+   643                           
+   644                           
+   645                           ; 1 bytes @ 0xB
+   646  007B                     	ds	1
+   647  007C                     dbg_print_MATRIX88@col:	
+   648                           
+   649                           ; 1 bytes @ 0xC
+   650  007C                     	ds	1
+   651  007D                     dbg_print_MATRIX88@enable:	
+   652                           
+   653                           ; 1 bytes @ 0xD
+   654  007D                     	ds	1
+   655                           
+   656                           	psect	cstackBANK0
+   657  0047                     __pcstackBANK0:	
+   658  0047                     hal_print_MATRIX88@matrix88:	
+   659                           
+   660                           ; 1 bytes @ 0x0
+   661  0047                     	ds	1
+   662  0048                     hal_print_MATRIX88@matrix7219:	
+   663                           
+   664                           ; 8 bytes @ 0x1
+   665  0048                     	ds	8
+   666  0050                     ??_main:	
+   667                           
+   668                           ; 1 bytes @ 0x9
+   669  0050                     	ds	2
+   670                           
+   671                           	psect	maintext
+   672  058E                     __pmaintext:	
+   673 ;;
+   674 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   675 ;;
+   676 ;; *************** function _main *****************
+   677 ;; Defined at:
+   678 ;;		line 29 in file "../main.c"
+   679 ;; Parameters:    Size  Location     Type
+   680 ;;		None
+   681 ;; Auto vars:     Size  Location     Type
+   682 ;;		None
+   683 ;; Return value:  Size  Location     Type
+   684 ;;                  2  106[None  ] int 
+   685 ;; Registers used:
+   686 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   687 ;; Tracked objects:
+   688 ;;		On entry : B00/0
+   689 ;;		On exit  : 0/0
+   690 ;;		Unchanged: 0/0
+   691 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   692 ;;      Params:         0       0       0       0       0
+   693 ;;      Locals:         0       0       0       0       0
+   694 ;;      Temps:          0       2       0       0       0
+   695 ;;      Totals:         0       2       0       0       0
+   696 ;;Total ram usage:        2 bytes
+   697 ;; Hardware stack levels required when called:    5
+   698 ;; This function calls:
+   699 ;;		_dbg_print_MATRIX88
+   700 ;;		_hal_print_Main_Screen
+   701 ;;		_main_close
+   702 ;;		_main_init
+   703 ;; This function is called by:
+   704 ;;		Startup code after reset
+   705 ;; This function uses a non-reentrant model
+   706 ;;
+   707                           
+   708                           
+   709                           ;psect for function _main
+   710  058E                     _main:	
+   711                           
+   712                           ;main.c: 31: main_init();
+   713                           
+   714                           ;incstack = 0
+   715                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   716  058E  120A  118A  253B  120A  118A  	fcall	_main_init
+   717                           
+   718                           ;main.c: 32: hal_print_Main_Screen();
+   719  0593  120A  118A  251E  120A  118A  	fcall	_hal_print_Main_Screen
+   720                           
+   721                           ;main.c: 33: dbg_print_MATRIX88(1, "Main Screen", &g_matrix88);
+   722  0598  3037               	movlw	(low ((STR_7-__stringbase)| (0+32768)))& (0+255)
+   723  0599  1283               	bcf	3,5	;RP0=0, select bank0
+   724  059A  1303               	bcf	3,6	;RP1=0, select bank0
+   725  059B  00D0               	movwf	??_main
+   726  059C  0850               	movf	??_main,w
+   727  059D  00F6               	movwf	dbg_print_MATRIX88@lable
+   728  059E  3090               	movlw	(low (_g_matrix88| (0+256)))& (0+255)
+   729  059F  00D1               	movwf	??_main+1
+   730  05A0  0851               	movf	??_main+1,w
+   731  05A1  00F7               	movwf	dbg_print_MATRIX88@matrix
+   732  05A2  3001               	movlw	1
+   733  05A3  120A  118A  2733  120A  118A  	fcall	_dbg_print_MATRIX88
+   734  05A8                     l107:	
+   735                           ;main.c: 40: while(1);
+   736                           
+   737  05A8  2DA8               	goto	l107
+   738  05A9                     __end_of_main:	
+   739                           ;main.c: 46: return 0;
+   740                           ;	Return value of _main is never used
+   741                           
+   742                           ;main.c: 42: main_close();
+   743                           
+   744                           
+   745                           	psect	text1
+   746  053B                     __ptext1:	
+   747 ;; *************** function _main_init *****************
+   748 ;; Defined at:
+   749 ;;		line 18 in file "../main.c"
+   750 ;; Parameters:    Size  Location     Type
+   751 ;;		None
+   752 ;; Auto vars:     Size  Location     Type
+   753 ;;		None
+   754 ;; Return value:  Size  Location     Type
+   755 ;;                  1    wreg      void 
+   756 ;; Registers used:
+   757 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   758 ;; Tracked objects:
+   759 ;;		On entry : 0/0
+   760 ;;		On exit  : 0/0
+   761 ;;		Unchanged: 0/0
+   762 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   763 ;;      Params:         0       0       0       0       0
+   764 ;;      Locals:         0       0       0       0       0
+   765 ;;      Temps:          0       0       0       0       0
+   766 ;;      Totals:         0       0       0       0       0
+   767 ;;Total ram usage:        0 bytes
+   768 ;; Hardware stack levels used:    1
+   769 ;; Hardware stack levels required when called:    3
+   770 ;; This function calls:
+   771 ;;		_dbg_init
+   772 ;;		_max7219_init1
+   773 ;; This function is called by:
+   774 ;;		_main
+   775 ;; This function uses a non-reentrant model
+   776 ;;
+   777                           
+   778                           
+   779                           ;psect for function _main_init
+   780  053B                     _main_init:	
+   781                           
+   782                           ;main.c: 21: max7219_init1();
+   783                           
+   784                           ;incstack = 0
+   785                           ; Regs used in _main_init: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   786  053B  120A  118A  25EF  120A  118A  	fcall	_max7219_init1
+   787                           
+   788                           ;main.c: 23: dbg_init();
+   789  0540  120A  118A  252B   	fcall	_dbg_init
+   790  0543  0008               	return
+   791  0544                     __end_of_main_init:	
+   792                           
+   793                           	psect	text2
+   794  05EF                     __ptext2:	
+   795 ;; *************** function _max7219_init1 *****************
+   796 ;; Defined at:
+   797 ;;		line 49 in file "../max7219.h"
+   798 ;; Parameters:    Size  Location     Type
+   799 ;;		None
+   800 ;; Auto vars:     Size  Location     Type
+   801 ;;		None
+   802 ;; Return value:  Size  Location     Type
+   803 ;;                  1    wreg      void 
+   804 ;; Registers used:
+   805 ;;		wreg, status,2, status,0, pclath, cstack
+   806 ;; Tracked objects:
+   807 ;;		On entry : 0/0
+   808 ;;		On exit  : 0/0
+   809 ;;		Unchanged: 0/0
+   810 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   811 ;;      Params:         0       0       0       0       0
+   812 ;;      Locals:         0       0       0       0       0
+   813 ;;      Temps:          1       0       0       0       0
+   814 ;;      Totals:         1       0       0       0       0
+   815 ;;Total ram usage:        1 bytes
+   816 ;; Hardware stack levels used:    1
+   817 ;; Hardware stack levels required when called:    2
+   818 ;; This function calls:
+   819 ;;		_Write_Byte
+   820 ;; This function is called by:
+   821 ;;		_main_init
+   822 ;; This function uses a non-reentrant model
+   823 ;;
+   824                           
+   825                           
+   826                           ;psect for function _max7219_init1
+   827  05EF                     _max7219_init1:	
+   828                           
+   829                           ;max7219.h: 51: (TRISAbits.TRISA3 = 0);
+   830                           
+   831                           ;incstack = 0
+   832                           ; Regs used in _max7219_init1: [wreg+status,2+status,0+pclath+cstack]
+   833  05EF  1683               	bsf	3,5	;RP0=1, select bank1
+   834  05F0  1303               	bcf	3,6	;RP1=0, select bank1
+   835  05F1  1185               	bcf	5,3	;volatile
+   836                           
+   837                           ;max7219.h: 52: (TRISAbits.TRISA2 = 0);
+   838  05F2  1105               	bcf	5,2	;volatile
+   839                           
+   840                           ;max7219.h: 53: (TRISAbits.TRISA1 = 0);
+   841  05F3  1085               	bcf	5,1	;volatile
+   842                           
+   843                           ;max7219.h: 55: ANSELbits.ANS1 = 0;
+   844  05F4  1683               	bsf	3,5	;RP0=1, select bank3
+   845  05F5  1703               	bsf	3,6	;RP1=1, select bank3
+   846  05F6  1088               	bcf	8,1	;volatile
+   847                           
+   848                           ;max7219.h: 56: ANSELbits.ANS2 = 0;
+   849  05F7  1108               	bcf	8,2	;volatile
+   850                           
+   851                           ;max7219.h: 57: ANSELbits.ANS3 = 0;
+   852  05F8  1188               	bcf	8,3	;volatile
+   853                           
+   854                           ;max7219.h: 58: RA2 = 1;
+   855  05F9  1283               	bcf	3,5	;RP0=0, select bank0
+   856  05FA  1303               	bcf	3,6	;RP1=0, select bank0
+   857  05FB  1505               	bsf	5,2	;volatile
+   858                           
+   859                           ;max7219.h: 59: RA1 = 0;
+   860  05FC  1085               	bcf	5,1	;volatile
+   861                           
+   862                           ;max7219.h: 61: Write_Byte(0x09, 0x00);
+   863  05FD  01F4               	clrf	Write_Byte@myValue
+   864  05FE  3009               	movlw	9
+   865  05FF  120A  118A  2555  120A  118A  	fcall	_Write_Byte
+   866                           
+   867                           ;max7219.h: 62: Write_Byte(0x0A, 0x0F);
+   868  0604  300F               	movlw	15
+   869  0605  00F6               	movwf	??_max7219_init1
+   870  0606  0876               	movf	??_max7219_init1,w
+   871  0607  00F4               	movwf	Write_Byte@myValue
+   872  0608  300A               	movlw	10
+   873  0609  120A  118A  2555  120A  118A  	fcall	_Write_Byte
+   874                           
+   875                           ;max7219.h: 63: Write_Byte(0x0B, 0x07);
+   876  060E  3007               	movlw	7
+   877  060F  00F6               	movwf	??_max7219_init1
+   878  0610  0876               	movf	??_max7219_init1,w
+   879  0611  00F4               	movwf	Write_Byte@myValue
+   880  0612  300B               	movlw	11
+   881  0613  120A  118A  2555  120A  118A  	fcall	_Write_Byte
+   882                           
+   883                           ;max7219.h: 64: Write_Byte(0x0C, 0x01);
+   884  0618  01F4               	clrf	Write_Byte@myValue
+   885  0619  0AF4               	incf	Write_Byte@myValue,f
+   886  061A  300C               	movlw	12
+   887  061B  120A  118A  2555  120A  118A  	fcall	_Write_Byte
+   888                           
+   889                           ;max7219.h: 65: Write_Byte(0x00, 0xFF);
+   890  0620  30FF               	movlw	255
+   891  0621  00F6               	movwf	??_max7219_init1
+   892  0622  0876               	movf	??_max7219_init1,w
+   893  0623  00F4               	movwf	Write_Byte@myValue
+   894  0624  3000               	movlw	0
+   895  0625  120A  118A  2555   	fcall	_Write_Byte
+   896  0628  0008               	return
+   897  0629                     __end_of_max7219_init1:	
+   898                           
+   899                           	psect	text3
+   900  052B                     __ptext3:	
+   901 ;; *************** function _dbg_init *****************
+   902 ;; Defined at:
+   903 ;;		line 57 in file "../debug_uart.h"
+   904 ;; Parameters:    Size  Location     Type
+   905 ;;		None
+   906 ;; Auto vars:     Size  Location     Type
+   907 ;;		None
+   908 ;; Return value:  Size  Location     Type
+   909 ;;                  1    wreg      void 
+   910 ;; Registers used:
+   911 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   912 ;; Tracked objects:
+   913 ;;		On entry : 0/0
+   914 ;;		On exit  : 0/0
+   915 ;;		Unchanged: 0/0
+   916 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   917 ;;      Params:         0       0       0       0       0
+   918 ;;      Locals:         0       0       0       0       0
+   919 ;;      Temps:          0       0       0       0       0
+   920 ;;      Totals:         0       0       0       0       0
+   921 ;;Total ram usage:        0 bytes
+   922 ;; Hardware stack levels used:    1
+   923 ;; Hardware stack levels required when called:    1
+   924 ;; This function calls:
+   925 ;;		_USARTInit
+   926 ;; This function is called by:
+   927 ;;		_main_init
+   928 ;; This function uses a non-reentrant model
+   929 ;;
+   930                           
+   931                           
+   932                           ;psect for function _dbg_init
+   933  052B                     _dbg_init:	
+   934                           
+   935                           ;debug_uart.h: 59: USARTInit(9600);
+   936                           
+   937                           ;incstack = 0
+   938                           ; Regs used in _dbg_init: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   939  052B  3080               	movlw	128
+   940  052C  00F0               	movwf	USARTInit@baud_rate
+   941  052D  3025               	movlw	37
+   942  052E  00F1               	movwf	USARTInit@baud_rate+1
+   943  052F  120A  118A  26A4   	fcall	_USARTInit
+   944  0532  0008               	return
+   945  0533                     __end_of_dbg_init:	
+   946                           
+   947                           	psect	text4
+   948  06A4                     __ptext4:	
+   949 ;; *************** function _USARTInit *****************
+   950 ;; Defined at:
+   951 ;;		line 31 in file "../usart_pic16.c"
+   952 ;; Parameters:    Size  Location     Type
+   953 ;;  baud_rate       2    0[COMMON] unsigned int 
+   954 ;; Auto vars:     Size  Location     Type
+   955 ;;		None
+   956 ;; Return value:  Size  Location     Type
+   957 ;;                  1    wreg      void 
+   958 ;; Registers used:
+   959 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   960 ;; Tracked objects:
+   961 ;;		On entry : 0/0
+   962 ;;		On exit  : 0/0
+   963 ;;		Unchanged: 0/0
+   964 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   965 ;;      Params:         2       0       0       0       0
+   966 ;;      Locals:         0       0       0       0       0
+   967 ;;      Temps:          1       0       0       0       0
+   968 ;;      Totals:         3       0       0       0       0
+   969 ;;Total ram usage:        3 bytes
+   970 ;; Hardware stack levels used:    1
+   971 ;; This function calls:
+   972 ;;		Nothing
+   973 ;; This function is called by:
+   974 ;;		_dbg_init
+   975 ;; This function uses a non-reentrant model
+   976 ;;
+   977                           
+   978                           
+   979                           ;psect for function _USARTInit
+   980  06A4                     _USARTInit:	
+   981                           
+   982                           ;usart_pic16.c: 33: UQFront = UQEnd = -1;
+   983                           
+   984                           ;incstack = 0
+   985                           ; Regs used in _USARTInit: [wreg-fsr0h+status,2+status,0]
+   986  06A4  30FF               	movlw	255
+   987  06A5  1283               	bcf	3,5	;RP0=0, select bank0
+   988  06A6  1303               	bcf	3,6	;RP1=0, select bank0
+   989  06A7  00C5               	movwf	_UQEnd	;volatile
+   990  06A8  00F2               	movwf	??_USARTInit
+   991  06A9  0872               	movf	??_USARTInit,w
+   992  06AA  00C6               	movwf	_UQFront	;volatile
+   993                           
+   994                           ;usart_pic16.c: 36: switch (baud_rate) {
+   995  06AB  2EB7               	goto	l1166
+   996  06AC                     l1156:	
+   997                           ;usart_pic16.c: 37: case 9600:
+   998                           
+   999                           
+  1000                           ;usart_pic16.c: 38: SPBRG = 129;
+  1001  06AC  3081               	movlw	129
+  1002  06AD  2EB3               	goto	L3
+  1003  06AE                     l1158:	
+  1004                           ;usart_pic16.c: 40: case 19200:
+  1005                           
+  1006                           ;usart_pic16.c: 39: break;
+  1007                           
+  1008                           
+  1009                           ;usart_pic16.c: 41: SPBRG = 64;
+  1010  06AE  3040               	movlw	64
+  1011  06AF  2EB3               	goto	L3
+  1012  06B0                     l1160:	
+  1013                           ;usart_pic16.c: 43: case 28800:
+  1014                           
+  1015                           ;usart_pic16.c: 42: break;
+  1016                           
+  1017                           
+  1018                           ;usart_pic16.c: 44: SPBRG = 42;
+  1019  06B0  302A               	movlw	42
+  1020  06B1  2EB3               	goto	L3
+  1021  06B2                     l1162:	
+  1022                           ;usart_pic16.c: 46: case 33600:
+  1023                           
+  1024                           ;usart_pic16.c: 45: break;
+  1025                           
+  1026                           
+  1027                           ;usart_pic16.c: 47: SPBRG = 36;
+  1028  06B2  3024               	movlw	36
+  1029  06B3                     L3:	
+  1030  06B3  1683               	bsf	3,5	;RP0=1, select bank1
+  1031  06B4  1303               	bcf	3,6	;RP1=0, select bank1
+  1032  06B5  0099               	movwf	25	;volatile
+  1033                           
+  1034                           ;usart_pic16.c: 49: }
+  1035                           
+  1036                           ;usart_pic16.c: 48: break;
+  1037  06B6  2ED9               	goto	l139
+  1038  06B7                     l1166:	
+  1039                           
+  1040                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 4 sub-sw
+      +                          itches
+  1041                           ; Switch size 1, requested type "space"
+  1042                           ; Number of cases is 4, Range of values is 37 to 131
+  1043                           ; switch strategies available:
+  1044                           ; Name         Instructions Cycles
+  1045                           ; simple_byte           13     7 (average)
+  1046                           ; jumptable            263     9 (fixed)
+  1047                           ;	Chosen strategy is simple_byte
+  1048  06B7  0871               	movf	USARTInit@baud_rate+1,w
+  1049  06B8  3A25               	xorlw	37	; case 37
+  1050  06B9  1903               	skipnz
+  1051  06BA  2EC5               	goto	l1642
+  1052  06BB  3A6E               	xorlw	110	; case 75
+  1053  06BC  1903               	skipnz
+  1054  06BD  2ECA               	goto	l1644
+  1055  06BE  3A3B               	xorlw	59	; case 112
+  1056  06BF  1903               	skipnz
+  1057  06C0  2ECF               	goto	l1646
+  1058  06C1  3AF3               	xorlw	243	; case 131
+  1059  06C2  1903               	skipnz
+  1060  06C3  2ED4               	goto	l1648
+  1061  06C4  2ED9               	goto	l139
+  1062  06C5                     l1642:	
+  1063                           
+  1064                           ; Switch size 1, requested type "space"
+  1065                           ; Number of cases is 1, Range of values is 128 to 128
+  1066                           ; switch strategies available:
+  1067                           ; Name         Instructions Cycles
+  1068                           ; simple_byte            4     3 (average)
+  1069                           ; direct_byte           14    11 (fixed)
+  1070                           ; jumptable            263     9 (fixed)
+  1071                           ;	Chosen strategy is simple_byte
+  1072  06C5  0870               	movf	USARTInit@baud_rate,w
+  1073  06C6  3A80               	xorlw	128	; case 128
+  1074  06C7  1903               	skipnz
+  1075  06C8  2EAC               	goto	l1156
+  1076  06C9  2ED9               	goto	l139
+  1077  06CA                     l1644:	
+  1078                           
+  1079                           ; Switch size 1, requested type "space"
+  1080                           ; Number of cases is 1, Range of values is 0 to 0
+  1081                           ; switch strategies available:
+  1082                           ; Name         Instructions Cycles
+  1083                           ; simple_byte            4     3 (average)
+  1084                           ; direct_byte           11     8 (fixed)
+  1085                           ; jumptable            260     6 (fixed)
+  1086                           ;	Chosen strategy is simple_byte
+  1087  06CA  0870               	movf	USARTInit@baud_rate,w
+  1088  06CB  3A00               	xorlw	0	; case 0
+  1089  06CC  1903               	skipnz
+  1090  06CD  2EAE               	goto	l1158
+  1091  06CE  2ED9               	goto	l139
+  1092  06CF                     l1646:	
+  1093                           
+  1094                           ; Switch size 1, requested type "space"
+  1095                           ; Number of cases is 1, Range of values is 128 to 128
+  1096                           ; switch strategies available:
+  1097                           ; Name         Instructions Cycles
+  1098                           ; simple_byte            4     3 (average)
+  1099                           ; direct_byte           14    11 (fixed)
+  1100                           ; jumptable            263     9 (fixed)
+  1101                           ;	Chosen strategy is simple_byte
+  1102  06CF  0870               	movf	USARTInit@baud_rate,w
+  1103  06D0  3A80               	xorlw	128	; case 128
+  1104  06D1  1903               	skipnz
+  1105  06D2  2EB0               	goto	l1160
+  1106  06D3  2ED9               	goto	l139
+  1107  06D4                     l1648:	
+  1108                           
+  1109                           ; Switch size 1, requested type "space"
+  1110                           ; Number of cases is 1, Range of values is 64 to 64
+  1111                           ; switch strategies available:
+  1112                           ; Name         Instructions Cycles
+  1113                           ; simple_byte            4     3 (average)
+  1114                           ; direct_byte           14    11 (fixed)
+  1115                           ; jumptable            263     9 (fixed)
+  1116                           ;	Chosen strategy is simple_byte
+  1117  06D4  0870               	movf	USARTInit@baud_rate,w
+  1118  06D5  3A40               	xorlw	64	; case 64
+  1119  06D6  1903               	skipnz
+  1120  06D7  2EB2               	goto	l1162
+  1121  06D8  2ED9               	goto	l139
+  1122  06D9                     l139:	
+  1123                           
+  1124                           ;usart_pic16.c: 52: TXSTAbits.TX9 = 0;
+  1125  06D9  1683               	bsf	3,5	;RP0=1, select bank1
+  1126  06DA  1303               	bcf	3,6	;RP1=0, select bank1
+  1127  06DB  1318               	bcf	24,6	;volatile
+  1128                           
+  1129                           ;usart_pic16.c: 53: TXSTAbits.TXEN = 1;
+  1130  06DC  1698               	bsf	24,5	;volatile
+  1131                           
+  1132                           ;usart_pic16.c: 54: TXSTAbits.SYNC = 0;
+  1133  06DD  1218               	bcf	24,4	;volatile
+  1134                           
+  1135                           ;usart_pic16.c: 55: TXSTAbits.BRGH = 1;
+  1136  06DE  1518               	bsf	24,2	;volatile
+  1137                           
+  1138                           ;usart_pic16.c: 58: RCSTAbits.SPEN = 1;
+  1139  06DF  1283               	bcf	3,5	;RP0=0, select bank0
+  1140  06E0  1303               	bcf	3,6	;RP1=0, select bank0
+  1141  06E1  1798               	bsf	24,7	;volatile
+  1142                           
+  1143                           ;usart_pic16.c: 59: RCSTAbits.RX9 = 0;
+  1144  06E2  1318               	bcf	24,6	;volatile
+  1145                           
+  1146                           ;usart_pic16.c: 60: RCSTAbits.CREN = 1;
+  1147  06E3  1618               	bsf	24,4	;volatile
+  1148                           
+  1149                           ;usart_pic16.c: 61: RCSTAbits.ADDEN = 0;
+  1150  06E4  1198               	bcf	24,3	;volatile
+  1151                           
+  1152                           ;usart_pic16.c: 64: RCIE = 1;
+  1153  06E5  1683               	bsf	3,5	;RP0=1, select bank1
+  1154  06E6  1303               	bcf	3,6	;RP1=0, select bank1
+  1155  06E7  168C               	bsf	12,5	;volatile
+  1156                           
+  1157                           ;usart_pic16.c: 65: PEIE = 1;
+  1158  06E8  170B               	bsf	11,6	;volatile
+  1159                           
+  1160                           ;usart_pic16.c: 67: (GIE = 1);
+  1161  06E9  178B               	bsf	11,7	;volatile
+  1162  06EA  0008               	return
+  1163  06EB                     __end_of_USARTInit:	
+  1164                           
+  1165                           	psect	text5
+  1166  051A                     __ptext5:	
+  1167 ;; *************** function _main_close *****************
+  1168 ;; Defined at:
+  1169 ;;		line 25 in file "../main.c"
+  1170 ;; Parameters:    Size  Location     Type
+  1171 ;;		None
+  1172 ;; Auto vars:     Size  Location     Type
+  1173 ;;		None
+  1174 ;; Return value:  Size  Location     Type
+  1175 ;;                  1    wreg      void 
+  1176 ;; Registers used:
+  1177 ;;		status,2, status,0, pclath, cstack
+  1178 ;; Tracked objects:
+  1179 ;;		On entry : 0/0
+  1180 ;;		On exit  : 0/0
+  1181 ;;		Unchanged: 0/0
+  1182 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1183 ;;      Params:         0       0       0       0       0
+  1184 ;;      Locals:         0       0       0       0       0
+  1185 ;;      Temps:          0       0       0       0       0
+  1186 ;;      Totals:         0       0       0       0       0
+  1187 ;;Total ram usage:        0 bytes
+  1188 ;; Hardware stack levels used:    1
+  1189 ;; Hardware stack levels required when called:    1
+  1190 ;; This function calls:
+  1191 ;;		_dbg_close
+  1192 ;; This function is called by:
+  1193 ;;		_main
+  1194 ;; This function uses a non-reentrant model
+  1195 ;;
+  1196                           
+  1197                           
+  1198                           ;psect for function _main_close
+  1199  051A                     _main_close:	
+  1200                           
+  1201                           ;main.c: 27: dbg_close();
+  1202                           
+  1203                           ;incstack = 0
+  1204                           ; Regs used in _main_close: [status,2+status,0+pclath+cstack]
+  1205  051A  120A  118A  2519   	fcall	_dbg_close
+  1206  051D  0008               	return
+  1207  051E                     __end_of_main_close:	
+  1208                           
+  1209                           	psect	text6
+  1210  0519                     __ptext6:	
+  1211 ;; *************** function _dbg_close *****************
+  1212 ;; Defined at:
+  1213 ;;		line 61 in file "../debug_uart.h"
+  1214 ;; Parameters:    Size  Location     Type
+  1215 ;;		None
+  1216 ;; Auto vars:     Size  Location     Type
+  1217 ;;		None
+  1218 ;; Return value:  Size  Location     Type
+  1219 ;;                  1    wreg      void 
+  1220 ;; Registers used:
+  1221 ;;		None
+  1222 ;; Tracked objects:
+  1223 ;;		On entry : 0/0
+  1224 ;;		On exit  : 0/0
+  1225 ;;		Unchanged: 0/0
+  1226 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1227 ;;      Params:         0       0       0       0       0
+  1228 ;;      Locals:         0       0       0       0       0
+  1229 ;;      Temps:          0       0       0       0       0
+  1230 ;;      Totals:         0       0       0       0       0
+  1231 ;;Total ram usage:        0 bytes
+  1232 ;; Hardware stack levels used:    1
+  1233 ;; This function calls:
+  1234 ;;		Nothing
+  1235 ;; This function is called by:
+  1236 ;;		_main_close
+  1237 ;; This function uses a non-reentrant model
+  1238 ;;
+  1239                           
+  1240                           
+  1241                           ;psect for function _dbg_close
+  1242  0519                     _dbg_close:	
+  1243                           
+  1244                           ;incstack = 0
+  1245                           ; Regs used in _dbg_close: []
+  1246  0519  0008               	return
+  1247  051A                     __end_of_dbg_close:	
+  1248                           
+  1249                           	psect	text7
+  1250  051E                     __ptext7:	
+  1251 ;; *************** function _hal_print_Main_Screen *****************
+  1252 ;; Defined at:
+  1253 ;;		line 7 in file "../hal.h"
+  1254 ;; Parameters:    Size  Location     Type
+  1255 ;;		None
+  1256 ;; Auto vars:     Size  Location     Type
+  1257 ;;		None
+  1258 ;; Return value:  Size  Location     Type
+  1259 ;;                  1    wreg      void 
+  1260 ;; Registers used:
+  1261 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1262 ;; Tracked objects:
+  1263 ;;		On entry : 0/0
+  1264 ;;		On exit  : 0/0
+  1265 ;;		Unchanged: 0/0
+  1266 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1267 ;;      Params:         0       0       0       0       0
+  1268 ;;      Locals:         0       0       0       0       0
+  1269 ;;      Temps:          0       0       0       0       0
+  1270 ;;      Totals:         0       0       0       0       0
+  1271 ;;Total ram usage:        0 bytes
+  1272 ;; Hardware stack levels used:    1
+  1273 ;; Hardware stack levels required when called:    4
+  1274 ;; This function calls:
+  1275 ;;		_hal_print_MATRIX88
+  1276 ;; This function is called by:
+  1277 ;;		_main
+  1278 ;; This function uses a non-reentrant model
+  1279 ;;
+  1280                           
+  1281                           
+  1282                           ;psect for function _hal_print_Main_Screen
+  1283  051E                     _hal_print_Main_Screen:	
+  1284                           
+  1285                           ;hal.h: 9: hal_print_MATRIX88(&g_matrix88);
+  1286                           
+  1287                           ;incstack = 0
+  1288                           ; Regs used in _hal_print_Main_Screen: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1289  051E  3090               	movlw	(low (_g_matrix88| (0+256)))& (0+255)
+  1290  051F  120A  118A  2567   	fcall	_hal_print_MATRIX88
+  1291  0522  0008               	return
+  1292  0523                     __end_of_hal_print_Main_Screen:	
+  1293                           
+  1294                           	psect	text8
+  1295  0567                     __ptext8:	
+  1296 ;; *************** function _hal_print_MATRIX88 *****************
+  1297 ;; Defined at:
+  1298 ;;		line 33 in file "../hal_max7219.h"
+  1299 ;; Parameters:    Size  Location     Type
+  1300 ;;  matrix88        1    wreg     PTR const struct .
+  1301 ;;		 -> g_matrix88(64), 
+  1302 ;; Auto vars:     Size  Location     Type
+  1303 ;;  matrix88        1    0[BANK0 ] PTR const struct .
+  1304 ;;		 -> g_matrix88(64), 
+  1305 ;;  matrix7219      8    1[BANK0 ] struct .
+  1306 ;; Return value:  Size  Location     Type
+  1307 ;;                  1    wreg      void 
+  1308 ;; Registers used:
+  1309 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1310 ;; Tracked objects:
+  1311 ;;		On entry : 0/0
+  1312 ;;		On exit  : 0/0
+  1313 ;;		Unchanged: 0/0
+  1314 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1315 ;;      Params:         0       0       0       0       0
+  1316 ;;      Locals:         0       9       0       0       0
+  1317 ;;      Temps:          1       0       0       0       0
+  1318 ;;      Totals:         1       9       0       0       0
+  1319 ;;Total ram usage:       10 bytes
+  1320 ;; Hardware stack levels used:    1
+  1321 ;; Hardware stack levels required when called:    3
+  1322 ;; This function calls:
+  1323 ;;		_hal_MATRIX88_to_MATRIX7219
+  1324 ;;		_hal_print_MATRIX7219
+  1325 ;; This function is called by:
+  1326 ;;		_hal_print_Main_Screen
+  1327 ;; This function uses a non-reentrant model
+  1328 ;;
+  1329                           
+  1330                           
+  1331                           ;psect for function _hal_print_MATRIX88
+  1332  0567                     _hal_print_MATRIX88:	
+  1333                           
+  1334                           ;incstack = 0
+  1335                           ; Regs used in _hal_print_MATRIX88: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1336                           ;hal_print_MATRIX88@matrix88 stored from wreg
+  1337  0567  1283               	bcf	3,5	;RP0=0, select bank0
+  1338  0568  1303               	bcf	3,6	;RP1=0, select bank0
+  1339  0569  00C7               	movwf	hal_print_MATRIX88@matrix88
+  1340                           
+  1341                           ;hal_max7219.h: 35: MATRIX7219 matrix7219;
+  1342                           ;hal_max7219.h: 36: hal_MATRIX88_to_MATRIX7219(matrix88, &matrix7219);
+  1343  056A  3048               	movlw	(low (hal_print_MATRIX88@matrix7219| 0))& (0+255)
+  1344  056B  00FA               	movwf	??_hal_print_MATRIX88
+  1345  056C  087A               	movf	??_hal_print_MATRIX88,w
+  1346  056D  00F0               	movwf	hal_MATRIX88_to_MATRIX7219@matrix7219
+  1347  056E  0847               	movf	hal_print_MATRIX88@matrix88,w
+  1348  056F  120A  118A  26EB  120A  118A  	fcall	_hal_MATRIX88_to_MATRIX7219
+  1349                           
+  1350                           ;hal_max7219.h: 37: hal_print_MATRIX7219(&matrix7219);
+  1351  0574  3048               	movlw	(low (hal_print_MATRIX88@matrix7219| 0))& (0+255)
+  1352  0575  120A  118A  25A9   	fcall	_hal_print_MATRIX7219
+  1353  0578  0008               	return
+  1354  0579                     __end_of_hal_print_MATRIX88:	
+  1355                           
+  1356                           	psect	text9
+  1357  05A9                     __ptext9:	
+  1358 ;; *************** function _hal_print_MATRIX7219 *****************
+  1359 ;; Defined at:
+  1360 ;;		line 24 in file "../hal_max7219.h"
+  1361 ;; Parameters:    Size  Location     Type
+  1362 ;;  matrix          1    wreg     PTR const struct .
+  1363 ;;		 -> hal_print_MATRIX88@matrix7219(8), 
+  1364 ;; Auto vars:     Size  Location     Type
+  1365 ;;  matrix          1    8[COMMON] PTR const struct .
+  1366 ;;		 -> hal_print_MATRIX88@matrix7219(8), 
+  1367 ;;  col             1    9[COMMON] unsigned char 
+  1368 ;; Return value:  Size  Location     Type
+  1369 ;;                  1    wreg      void 
+  1370 ;; Registers used:
+  1371 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1372 ;; Tracked objects:
+  1373 ;;		On entry : 0/0
+  1374 ;;		On exit  : 0/0
+  1375 ;;		Unchanged: 0/0
+  1376 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1377 ;;      Params:         0       0       0       0       0
+  1378 ;;      Locals:         2       0       0       0       0
+  1379 ;;      Temps:          2       0       0       0       0
+  1380 ;;      Totals:         4       0       0       0       0
+  1381 ;;Total ram usage:        4 bytes
+  1382 ;; Hardware stack levels used:    1
+  1383 ;; Hardware stack levels required when called:    2
+  1384 ;; This function calls:
+  1385 ;;		_Write_Byte
+  1386 ;; This function is called by:
+  1387 ;;		_hal_print_MATRIX88
+  1388 ;; This function uses a non-reentrant model
+  1389 ;;
+  1390                           
+  1391                           
+  1392                           ;psect for function _hal_print_MATRIX7219
+  1393  05A9                     _hal_print_MATRIX7219:	
+  1394                           
+  1395                           ;incstack = 0
+  1396                           ; Regs used in _hal_print_MATRIX7219: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1397                           ;hal_print_MATRIX7219@matrix stored from wreg
+  1398  05A9  00F8               	movwf	hal_print_MATRIX7219@matrix
+  1399                           
+  1400                           ;hal_max7219.h: 26: uint8_t col;
+  1401                           ;hal_max7219.h: 28: for (col = 0; col < 8; col++)
+  1402  05AA  01F9               	clrf	hal_print_MATRIX7219@col
+  1403  05AB                     L4:	
+  1404  05AB  3008               	movlw	8
+  1405  05AC  0279               	subwf	hal_print_MATRIX7219@col,w
+  1406  05AD  1803               	btfsc	3,0
+  1407  05AE  0008               	return
+  1408                           
+  1409                           ;hal_max7219.h: 29: {
+  1410                           ;hal_max7219.h: 30: Write_Byte(col + 1, matrix->col[col]);
+  1411  05AF  0879               	movf	hal_print_MATRIX7219@col,w
+  1412  05B0  0778               	addwf	hal_print_MATRIX7219@matrix,w
+  1413  05B1  00F6               	movwf	??_hal_print_MATRIX7219
+  1414  05B2  0876               	movf	??_hal_print_MATRIX7219,w
+  1415  05B3  0084               	movwf	4
+  1416  05B4  1383               	bcf	3,7	;select IRP bank0
+  1417  05B5  0800               	movf	0,w
+  1418  05B6  00F7               	movwf	??_hal_print_MATRIX7219+1
+  1419  05B7  0877               	movf	??_hal_print_MATRIX7219+1,w
+  1420  05B8  00F4               	movwf	Write_Byte@myValue
+  1421  05B9  0879               	movf	hal_print_MATRIX7219@col,w
+  1422  05BA  3E01               	addlw	1
+  1423  05BB  120A  118A  2555  120A  118A  	fcall	_Write_Byte
+  1424  05C0  3001               	movlw	1
+  1425  05C1  00F6               	movwf	??_hal_print_MATRIX7219
+  1426  05C2  0876               	movf	??_hal_print_MATRIX7219,w
+  1427  05C3  07F9               	addwf	hal_print_MATRIX7219@col,f
+  1428  05C4  2DAB               	goto	L4
+  1429  05C5                     __end_of_hal_print_MATRIX7219:	
+  1430                           
+  1431                           	psect	text10
+  1432  0555                     __ptext10:	
+  1433 ;; *************** function _Write_Byte *****************
+  1434 ;; Defined at:
+  1435 ;;		line 41 in file "../max7219.h"
+  1436 ;; Parameters:    Size  Location     Type
+  1437 ;;  myColumn        1    wreg     unsigned char 
+  1438 ;;  myValue         1    4[COMMON] unsigned char 
+  1439 ;; Auto vars:     Size  Location     Type
+  1440 ;;  myColumn        1    5[COMMON] unsigned char 
+  1441 ;; Return value:  Size  Location     Type
+  1442 ;;                  1    wreg      void 
+  1443 ;; Registers used:
+  1444 ;;		wreg, status,2, status,0, pclath, cstack
+  1445 ;; Tracked objects:
+  1446 ;;		On entry : 0/0
+  1447 ;;		On exit  : 0/0
+  1448 ;;		Unchanged: 0/0
+  1449 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1450 ;;      Params:         1       0       0       0       0
+  1451 ;;      Locals:         1       0       0       0       0
+  1452 ;;      Temps:          0       0       0       0       0
+  1453 ;;      Totals:         2       0       0       0       0
+  1454 ;;Total ram usage:        2 bytes
+  1455 ;; Hardware stack levels used:    1
+  1456 ;; Hardware stack levels required when called:    1
+  1457 ;; This function calls:
+  1458 ;;		_SPI1_write
+  1459 ;; This function is called by:
+  1460 ;;		_max7219_init1
+  1461 ;;		_hal_print_MATRIX7219
+  1462 ;; This function uses a non-reentrant model
+  1463 ;;
+  1464                           
+  1465                           
+  1466                           ;psect for function _Write_Byte
+  1467  0555                     _Write_Byte:	
+  1468                           
+  1469                           ;incstack = 0
+  1470                           ; Regs used in _Write_Byte: [wreg+status,2+status,0+pclath+cstack]
+  1471                           ;Write_Byte@myColumn stored from wreg
+  1472  0555  00F5               	movwf	Write_Byte@myColumn
+  1473                           
+  1474                           ;max7219.h: 43: RA2 = 0;
+  1475  0556  1283               	bcf	3,5	;RP0=0, select bank0
+  1476  0557  1303               	bcf	3,6	;RP1=0, select bank0
+  1477  0558  1105               	bcf	5,2	;volatile
+  1478                           
+  1479                           ;max7219.h: 44: SPI1_write(myColumn);
+  1480  0559  0875               	movf	Write_Byte@myColumn,w
+  1481  055A  120A  118A  25C5  120A  118A  	fcall	_SPI1_write
+  1482                           
+  1483                           ;max7219.h: 45: SPI1_write(myValue);
+  1484  055F  0874               	movf	Write_Byte@myValue,w
+  1485  0560  120A  118A  25C5   	fcall	_SPI1_write
+  1486                           
+  1487                           ;max7219.h: 46: RA2 = 1;
+  1488  0563  1283               	bcf	3,5	;RP0=0, select bank0
+  1489  0564  1303               	bcf	3,6	;RP1=0, select bank0
+  1490  0565  1505               	bsf	5,2	;volatile
+  1491  0566  0008               	return
+  1492  0567                     __end_of_Write_Byte:	
+  1493                           
+  1494                           	psect	text11
+  1495  05C5                     __ptext11:	
+  1496 ;; *************** function _SPI1_write *****************
+  1497 ;; Defined at:
+  1498 ;;		line 16 in file "../max7219.h"
+  1499 ;; Parameters:    Size  Location     Type
+  1500 ;;  data            1    wreg     unsigned char 
+  1501 ;; Auto vars:     Size  Location     Type
+  1502 ;;  data            1    1[COMMON] unsigned char 
+  1503 ;;  i               1    3[COMMON] unsigned char 
+  1504 ;;  mask            1    2[COMMON] unsigned char 
+  1505 ;; Return value:  Size  Location     Type
+  1506 ;;                  1    wreg      void 
+  1507 ;; Registers used:
+  1508 ;;		wreg, status,2, status,0
+  1509 ;; Tracked objects:
+  1510 ;;		On entry : 0/0
+  1511 ;;		On exit  : 0/0
+  1512 ;;		Unchanged: 0/0
+  1513 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1514 ;;      Params:         0       0       0       0       0
+  1515 ;;      Locals:         3       0       0       0       0
+  1516 ;;      Temps:          1       0       0       0       0
+  1517 ;;      Totals:         4       0       0       0       0
+  1518 ;;Total ram usage:        4 bytes
+  1519 ;; Hardware stack levels used:    1
+  1520 ;; This function calls:
+  1521 ;;		Nothing
+  1522 ;; This function is called by:
+  1523 ;;		_Write_Byte
+  1524 ;; This function uses a non-reentrant model
+  1525 ;;
+  1526                           
+  1527                           
+  1528                           ;psect for function _SPI1_write
+  1529  05C5                     _SPI1_write:	
+  1530                           
+  1531                           ;incstack = 0
+  1532                           ; Regs used in _SPI1_write: [wreg+status,2+status,0]
+  1533                           ;SPI1_write@data stored from wreg
+  1534  05C5  00F1               	movwf	SPI1_write@data
+  1535                           
+  1536                           ;max7219.h: 18: uint8_t mask = 0b10000000;
+  1537  05C6  3080               	movlw	128
+  1538  05C7  00F0               	movwf	??_SPI1_write
+  1539  05C8  0870               	movf	??_SPI1_write,w
+  1540  05C9  00F2               	movwf	SPI1_write@mask
+  1541                           
+  1542                           ;max7219.h: 19: for(uint8_t i = 0; i < 8; i++)
+  1543  05CA  01F3               	clrf	SPI1_write@i
+  1544  05CB                     L5:	
+  1545  05CB  3008               	movlw	8
+  1546  05CC  0273               	subwf	SPI1_write@i,w
+  1547  05CD  1803               	btfsc	3,0
+  1548  05CE  0008               	return
+  1549                           
+  1550                           ;max7219.h: 20: {
+  1551                           ;max7219.h: 21: if((data & mask) > 0)
+  1552  05CF  0871               	movf	SPI1_write@data,w
+  1553  05D0  0572               	andwf	SPI1_write@mask,w
+  1554  05D1  1903               	btfsc	3,2
+  1555  05D2  2DD7               	goto	l29
+  1556                           
+  1557                           ;max7219.h: 22: {
+  1558                           ;max7219.h: 23: RA3 = 1;
+  1559  05D3  1283               	bcf	3,5	;RP0=0, select bank0
+  1560  05D4  1303               	bcf	3,6	;RP1=0, select bank0
+  1561  05D5  1585               	bsf	5,3	;volatile
+  1562                           
+  1563                           ;max7219.h: 25: }
+  1564  05D6  2DDA               	goto	l1138
+  1565  05D7                     l29:	
+  1566                           
+  1567                           ;max7219.h: 26: else
+  1568                           ;max7219.h: 27: {
+  1569                           ;max7219.h: 28: RA3 = 0;
+  1570  05D7  1283               	bcf	3,5	;RP0=0, select bank0
+  1571  05D8  1303               	bcf	3,6	;RP1=0, select bank0
+  1572  05D9  1185               	bcf	5,3	;volatile
+  1573  05DA                     l1138:	
+  1574                           
+  1575                           ;max7219.h: 30: }
+  1576                           ;max7219.h: 31: mask >>= 1;
+  1577  05DA  1003               	clrc
+  1578  05DB  0CF2               	rrf	SPI1_write@mask,f
+  1579                           
+  1580                           ;max7219.h: 32: RA1 = 1;
+  1581  05DC  1485               	bsf	5,1	;volatile
+  1582                           
+  1583                           ;max7219.h: 33: _delay((unsigned long)((10)*(20000000/4000000.0)));
+  1584  05DD  3010               	movlw	16
+  1585  05DE  00F0               	movwf	??_SPI1_write
+  1586  05DF                     u1267:	
+  1587  05DF  0BF0               	decfsz	??_SPI1_write,f
+  1588  05E0  2DDF               	goto	u1267
+  1589  05E1  0000               	nop
+  1590                           
+  1591                           ;max7219.h: 34: RA1 = 0;
+  1592  05E2  1283               	bcf	3,5	;RP0=0, select bank0
+  1593  05E3  1303               	bcf	3,6	;RP1=0, select bank0
+  1594  05E4  1085               	bcf	5,1	;volatile
+  1595                           
+  1596                           ;max7219.h: 35: _delay((unsigned long)((10)*(20000000/4000000.0)));
+  1597  05E5  3010               	movlw	16
+  1598  05E6  00F0               	movwf	??_SPI1_write
+  1599  05E7                     u1277:	
+  1600  05E7  0BF0               	decfsz	??_SPI1_write,f
+  1601  05E8  2DE7               	goto	u1277
+  1602  05E9  0000               	nop
+  1603  05EA  3001               	movlw	1
+  1604  05EB  00F0               	movwf	??_SPI1_write
+  1605  05EC  0870               	movf	??_SPI1_write,w
+  1606  05ED  07F3               	addwf	SPI1_write@i,f
+  1607  05EE  2DCB               	goto	L5
+  1608  05EF                     __end_of_SPI1_write:	
+  1609                           
+  1610                           	psect	text12
+  1611  06EB                     __ptext12:	
+  1612 ;; *************** function _hal_MATRIX88_to_MATRIX7219 *****************
+  1613 ;; Defined at:
+  1614 ;;		line 6 in file "../hal_max7219.h"
+  1615 ;; Parameters:    Size  Location     Type
+  1616 ;;  matrix88        1    wreg     PTR const struct .
+  1617 ;;		 -> g_matrix88(64), 
+  1618 ;;  matrix7219      1    0[COMMON] PTR struct .
+  1619 ;;		 -> hal_print_MATRIX88@matrix7219(8), 
+  1620 ;; Auto vars:     Size  Location     Type
+  1621 ;;  matrix88        1    4[COMMON] PTR const struct .
+  1622 ;;		 -> g_matrix88(64), 
+  1623 ;;  row             1    6[COMMON] unsigned char 
+  1624 ;;  col             1    7[COMMON] unsigned char 
+  1625 ;;  mask            1    5[COMMON] unsigned char 
+  1626 ;; Return value:  Size  Location     Type
+  1627 ;;                  1    wreg      void 
+  1628 ;; Registers used:
+  1629 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1630 ;; Tracked objects:
+  1631 ;;		On entry : 0/0
+  1632 ;;		On exit  : 0/0
+  1633 ;;		Unchanged: 0/0
+  1634 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1635 ;;      Params:         1       0       0       0       0
+  1636 ;;      Locals:         4       0       0       0       0
+  1637 ;;      Temps:          3       0       0       0       0
+  1638 ;;      Totals:         8       0       0       0       0
+  1639 ;;Total ram usage:        8 bytes
+  1640 ;; Hardware stack levels used:    1
+  1641 ;; This function calls:
+  1642 ;;		Nothing
+  1643 ;; This function is called by:
+  1644 ;;		_hal_print_MATRIX88
+  1645 ;; This function uses a non-reentrant model
+  1646 ;;
+  1647                           
+  1648                           
+  1649                           ;psect for function _hal_MATRIX88_to_MATRIX7219
+  1650  06EB                     _hal_MATRIX88_to_MATRIX7219:	
+  1651                           
+  1652                           ;incstack = 0
+  1653                           ; Regs used in _hal_MATRIX88_to_MATRIX7219: [wreg-fsr0h+status,2+status,0]
+  1654                           ;hal_MATRIX88_to_MATRIX7219@matrix88 stored from wreg
+  1655  06EB  00F4               	movwf	hal_MATRIX88_to_MATRIX7219@matrix88
+  1656                           
+  1657                           ;hal_max7219.h: 8: uint8_t mask = 0x80;
+  1658  06EC  3080               	movlw	128
+  1659  06ED  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1660  06EE  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1661  06EF  00F5               	movwf	hal_MATRIX88_to_MATRIX7219@mask
+  1662                           
+  1663                           ;hal_max7219.h: 10: for(uint8_t col = 0; col < 8; col++)
+  1664  06F0  01F7               	clrf	hal_MATRIX88_to_MATRIX7219@col
+  1665  06F1                     L6:	
+  1666  06F1  3008               	movlw	8
+  1667  06F2  0277               	subwf	hal_MATRIX88_to_MATRIX7219@col,w
+  1668  06F3  1803               	btfsc	3,0
+  1669  06F4  0008               	return
+  1670                           
+  1671                           ;hal_max7219.h: 11: {
+  1672                           ;hal_max7219.h: 12: mask = 0x80;
+  1673  06F5  3080               	movlw	128
+  1674  06F6  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1675  06F7  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1676  06F8  00F5               	movwf	hal_MATRIX88_to_MATRIX7219@mask
+  1677                           
+  1678                           ;hal_max7219.h: 13: matrix7219->col[col] = 0;
+  1679  06F9  0877               	movf	hal_MATRIX88_to_MATRIX7219@col,w
+  1680  06FA  0770               	addwf	hal_MATRIX88_to_MATRIX7219@matrix7219,w
+  1681  06FB  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1682  06FC  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1683  06FD  0084               	movwf	4
+  1684  06FE  1383               	bcf	3,7	;select IRP bank0
+  1685  06FF  0180               	clrf	0
+  1686                           
+  1687                           ;hal_max7219.h: 14: for(uint8_t row = 0; row < 8; row++)
+  1688  0700  01F6               	clrf	hal_MATRIX88_to_MATRIX7219@row
+  1689  0701  3008               	movlw	8
+  1690  0702  0276               	subwf	hal_MATRIX88_to_MATRIX7219@row,w
+  1691  0703  1803               	btfsc	3,0
+  1692  0704  2F2E               	goto	l1212
+  1693  0705                     l1202:	
+  1694                           
+  1695                           ;hal_max7219.h: 15: {
+  1696                           ;hal_max7219.h: 16: if(matrix88->data[row][col] == 1)
+  1697  0705  0876               	movf	hal_MATRIX88_to_MATRIX7219@row,w
+  1698  0706  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1699  0707  3002               	movlw	2
+  1700  0708                     u595:	
+  1701  0708  1003               	clrc
+  1702  0709  0DF1               	rlf	??_hal_MATRIX88_to_MATRIX7219,f
+  1703  070A  3EFF               	addlw	-1
+  1704  070B  1D03               	skipz
+  1705  070C  2F08               	goto	u595
+  1706  070D  1003               	clrc
+  1707  070E  0D71               	rlf	??_hal_MATRIX88_to_MATRIX7219,w
+  1708  070F  0774               	addwf	hal_MATRIX88_to_MATRIX7219@matrix88,w
+  1709  0710  00F2               	movwf	??_hal_MATRIX88_to_MATRIX7219+1
+  1710  0711  0877               	movf	hal_MATRIX88_to_MATRIX7219@col,w
+  1711  0712  0772               	addwf	??_hal_MATRIX88_to_MATRIX7219+1,w
+  1712  0713  00F3               	movwf	??_hal_MATRIX88_to_MATRIX7219+2
+  1713  0714  0873               	movf	??_hal_MATRIX88_to_MATRIX7219+2,w
+  1714  0715  0084               	movwf	4
+  1715  0716  1783               	bsf	3,7	;select IRP bank2
+  1716  0717  0300               	decf	0,w
+  1717  0718  1D03               	btfss	3,2
+  1718  0719  2F24               	goto	l1206
+  1719                           
+  1720                           ;hal_max7219.h: 17: {
+  1721                           ;hal_max7219.h: 18: matrix7219->col[col] |= mask;
+  1722  071A  0875               	movf	hal_MATRIX88_to_MATRIX7219@mask,w
+  1723  071B  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1724  071C  0877               	movf	hal_MATRIX88_to_MATRIX7219@col,w
+  1725  071D  0770               	addwf	hal_MATRIX88_to_MATRIX7219@matrix7219,w
+  1726  071E  00F2               	movwf	??_hal_MATRIX88_to_MATRIX7219+1
+  1727  071F  0872               	movf	??_hal_MATRIX88_to_MATRIX7219+1,w
+  1728  0720  0084               	movwf	4
+  1729  0721  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1730  0722  1383               	bcf	3,7	;select IRP bank0
+  1731  0723  0480               	iorwf	0,f
+  1732  0724                     l1206:	
+  1733                           
+  1734                           ;hal_max7219.h: 19: }
+  1735                           ;hal_max7219.h: 20: mask >>= 1;
+  1736  0724  1003               	clrc
+  1737  0725  0CF5               	rrf	hal_MATRIX88_to_MATRIX7219@mask,f
+  1738  0726  3001               	movlw	1
+  1739  0727  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1740  0728  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1741  0729  07F6               	addwf	hal_MATRIX88_to_MATRIX7219@row,f
+  1742  072A  3008               	movlw	8
+  1743  072B  0276               	subwf	hal_MATRIX88_to_MATRIX7219@row,w
+  1744  072C  1C03               	skipc
+  1745  072D  2F05               	goto	l1202
+  1746  072E                     l1212:	
+  1747  072E  3001               	movlw	1
+  1748  072F  00F1               	movwf	??_hal_MATRIX88_to_MATRIX7219
+  1749  0730  0871               	movf	??_hal_MATRIX88_to_MATRIX7219,w
+  1750  0731  07F7               	addwf	hal_MATRIX88_to_MATRIX7219@col,f
+  1751  0732  2EF1               	goto	L6
+  1752  0733                     __end_of_hal_MATRIX88_to_MATRIX7219:	
+  1753                           
+  1754                           	psect	text13
+  1755  0733                     __ptext13:	
+  1756 ;; *************** function _dbg_print_MATRIX88 *****************
+  1757 ;; Defined at:
+  1758 ;;		line 7 in file "../debug.h"
+  1759 ;; Parameters:    Size  Location     Type
+  1760 ;;  enable          1    wreg     unsigned char 
+  1761 ;;  lable           1    6[COMMON] PTR const unsigned char 
+  1762 ;;		 -> STR_7(12), 
+  1763 ;;  matrix          1    7[COMMON] PTR const struct .
+  1764 ;;		 -> g_matrix88(64), 
+  1765 ;; Auto vars:     Size  Location     Type
+  1766 ;;  enable          1   13[COMMON] unsigned char 
+  1767 ;;  col             1   12[COMMON] unsigned char 
+  1768 ;;  row             1   11[COMMON] unsigned char 
+  1769 ;; Return value:  Size  Location     Type
+  1770 ;;                  1    wreg      void 
+  1771 ;; Registers used:
+  1772 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1773 ;; Tracked objects:
+  1774 ;;		On entry : 0/0
+  1775 ;;		On exit  : 0/0
+  1776 ;;		Unchanged: 0/0
+  1777 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1778 ;;      Params:         2       0       0       0       0
+  1779 ;;      Locals:         3       0       0       0       0
+  1780 ;;      Temps:          3       0       0       0       0
+  1781 ;;      Totals:         8       0       0       0       0
+  1782 ;;Total ram usage:        8 bytes
+  1783 ;; Hardware stack levels used:    1
+  1784 ;; Hardware stack levels required when called:    2
+  1785 ;; This function calls:
+  1786 ;;		_USARTWriteString
+  1787 ;;		_sprintf
+  1788 ;; This function is called by:
+  1789 ;;		_main
+  1790 ;; This function uses a non-reentrant model
+  1791 ;;
+  1792                           
+  1793                           
+  1794                           ;psect for function _dbg_print_MATRIX88
+  1795  0733                     _dbg_print_MATRIX88:	
+  1796                           
+  1797                           ;incstack = 0
+  1798                           ; Regs used in _dbg_print_MATRIX88: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1799                           ;dbg_print_MATRIX88@enable stored from wreg
+  1800  0733  00FD               	movwf	dbg_print_MATRIX88@enable
+  1801  0734  087D               	movf	dbg_print_MATRIX88@enable,w
+  1802  0735  1903               	btfsc	3,2
+  1803  0736  0008               	return
+  1804                           
+  1805                           ;debug.h: 10: {
+  1806                           ;debug.h: 11: if(lable != (0))
+  1807  0737  0876               	movf	dbg_print_MATRIX88@lable,w
+  1808  0738  1903               	btfsc	3,2
+  1809  0739  2F60               	goto	l1284
+  1810                           
+  1811                           ;debug.h: 12: {
+  1812                           ;debug.h: 13: do { if((1) && (enable)) { sprintf(g_debug, lable); USARTWriteString(g_deb
+      +                          ug); } } while (0);;
+  1813  073A  087D               	movf	dbg_print_MATRIX88@enable,w
+  1814  073B  1903               	btfsc	3,2
+  1815  073C  2F4D               	goto	l1280
+  1816  073D  0876               	movf	dbg_print_MATRIX88@lable,w
+  1817  073E  00F8               	movwf	??_dbg_print_MATRIX88
+  1818  073F  0878               	movf	??_dbg_print_MATRIX88,w
+  1819  0740  00F0               	movwf	sprintf@f
+  1820  0741  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1821  0742  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1822  0747  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1823  0748  120A  118A  2579  120A  118A  	fcall	_USARTWriteString
+  1824  074D                     l1280:	
+  1825                           ;debug.h: 14: do { if((1) && (enable)) { sprintf(g_debug, ":""\r\n"); USARTWriteString(g
+      +                          _debug); } } while (0);;
+  1826                           
+  1827  074D  087D               	movf	dbg_print_MATRIX88@enable,w
+  1828  074E  1903               	btfsc	3,2
+  1829  074F  2F60               	goto	l1284
+  1830  0750  3043               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+  1831  0751  00F8               	movwf	??_dbg_print_MATRIX88
+  1832  0752  0878               	movf	??_dbg_print_MATRIX88,w
+  1833  0753  00F0               	movwf	sprintf@f
+  1834  0754  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1835  0755  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1836  075A  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1837  075B  120A  118A  2579  120A  118A  	fcall	_USARTWriteString
+  1838  0760                     l1284:	
+  1839                           ;debug.h: 15: }
+  1840                           ;debug.h: 16: do { if((1) && (enable)) { sprintf(g_debug, "<<<<<<<<<<<<<<<<<<<<MATRIX88"
+      +                          "\r\n"); USARTWriteString(g_debug); } } while (0);;
+  1841                           
+  1842  0760  087D               	movf	dbg_print_MATRIX88@enable,w
+  1843  0761  1903               	btfsc	3,2
+  1844  0762  2F73               	goto	l1288
+  1845  0763  3001               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
+  1846  0764  00F8               	movwf	??_dbg_print_MATRIX88
+  1847  0765  0878               	movf	??_dbg_print_MATRIX88,w
+  1848  0766  00F0               	movwf	sprintf@f
+  1849  0767  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1850  0768  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1851  076D  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1852  076E  120A  118A  2579  120A  118A  	fcall	_USARTWriteString
+  1853  0773                     l1288:	
+  1854                           
+  1855                           ;debug.h: 17: for(uint8_t row = 0; row < 8; row++)
+  1856  0773  01FB               	clrf	dbg_print_MATRIX88@row
+  1857  0774  3008               	movlw	8
+  1858  0775  027B               	subwf	dbg_print_MATRIX88@row,w
+  1859  0776  1803               	btfsc	3,0
+  1860  0777  2FCD               	goto	l1322
+  1861  0778                     l1294:	
+  1862                           
+  1863                           ;debug.h: 18: {
+  1864                           ;debug.h: 19: for(uint8_t col = 0; col < 8; col++)
+  1865  0778  01FC               	clrf	dbg_print_MATRIX88@col
+  1866  0779  3008               	movlw	8
+  1867  077A  027C               	subwf	dbg_print_MATRIX88@col,w
+  1868  077B  1803               	btfsc	3,0
+  1869  077C  2FB2               	goto	l1314
+  1870  077D                     l1300:	
+  1871                           
+  1872                           ;debug.h: 20: {
+  1873                           ;debug.h: 21: if(matrix->data[row][col] == 1)
+  1874  077D  087B               	movf	dbg_print_MATRIX88@row,w
+  1875  077E  00F8               	movwf	??_dbg_print_MATRIX88
+  1876  077F  3002               	movlw	2
+  1877  0780                     u765:	
+  1878  0780  1003               	clrc
+  1879  0781  0DF8               	rlf	??_dbg_print_MATRIX88,f
+  1880  0782  3EFF               	addlw	-1
+  1881  0783  1D03               	skipz
+  1882  0784  2F80               	goto	u765
+  1883  0785  1003               	clrc
+  1884  0786  0D78               	rlf	??_dbg_print_MATRIX88,w
+  1885  0787  0777               	addwf	dbg_print_MATRIX88@matrix,w
+  1886  0788  00F9               	movwf	??_dbg_print_MATRIX88+1
+  1887  0789  087C               	movf	dbg_print_MATRIX88@col,w
+  1888  078A  0779               	addwf	??_dbg_print_MATRIX88+1,w
+  1889  078B  00FA               	movwf	??_dbg_print_MATRIX88+2
+  1890  078C  087A               	movf	??_dbg_print_MATRIX88+2,w
+  1891  078D  0084               	movwf	4
+  1892  078E  1783               	bsf	3,7	;select IRP bank2
+  1893  078F  0300               	decf	0,w
+  1894  0790  1D03               	btfss	3,2
+  1895  0791  2F97               	goto	l1306
+  1896                           
+  1897                           ;debug.h: 22: {
+  1898                           ;debug.h: 23: do { if((1) && (enable)) { sprintf(g_debug, "*"); USARTWriteString(g_debug
+      +                          ); } } while (0);;
+  1899  0792  087D               	movf	dbg_print_MATRIX88@enable,w
+  1900  0793  1903               	btfsc	3,2
+  1901  0794  2FAA               	goto	l1310
+  1902  0795  3047               	movlw	(low ((STR_3-__stringbase)| (0+32768)))& (0+255)
+  1903  0796  2F9B               	goto	L7
+  1904  0797                     l1306:	
+  1905                           ;debug.h: 25: else
+  1906                           ;debug.h: 26: {
+  1907                           ;debug.h: 27: do { if((1) && (enable)) { sprintf(g_debug, "_"); USARTWriteString(g_debug
+      +                          ); } } while (0);;
+  1908                           
+  1909                           ;debug.h: 24: }
+  1910                           
+  1911  0797  087D               	movf	dbg_print_MATRIX88@enable,w
+  1912  0798  1903               	btfsc	3,2
+  1913  0799  2FAA               	goto	l1310
+  1914  079A  3049               	movlw	(low ((STR_4-__stringbase)| (0+32768)))& (0+255)
+  1915  079B                     L7:	
+  1916  079B  00F8               	movwf	??_dbg_print_MATRIX88
+  1917  079C  0878               	movf	??_dbg_print_MATRIX88,w
+  1918  079D  00F0               	movwf	sprintf@f
+  1919  079E  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1920  079F  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1921  07A4  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1922  07A5  120A  118A  2579  120A  118A  	fcall	_USARTWriteString
+  1923  07AA                     l1310:	
+  1924  07AA  3001               	movlw	1
+  1925  07AB  00F8               	movwf	??_dbg_print_MATRIX88
+  1926  07AC  0878               	movf	??_dbg_print_MATRIX88,w
+  1927  07AD  07FC               	addwf	dbg_print_MATRIX88@col,f
+  1928  07AE  3008               	movlw	8
+  1929  07AF  027C               	subwf	dbg_print_MATRIX88@col,w
+  1930  07B0  1C03               	skipc
+  1931  07B1  2F7D               	goto	l1300
+  1932  07B2                     l1314:	
+  1933                           ;debug.h: 28: }
+  1934                           ;debug.h: 29: }
+  1935                           ;debug.h: 30: do { if((1) && (enable)) { sprintf(g_debug, """\r\n"); USARTWriteString(g_
+      +                          debug); } } while (0);;
+  1936                           
+  1937  07B2  087D               	movf	dbg_print_MATRIX88@enable,w
+  1938  07B3  1903               	btfsc	3,2
+  1939  07B4  2FC5               	goto	l1318
+  1940  07B5  301D               	movlw	(low (((STR_2+28)-__stringbase)| (0+32768)))& (0+255)
+  1941  07B6  00F8               	movwf	??_dbg_print_MATRIX88
+  1942  07B7  0878               	movf	??_dbg_print_MATRIX88,w
+  1943  07B8  00F0               	movwf	sprintf@f
+  1944  07B9  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1945  07BA  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1946  07BF  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1947  07C0  120A  118A  2579  120A  118A  	fcall	_USARTWriteString
+  1948  07C5                     l1318:	
+  1949  07C5  3001               	movlw	1
+  1950  07C6  00F8               	movwf	??_dbg_print_MATRIX88
+  1951  07C7  0878               	movf	??_dbg_print_MATRIX88,w
+  1952  07C8  07FB               	addwf	dbg_print_MATRIX88@row,f
+  1953  07C9  3008               	movlw	8
+  1954  07CA  027B               	subwf	dbg_print_MATRIX88@row,w
+  1955  07CB  1C03               	skipc
+  1956  07CC  2F78               	goto	l1294
+  1957  07CD                     l1322:	
+  1958                           ;debug.h: 31: }
+  1959                           ;debug.h: 32: do { if((1) && (enable)) { sprintf(g_debug, ">>>>>>>>>>>>>>>>>>>>""\r\n");
+      +                           USARTWriteString(g_debug); } } while (0);;
+  1960                           
+  1961  07CD  087D               	movf	dbg_print_MATRIX88@enable,w
+  1962  07CE  1903               	btfsc	3,2
+  1963  07CF  0008               	return
+  1964  07D0  3020               	movlw	(low ((STR_6-__stringbase)| (0+32768)))& (0+255)
+  1965  07D1  00F8               	movwf	??_dbg_print_MATRIX88
+  1966  07D2  0878               	movf	??_dbg_print_MATRIX88,w
+  1967  07D3  00F0               	movwf	sprintf@f
+  1968  07D4  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1969  07D5  120A  118A  2629  120A  118A  	fcall	_sprintf
+  1970  07DA  30A0               	movlw	(low (_g_debug| 0))& (0+255)
+  1971  07DB  120A  118A  2579   	fcall	_USARTWriteString
+  1972  07DE  0008               	return
+  1973  07DF                     __end_of_dbg_print_MATRIX88:	
+  1974                           
+  1975                           	psect	text14
+  1976  0629                     __ptext14:	
+  1977 ;; *************** function _sprintf *****************
+  1978 ;; Defined at:
+  1979 ;;		line 492 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c"
+  1980 ;; Parameters:    Size  Location     Type
+  1981 ;;  sp              1    wreg     PTR unsigned char 
+  1982 ;;		 -> g_debug(64), 
+  1983 ;;  f               1    0[COMMON] PTR const unsigned char 
+  1984 ;;		 -> STR_7(12), STR_6(23), STR_5(3), STR_4(2), 
+  1985 ;;		 -> STR_3(2), STR_2(31), STR_1(4), 
+  1986 ;; Auto vars:     Size  Location     Type
+  1987 ;;  sp              1    5[COMMON] PTR unsigned char 
+  1988 ;;		 -> g_debug(64), 
+  1989 ;;  tmpval          4    0        struct .
+  1990 ;;  cp              2    0        PTR const unsigned char 
+  1991 ;;  len             2    0        unsigned int 
+  1992 ;;  val             2    0        unsigned int 
+  1993 ;;  c               1    4[COMMON] char 
+  1994 ;;  flag            1    3[COMMON] unsigned char 
+  1995 ;;  ap              1    2[COMMON] PTR void [1]
+  1996 ;;		 -> ?_sprintf(2), 
+  1997 ;;  prec            1    0        char 
+  1998 ;; Return value:  Size  Location     Type
+  1999 ;;                  2    0[COMMON] int 
+  2000 ;; Registers used:
+  2001 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+  2002 ;; Tracked objects:
+  2003 ;;		On entry : 0/0
+  2004 ;;		On exit  : 0/0
+  2005 ;;		Unchanged: 0/0
+  2006 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2007 ;;      Params:         1       0       0       0       0
+  2008 ;;      Locals:         4       0       0       0       0
+  2009 ;;      Temps:          1       0       0       0       0
+  2010 ;;      Totals:         6       0       0       0       0
+  2011 ;;Total ram usage:        6 bytes
+  2012 ;; Hardware stack levels used:    2
+  2013 ;; This function calls:
+  2014 ;;		Nothing
+  2015 ;; This function is called by:
+  2016 ;;		_dbg_print_MATRIX88
+  2017 ;; This function uses a non-reentrant model
+  2018 ;;
+  2019                           
+  2020                           
+  2021                           ;psect for function _sprintf
+  2022  0629                     _sprintf:	
+  2023                           
+  2024                           ;incstack = 0
+  2025                           ; Regs used in _sprintf: [wreg-fsr0h+status,2+status,0+pclath]
+  2026                           ;sprintf@sp stored from wreg
+  2027  0629  00F5               	movwf	sprintf@sp
+  2028                           
+  2029                           ;doprnt.c: 494: va_list ap;
+  2030                           ;doprnt.c: 499: signed char c;
+  2031                           ;doprnt.c: 506: signed char prec;
+  2032                           ;doprnt.c: 508: unsigned char flag;
+  2033                           ;doprnt.c: 523: union {
+  2034                           ;doprnt.c: 524: unsigned long vd;
+  2035                           ;doprnt.c: 525: double integ;
+  2036                           ;doprnt.c: 526: } tmpval;
+  2037                           ;doprnt.c: 528: unsigned int val;
+  2038                           ;doprnt.c: 529: unsigned len;
+  2039                           ;doprnt.c: 530: const char * cp;
+  2040                           ;doprnt.c: 533: *ap = __va_start();
+  2041  062A  3071               	movlw	(low ((?_sprintf| 0+1)))& (0+255)
+  2042  062B  00F1               	movwf	??_sprintf
+  2043  062C  0871               	movf	??_sprintf,w
+  2044  062D  00F2               	movwf	sprintf@ap
+  2045                           
+  2046                           ;doprnt.c: 635: switch(c = *f++) {
+  2047  062E  2E3A               	goto	l1256
+  2048  062F                     l1248:	
+  2049                           ;doprnt.c: 802: default:
+  2050                           
+  2051                           ;doprnt.c: 638: goto alldone;
+  2052                           
+  2053                           ;doprnt.c: 637: case 0:
+  2054                           
+  2055                           
+  2056                           ;doprnt.c: 809: ((*sp++ = (c)));
+  2057  062F  0874               	movf	sprintf@c,w
+  2058  0630  00F1               	movwf	??_sprintf
+  2059  0631  0875               	movf	sprintf@sp,w
+  2060  0632  0084               	movwf	4
+  2061  0633  0871               	movf	??_sprintf,w
+  2062  0634  1383               	bcf	3,7	;select IRP bank0
+  2063  0635  0080               	movwf	0
+  2064  0636  3001               	movlw	1
+  2065  0637  00F1               	movwf	??_sprintf
+  2066  0638  0871               	movf	??_sprintf,w
+  2067  0639  07F5               	addwf	sprintf@sp,f
+  2068  063A                     l1256:	
+  2069                           ;doprnt.c: 1422: {
+  2070                           
+  2071                           ;doprnt.c: 536: while(c = *f++) {
+  2072                           
+  2073                           ;doprnt.c: 822: }
+  2074                           
+  2075                           ;doprnt.c: 810: continue;
+  2076                           
+  2077  063A  3001               	movlw	1
+  2078  063B  07F0               	addwf	sprintf@f,f
+  2079  063C  30FF               	movlw	-1
+  2080  063D  0770               	addwf	sprintf@f,w
+  2081  063E  0084               	movwf	4
+  2082  063F  120A  118A  2003  120A  118A  	fcall	stringdir
+  2083  0644  00F1               	movwf	??_sprintf
+  2084  0645  0871               	movf	??_sprintf,w
+  2085  0646  00F4               	movwf	sprintf@c
+  2086  0647  0874               	movf	sprintf@c,w
+  2087  0648  1903               	btfsc	3,2
+  2088  0649  2E5F               	goto	l1258
+  2089                           
+  2090                           ;doprnt.c: 538: if(c != '%')
+  2091  064A  3025               	movlw	37
+  2092  064B  0674               	xorwf	sprintf@c,w
+  2093  064C  1D03               	btfss	3,2
+  2094  064D  2E2F               	goto	l1248
+  2095                           
+  2096                           ;doprnt.c: 543: }
+  2097                           ;doprnt.c: 548: flag = 0;
+  2098                           
+  2099                           ;doprnt.c: 542: continue;
+  2100                           
+  2101                           ;doprnt.c: 540: {
+  2102                           ;doprnt.c: 541: ((*sp++ = (c)));
+  2103  064E  01F3               	clrf	sprintf@flag
+  2104  064F  3001               	movlw	1
+  2105  0650  07F0               	addwf	sprintf@f,f
+  2106  0651  30FF               	movlw	-1
+  2107  0652  0770               	addwf	sprintf@f,w
+  2108  0653  0084               	movwf	4
+  2109  0654  120A  118A  2003  120A  118A  	fcall	stringdir
+  2110  0659  00F4               	movwf	sprintf@c
+  2111                           
+  2112                           ; Switch size 1, requested type "space"
+  2113                           ; Number of cases is 1, Range of values is 0 to 0
+  2114                           ; switch strategies available:
+  2115                           ; Name         Instructions Cycles
+  2116                           ; simple_byte            4     3 (average)
+  2117                           ; direct_byte           11     8 (fixed)
+  2118                           ; jumptable            260     6 (fixed)
+  2119                           ;	Chosen strategy is simple_byte
+  2120  065A  3A00               	xorlw	0	; case 0
+  2121  065B  1903               	skipnz
+  2122  065C  2E5F               	goto	l1258
+  2123  065D  2E2F               	goto	l1248
+  2124  065E  2E3A               	goto	l1256
+  2125  065F                     l1258:	
+  2126                           ;doprnt.c: 1469: }
+  2127                           ;doprnt.c: 1533: }
+  2128                           ;doprnt.c: 1535: alldone:
+  2129                           
+  2130                           
+  2131                           ;doprnt.c: 1538: *sp = 0;
+  2132  065F  0875               	movf	sprintf@sp,w
+  2133  0660  0084               	movwf	4
+  2134  0661  1383               	bcf	3,7	;select IRP bank0
+  2135  0662  0180               	clrf	0
+  2136  0663  0008               	return
+  2137  0664                     __end_of_sprintf:	
+  2138                           ;doprnt.c: 1540: return 0;
+  2139                           ;	Return value of _sprintf is never used
+  2140                           
+  2141                           
+  2142                           	psect	text15
+  2143  0579                     __ptext15:	
+  2144 ;; *************** function _USARTWriteString *****************
+  2145 ;; Defined at:
+  2146 ;;		line 76 in file "../usart_pic16.c"
+  2147 ;; Parameters:    Size  Location     Type
+  2148 ;;  str             1    wreg     PTR const unsigned char 
+  2149 ;;		 -> g_debug(64), 
+  2150 ;; Auto vars:     Size  Location     Type
+  2151 ;;  str             1    2[COMMON] PTR const unsigned char 
+  2152 ;;		 -> g_debug(64), 
+  2153 ;; Return value:  Size  Location     Type
+  2154 ;;                  1    wreg      void 
+  2155 ;; Registers used:
+  2156 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  2157 ;; Tracked objects:
+  2158 ;;		On entry : 0/0
+  2159 ;;		On exit  : 0/0
+  2160 ;;		Unchanged: 0/0
+  2161 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2162 ;;      Params:         0       0       0       0       0
+  2163 ;;      Locals:         1       0       0       0       0
+  2164 ;;      Temps:          1       0       0       0       0
+  2165 ;;      Totals:         2       0       0       0       0
+  2166 ;;Total ram usage:        2 bytes
+  2167 ;; Hardware stack levels used:    1
+  2168 ;; Hardware stack levels required when called:    1
+  2169 ;; This function calls:
+  2170 ;;		_USARTWriteChar
+  2171 ;; This function is called by:
+  2172 ;;		_dbg_print_MATRIX88
+  2173 ;;		_USARTWriteLine
+  2174 ;; This function uses a non-reentrant model
+  2175 ;;
+  2176                           
+  2177                           
+  2178                           ;psect for function _USARTWriteString
+  2179  0579                     _USARTWriteString:	
+  2180                           
+  2181                           ;incstack = 0
+  2182                           ; Regs used in _USARTWriteString: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  2183                           ;USARTWriteString@str stored from wreg
+  2184  0579  00F2               	movwf	USARTWriteString@str
+  2185  057A                     l1268:	
+  2186                           ;usart_pic16.c: 77: while (*str != '\0') {
+  2187                           
+  2188  057A  0872               	movf	USARTWriteString@str,w
+  2189  057B  0084               	movwf	4
+  2190  057C  1383               	bcf	3,7	;select IRP bank0
+  2191  057D  0800               	movf	0,w
+  2192  057E  1903               	btfsc	3,2
+  2193  057F  0008               	return
+  2194                           
+  2195                           ;usart_pic16.c: 78: USARTWriteChar(*str);
+  2196  0580  0872               	movf	USARTWriteString@str,w
+  2197  0581  0084               	movwf	4
+  2198  0582  1383               	bcf	3,7	;select IRP bank0
+  2199  0583  0800               	movf	0,w
+  2200  0584  120A  118A  2523  120A  118A  	fcall	_USARTWriteChar
+  2201                           
+  2202                           ;usart_pic16.c: 79: str++;
+  2203  0589  3001               	movlw	1
+  2204  058A  00F1               	movwf	??_USARTWriteString
+  2205  058B  0871               	movf	??_USARTWriteString,w
+  2206  058C  07F2               	addwf	USARTWriteString@str,f
+  2207  058D  2D7A               	goto	l1268
+  2208  058E                     __end_of_USARTWriteString:	
+  2209                           
+  2210                           	psect	text16
+  2211  0523                     __ptext16:	
+  2212 ;; *************** function _USARTWriteChar *****************
+  2213 ;; Defined at:
+  2214 ;;		line 70 in file "../usart_pic16.c"
+  2215 ;; Parameters:    Size  Location     Type
+  2216 ;;  ch              1    wreg     unsigned char 
+  2217 ;; Auto vars:     Size  Location     Type
+  2218 ;;  ch              1    0[COMMON] unsigned char 
+  2219 ;; Return value:  Size  Location     Type
+  2220 ;;                  1    wreg      void 
+  2221 ;; Registers used:
+  2222 ;;		wreg
+  2223 ;; Tracked objects:
+  2224 ;;		On entry : 0/0
+  2225 ;;		On exit  : 0/0
+  2226 ;;		Unchanged: 0/0
+  2227 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2228 ;;      Params:         0       0       0       0       0
+  2229 ;;      Locals:         1       0       0       0       0
+  2230 ;;      Temps:          0       0       0       0       0
+  2231 ;;      Totals:         1       0       0       0       0
+  2232 ;;Total ram usage:        1 bytes
+  2233 ;; Hardware stack levels used:    1
+  2234 ;; This function calls:
+  2235 ;;		Nothing
+  2236 ;; This function is called by:
+  2237 ;;		_USARTWriteString
+  2238 ;;		_USARTWriteLine
+  2239 ;;		_USARTWriteInt
+  2240 ;;		_USARTGotoNewLine
+  2241 ;; This function uses a non-reentrant model
+  2242 ;;
+  2243                           
+  2244                           
+  2245                           ;psect for function _USARTWriteChar
+  2246  0523                     _USARTWriteChar:	
+  2247                           
+  2248                           ;incstack = 0
+  2249                           ; Regs used in _USARTWriteChar: [wreg]
+  2250                           ;USARTWriteChar@ch stored from wreg
+  2251  0523  00F0               	movwf	USARTWriteChar@ch
+  2252  0524                     l146:	
+  2253                           ;usart_pic16.c: 71: while (!PIR1bits.TXIF);
+  2254                           
+  2255  0524  1283               	bcf	3,5	;RP0=0, select bank0
+  2256  0525  1303               	bcf	3,6	;RP1=0, select bank0
+  2257  0526  1E0C               	btfss	12,4	;volatile
+  2258  0527  2D24               	goto	l146
+  2259                           
+  2260                           ;usart_pic16.c: 73: TXREG = ch;
+  2261  0528  0870               	movf	USARTWriteChar@ch,w
+  2262  0529  0099               	movwf	25	;volatile
+  2263  052A  0008               	return
+  2264  052B                     __end_of_USARTWriteChar:	
+  2265  007E                     btemp	set	126	;btemp
+  2266  007E                     wtemp	set	126
+  2267  007E                     wtemp0	set	126
+  2268  0080                     wtemp1	set	128
+  2269  0082                     wtemp2	set	130
+  2270  0084                     wtemp3	set	132
+  2271  0086                     wtemp4	set	134
+  2272  0088                     wtemp5	set	136
+  2273  007F                     wtemp6	set	127
+  2274  007E                     ttemp	set	126
+  2275  007E                     ttemp0	set	126
+  2276  0081                     ttemp1	set	129
+  2277  0084                     ttemp2	set	132
+  2278  0087                     ttemp3	set	135
+  2279  007F                     ttemp4	set	127
+  2280  007E                     ltemp	set	126
+  2281  007E                     ltemp0	set	126
+  2282  0082                     ltemp1	set	130
+  2283  0086                     ltemp2	set	134
+  2284  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     74
+    Constant    0
+    Data        64
+    BSS         103
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     14      14
+    BANK0            80     11      50
+    BANK1            80      0      64
+    BANK3            96      0      64
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    sprintf@f	PTR const unsigned char  size(1) Largest target is 31
+		 -> STR_7(CODE[12]), STR_6(CODE[23]), STR_5(CODE[3]), STR_4(CODE[2]), 
+		 -> STR_3(CODE[2]), STR_2(CODE[31]), STR_1(CODE[4]), 
+
+    sprintf@sp	PTR unsigned char  size(1) Largest target is 64
+		 -> g_debug(BANK1[64]), 
+
+    sprintf@ap	PTR void [1] size(1) Largest target is 2
+		 -> ?_sprintf(COMMON[2]), 
+
+    USARTWriteString@str	PTR const unsigned char  size(1) Largest target is 64
+		 -> g_debug(BANK1[64]), 
+
+    hal_print_MATRIX88@matrix88	PTR const struct . size(1) Largest target is 64
+		 -> g_matrix88(BANK3[64]), 
+
+    hal_print_MATRIX7219@matrix	PTR const struct . size(1) Largest target is 8
+		 -> hal_print_MATRIX88@matrix7219(BANK0[8]), 
+
+    hal_MATRIX88_to_MATRIX7219@matrix88	PTR const struct . size(1) Largest target is 64
+		 -> g_matrix88(BANK3[64]), 
+
+    hal_MATRIX88_to_MATRIX7219@matrix7219	PTR struct . size(1) Largest target is 8
+		 -> hal_print_MATRIX88@matrix7219(BANK0[8]), 
+
+    dbg_print_MATRIX88@matrix	PTR const struct . size(1) Largest target is 64
+		 -> g_matrix88(BANK3[64]), 
+
+    dbg_print_MATRIX88@lable	PTR const unsigned char  size(1) Largest target is 12
+		 -> STR_7(CODE[12]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_dbg_print_MATRIX88
+    _main_init->_max7219_init1
+    _max7219_init1->_Write_Byte
+    _dbg_init->_USARTInit
+    _hal_print_Main_Screen->_hal_print_MATRIX88
+    _hal_print_MATRIX88->_hal_print_MATRIX7219
+    _hal_print_MATRIX7219->_Write_Byte
+    _Write_Byte->_SPI1_write
+    _dbg_print_MATRIX88->_sprintf
+    _USARTWriteString->_USARTWriteChar
+
+Critical Paths under _main in BANK0
+
+    _hal_print_Main_Screen->_hal_print_MATRIX88
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    3078
+                                              9 BANK0      2     2      0
+                 _dbg_print_MATRIX88
+              _hal_print_Main_Screen
+                         _main_close
+                          _main_init
+ ---------------------------------------------------------------------------------
+ (1) _main_init                                            0     0      0     529
+                           _dbg_init
+                      _max7219_init1
+ ---------------------------------------------------------------------------------
+ (2) _max7219_init1                                        1     1      0     454
+                                              6 COMMON     1     1      0
+                         _Write_Byte
+ ---------------------------------------------------------------------------------
+ (2) _dbg_init                                             0     0      0      75
+                          _USARTInit
+ ---------------------------------------------------------------------------------
+ (3) _USARTInit                                            3     1      2      75
+                                              0 COMMON     3     1      2
+ ---------------------------------------------------------------------------------
+ (1) _main_close                                           0     0      0       0
+                          _dbg_close
+ ---------------------------------------------------------------------------------
+ (2) _dbg_close                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _hal_print_Main_Screen                                0     0      0    1040
+                 _hal_print_MATRIX88
+ ---------------------------------------------------------------------------------
+ (2) _hal_print_MATRIX88                                  10    10      0    1040
+                                             10 COMMON     1     1      0
+                                              0 BANK0      9     9      0
+         _hal_MATRIX88_to_MATRIX7219
+               _hal_print_MATRIX7219
+ ---------------------------------------------------------------------------------
+ (3) _hal_print_MATRIX7219                                 4     4      0     593
+                                              6 COMMON     4     4      0
+                         _Write_Byte
+ ---------------------------------------------------------------------------------
+ (3) _Write_Byte                                           2     1      1     454
+                                              4 COMMON     2     1      1
+                         _SPI1_write
+ ---------------------------------------------------------------------------------
+ (4) _SPI1_write                                           4     4      0      92
+                                              0 COMMON     4     4      0
+ ---------------------------------------------------------------------------------
+ (3) _hal_MATRIX88_to_MATRIX7219                           8     7      1     351
+                                              0 COMMON     8     7      1
+ ---------------------------------------------------------------------------------
+ (1) _dbg_print_MATRIX88                                   8     6      2    1509
+                                              6 COMMON     8     6      2
+                   _USARTWriteString
+                            _sprintf
+ ---------------------------------------------------------------------------------
+ (3) _sprintf                                             17    16      1     742
+                                              0 COMMON     6     5      1
+ ---------------------------------------------------------------------------------
+ (2) _USARTWriteString                                     2     2      0     283
+                                              1 COMMON     2     2      0
+                     _USARTWriteChar
+ ---------------------------------------------------------------------------------
+ (3) _USARTWriteChar                                       1     1      0      22
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _dbg_print_MATRIX88
+     _USARTWriteString
+       _USARTWriteChar
+     _sprintf
+   _hal_print_Main_Screen
+     _hal_print_MATRIX88
+       _hal_MATRIX88_to_MATRIX7219
+       _hal_print_MATRIX7219
+         _Write_Byte
+           _SPI1_write
+   _main_close
+     _dbg_close
+   _main_init
+     _dbg_init
+       _USARTInit
+     _max7219_init1
+       _Write_Byte
+         _SPI1_write
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0      40       9       66.7%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0      40       7       80.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      B      32       5       62.5%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      E       E       1      100.0%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      C0      12        0.0%
+ABS                  0      0      C0       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.37 build -260352376 
+Symbol Table                                                                                   Wed Aug 31 09:42:12 2016
+
+                                   pc 0002          ??_hal_MATRIX88_to_MATRIX7219 0071  
+                                  l29 05D7                                    fsr 0004  
+                  USARTInit@baud_rate 0070                                   l107 05A8  
+                                 l146 0524                                   l139 06D9  
+                                 _GIE 005F                                   _RA1 0029  
+                                 _RA2 002A                                   _RA3 002B  
+                                 u595 0708                                   u765 0780  
+                                 fsr0 0004                                   indf 0000  
+               __end_of_max7219_init1 0629                                  l1202 0705  
+                                l1300 077D                                  l1212 072E  
+                                l1310 07AA                                  l1206 0724  
+                                l1160 06B0                                  l1306 0797  
+                                l1314 07B2                                  l1322 07CD  
+                                l1138 05DA                                  l1162 06B2  
+                                l1156 06AC                                  l1318 07C5  
+                                l1158 06AE                                  l1166 06B7  
+                                l1248 062F                                  l1256 063A  
+                                l1280 074D                                  l1258 065F  
+                                l1268 057A                                  l1284 0760  
+                                l1294 0778                                  l1288 0773  
+                                l1642 06C5                                  l1644 06CA  
+                                l1646 06CF                                  l1648 06D4  
+                                STR_1 004B                                  STR_2 0009  
+                                STR_3 004F                                  STR_4 0051  
+                                STR_5 0025                                  STR_6 0028  
+                                STR_7 003F                                  u1267 05DF  
+                                u1277 05E7                                  _PEIE 005E  
+                                _RCIE 0465            __end_of_hal_print_MATRIX88 0579  
+                  _dbg_print_MATRIX88 0733                __end_of_USARTWriteChar 052B  
+                                _main 058E                                  btemp 007E  
+                                ltemp 007E                                  start 0000  
+                                ttemp 007E                                  wtemp 007E  
+         ?_hal_MATRIX88_to_MATRIX7219 0070                   ?_dbg_print_MATRIX88 0076  
+                               ?_main 0070                      USARTWriteChar@ch 0070  
+                               _RCREG 001A                                 _SPBRG 0099  
+                               _TXREG 0019                                 _UQEnd 0045  
+                ??_dbg_print_MATRIX88 0078                           ?_SPI1_write 0070  
+                               pclath 000A                                 ltemp0 007E  
+                               ltemp1 0082                                 ltemp2 0086  
+                               ltemp3 0080                    __size_of_USARTInit 0047  
+                     ?_USARTWriteChar 0070                                 ttemp0 007E  
+                               ttemp1 0081                                 ttemp2 0084  
+                               ttemp3 0087                                 ttemp4 007F  
+                               status 0003                                 wtemp0 007E  
+                               wtemp1 0080                                 wtemp2 0082  
+                               wtemp3 0084                                 wtemp4 0086  
+                               wtemp5 0088                                 wtemp6 007F  
+                     __end_of_sprintf 0664                       __initialization 07DF  
+                        __end_of_main 05A9    hal_MATRIX88_to_MATRIX7219@matrix88 0074  
+                              ??_main 0050         hal_MATRIX88_to_MATRIX7219@col 0077  
+       hal_MATRIX88_to_MATRIX7219@row 0076                      __end_of_dbg_init 0533  
+               _hal_print_Main_Screen 051E                                _URBuff 0020  
+        __end_of_hal_print_MATRIX7219 05C5                   __size_of_SPI1_write 002A  
+            __end_of_USARTWriteString 058E                     __end_of_USARTInit 06EB  
+        hal_print_MATRIX88@matrix7219 0048                             ??_sprintf 0071  
+             __end_of__initialization 07FC                    __size_of_dbg_close 0001  
+                      __pcstackCOMMON 0070                          __pidataBANK3 0664  
+                          _Write_Byte 0555                    __size_of_main_init 0009  
+                          __pbssBANK0 0020                            __pbssBANK1 00A0  
+              ?_hal_print_Main_Screen 0070                            _g_matrix88 0190  
+                          __pmaintext 058E        hal_MATRIX88_to_MATRIX7219@mask 0075  
+                  _hal_print_MATRIX88 0567               hal_print_MATRIX7219@col 0079  
+                 ?_hal_print_MATRIX88 0070                             ?_dbg_init 0070  
+                _hal_print_MATRIX7219 05A9                          ??_SPI1_write 0070  
+                    ??_USARTWriteChar 0070                     __end_of_dbg_close 051A  
+                  USARTWriteInt@F1617 0040                            __stringtab 0003  
+                             _UQFront 0046              dbg_print_MATRIX88@enable 007D  
+                          _main_close 051A              dbg_print_MATRIX88@matrix 0077  
+                ??_hal_print_MATRIX88 007A                           ?_Write_Byte 0074  
+                  __end_of_SPI1_write 05EF                __size_of_max7219_init1 003A  
+                             _g_debug 00A0                     __end_of_main_init 0544  
+                           _ANSELbits 0188                               __ptext1 053B  
+                             __ptext2 05EF                               __ptext3 052B  
+                             __ptext4 06A4                               __ptext5 051A  
+                             __ptext6 0519                               __ptext7 051E  
+                             __ptext8 0567                               __ptext9 05A9  
+                          ??_dbg_init 0073                 ?_hal_print_MATRIX7219 0070  
+                         SPI1_write@i 0073           __size_of_dbg_print_MATRIX88 00AC  
+                             _sprintf 0629                               clrloop0 0534  
+                end_of_initialization 07FC                        SPI1_write@data 0071  
+                      SPI1_write@mask 0072                             _RCSTAbits 0018  
+                   Write_Byte@myValue 0074                     ?_USARTWriteString 0070  
+                  ??_USARTWriteString 0071                             _USARTInit 06A4  
+                           _TRISAbits 0085                         _max7219_init1 05EF  
+                 __size_of_Write_Byte 0012                           ?_main_close 0070  
+                           _TXSTAbits 0098            hal_print_MATRIX7219@matrix 0078  
+              ??_hal_print_MATRIX7219 0076  hal_MATRIX88_to_MATRIX7219@matrix7219 0070  
+                 start_initialization 07DF                            ?_USARTInit 0070  
+                      ?_max7219_init1 0070               ??_hal_print_Main_Screen 007B  
+                          init_fetch0 0544                           __pdataBANK3 0190  
+                 __size_of_main_close 0004                             ___latbits 0002  
+                       __pcstackBANK0 0047                     __size_of_dbg_init 0008  
+ __size_of_hal_MATRIX88_to_MATRIX7219 0048                             _dbg_close 0519  
+                         sprintf@flag 0073                          ??_Write_Byte 0075  
+                           __pstrings 0003               dbg_print_MATRIX88@lable 0076  
+                           _main_init 053B                       ??_max7219_init1 0076  
+                         ??_USARTInit 0072                              ?_sprintf 0070  
+                          ?_dbg_close 0070                    __end_of_Write_Byte 0567  
+                           clear_ram0 0533           __size_of_hal_print_MATRIX88 0012  
+                            _PIR1bits 000C                           __stringbase 0008  
+          __end_of_dbg_print_MATRIX88 07DF                            ?_main_init 0070  
+           __size_of_USARTWriteString 0015                          ??_main_close 0070  
+             __size_of_USARTWriteChar 0008    __end_of_hal_MATRIX88_to_MATRIX7219 0733  
+          _hal_MATRIX88_to_MATRIX7219 06EB            hal_print_MATRIX88@matrix88 0047  
+                  __end_of__stringtab 0009                              _dbg_init 052B  
+                  __end_of_main_close 051E                              __ptext10 0555  
+                            __ptext11 05C5                              __ptext12 06EB  
+                            __ptext13 0733                              __ptext14 0629  
+                            __ptext15 0579                              __ptext16 0523  
+      __size_of_hal_print_Main_Screen 0005                      __size_of_sprintf 003B  
+       __end_of_hal_print_Main_Screen 0523                           ??_dbg_close 0070  
+                       __size_of_main 001B                           ??_main_init 0077  
+       __size_of_hal_print_MATRIX7219 001C                              init_ram0 0548  
+                           sprintf@ap 0072                             sprintf@sp 0075  
+               dbg_print_MATRIX88@col 007C                 dbg_print_MATRIX88@row 007B  
+                           stringcode 0003                    Write_Byte@myColumn 0075  
+                 USARTWriteString@str 0072                              sprintf@c 0074  
+                            sprintf@f 0070                              stringdir 0003  
+                            stringtab 0003                            _SPI1_write 05C5  
+                    _USARTWriteString 0579                        _USARTWriteChar 0523  

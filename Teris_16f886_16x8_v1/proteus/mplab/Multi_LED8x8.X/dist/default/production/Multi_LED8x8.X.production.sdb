@@ -1,0 +1,1306 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 6 ]
+"165 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[e E2102 . `uc
+ALIGN_OK 0
+ALIGN_LEFT_OVER_BOUNDARY 1
+ALIGN_RIGHT_OVER_BOUNDARY 2
+]
+"4 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_matrix.h
+[v _set_matrix_bit set_matrix_bit `(v  1 e 1 0 ]
+"8
+[v _get_matrix_bit get_matrix_bit `(uc  1 e 1 0 ]
+"8 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_operator.h
+[v _setbit setbit `(v  1 e 1 0 ]
+"39
+[v _getbit getbit `(uc  1 e 1 0 ]
+"70
+[v _reverse reverse `(uc  1 e 1 0 ]
+"11 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug.h
+[v _dbg_print_MATRIX4x4 dbg_print_MATRIX4x4 `(v  1 e 1 0 ]
+"48
+[v _dbg_print_MATRIX16x8 dbg_print_MATRIX16x8 `(v  1 e 1 0 ]
+"118
+[v _dbg_print_Screen dbg_print_Screen `(v  1 e 1 0 ]
+"137
+[v _dbg_print_cur_MATRIX4x4 dbg_print_cur_MATRIX4x4 `(v  1 e 1 0 ]
+"116 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug_uart.h
+[v _dbg_init dbg_init `(v  1 e 1 0 ]
+"120
+[v _dbg_close dbg_close `(v  1 e 1 0 ]
+"2 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/eeprom_operator.h
+[v _eeprom_write_int eeprom_write_int `(v  1 e 1 0 ]
+"12
+[v _eeprom_read_int eeprom_read_int `(ui  1 e 2 0 ]
+"10 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/hal.h
+[v _hal_print_Screen hal_print_Screen `(v  1 e 1 0 ]
+"6 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/hal_max7219.h
+[v _hal_MATRIX16x8_to_MATRIX_MATRIX7219 hal_MATRIX16x8_to_MATRIX_MATRIX7219 `(v  1 e 1 0 ]
+"16
+[v _hal_print_MATRIX_MATRIX7219 hal_print_MATRIX_MATRIX7219 `(v  1 e 1 0 ]
+"34
+[v _hal_print_MATRIX16x8 hal_print_MATRIX16x8 `(v  1 e 1 0 ]
+"76 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/common.h
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+"10 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_get_MATRIX4x4 lg_get_MATRIX4x4 `(*.25S27  1 e 1 0 ]
+"14
+[v _lg_clear_matrix lg_clear_matrix `(v  1 e 1 0 ]
+"19
+[v _lg_is_row_full lg_is_row_full `(uc  1 e 1 0 ]
+"30
+[v _lg_delete_matrix_row lg_delete_matrix_row `(v  1 e 1 0 ]
+"47
+[v _lg_delete_matrix lg_delete_matrix `(uc  1 e 1 0 ]
+"71
+[v _lg_get_num_removed_rows lg_get_num_removed_rows `(uc  1 e 1 0 ]
+"85
+[v _lg_is_row_empty lg_is_row_empty `(uc  1 e 1 0 ]
+"93
+[v _lg_hit_land lg_hit_land `(uc  1 e 1 0 ]
+"120
+[v _lg_is_valid lg_is_valid `(uc  1 e 1 0 ]
+"154
+[v _lg_is_left_boundary lg_is_left_boundary `(uc  1 e 1 0 ]
+"172
+[v _lg_is_right_boundary lg_is_right_boundary `(uc  1 e 1 0 ]
+"190
+[v _lg_fall_off lg_fall_off `(uc  1 e 1 0 ]
+"221
+[v _lg_clear lg_clear `(v  1 e 1 0 ]
+"234
+[v _lg_merge lg_merge `(v  1 e 1 0 ]
+"251
+[v _lg_merge1 lg_merge1 `(v  1 e 1 0 ]
+"272
+[v _lg_get_num_of_orphan lg_get_num_of_orphan `(ui  1 e 2 0 ]
+"302
+[v _lg_get_weight lg_get_weight `(ui  1 e 2 0 ]
+"343
+[v _lg_char_info_index_rand lg_char_info_index_rand `(uc  1 e 1 0 ]
+"347
+[v _lg_left_most lg_left_most `(c  1 e 1 0 ]
+"362
+[v _lg_right_most lg_right_most `(c  1 e 1 0 ]
+"377
+[v _lg_get_height lg_get_height `(uc  1 e 1 0 ]
+"389
+[v _lg_get_height_after_merge lg_get_height_after_merge `(uc  1 e 1 0 ]
+"406
+[v _lg_get_holes_after_merge lg_get_holes_after_merge `(uc  1 e 1 0 ]
+"478
+[v _lg_find_best_solution lg_find_best_solution `(uc  1 e 1 0 ]
+"65 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/main.c
+[v _main_init main_init `(v  1 e 1 0 ]
+"85
+[v _main main `(i  1 e 2 0 ]
+"14 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/matrix_matrix7219.h
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+"23
+[v _get_matrix7219 get_matrix7219 `(*.4S19  1 e 1 0 ]
+"27
+[v _get_matrix7219_bit get_matrix7219_bit `(uc  1 e 1 0 ]
+"41
+[v _set_matrix7219_bit set_matrix7219_bit `(uc  1 e 1 0 ]
+"62
+[v _set_matrix_matrix7219_bit set_matrix_matrix7219_bit `(v  1 e 1 0 ]
+"26 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/max7219.h
+[v _SPI1_write SPI1_write `(v  1 e 1 0 ]
+"58
+[v _Write_Matrix Write_Matrix `(v  1 e 1 0 ]
+"87
+[v _max7219_init1 max7219_init1 `(v  1 e 1 0 ]
+"31 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/usart_pic16.c
+[v _USARTInit USARTInit `(v  1 e 1 0 ]
+"67
+[v _USARTWriteChar USARTWriteChar `(v  1 e 1 0 ]
+"73
+[v _USARTWriteString USARTWriteString `(v  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memcpy.c
+[v _memcpy memcpy `(*.5v  1 e 1 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c
+[v _srand srand `(v  1 e 1 0 ]
+"12
+[v _rand rand `(i  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+[s S24 . 2 `uc 1 start_index 1 0 `uc 1 num 1 1 ]
+"84 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/common.h
+[v _g_char_info g_char_info `[9]S24  1 e 18 0 ]
+"105
+[v _g_char_info_index g_char_info_index `uc  1 e 1 0 ]
+"106
+[v _g_char_info_sub_index g_char_info_sub_index `uc  1 e 1 0 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+"107
+[v _g_cur_matrix4x4 g_cur_matrix4x4 `*.25S27  1 e 2 0 ]
+"111
+[v _g_matrix4x4 g_matrix4x4 `DCC[24]S27  1 e 96 0 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+"243
+[v _g_matrix16x8 g_matrix16x8 `S29  1 e 16 0 ]
+"262
+[v _cur_x cur_x `c  1 e 1 0 ]
+"263
+[v _cur_y cur_y `c  1 e 1 0 ]
+"267
+[v _Seed Seed `ui  1 e 2 0 ]
+"6 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug_uart.h
+[v _g_debug g_debug `[64]uc  1 e 64 0 ]
+"476 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _temp_cur_matrix4x4 temp_cur_matrix4x4 `*.25S27  1 e 2 0 ]
+"477
+[v _temp_matrix16x8 temp_matrix16x8 `S29  1 e 16 0 ]
+[s S861 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"462 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic16f886.h
+[u S869 . 1 `S861 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES869  1 e 1 @12 ]
+[s S814 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"963
+[s S823 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S827 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S830 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S833 . 1 `S814 1 . 1 0 `S823 1 . 1 0 `S827 1 . 1 0 `S830 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES833  1 e 1 @24 ]
+"1027
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+[s S52 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1318
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES61  1 e 1 @133 ]
+[s S777 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2371
+[s S786 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S790 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S793 . 1 `S777 1 . 1 0 `S786 1 . 1 0 `S790 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES793  1 e 1 @152 ]
+"2430
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"3022
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"3033
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+[s S73 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+]
+"3172
+[u S79 . 1 `S73 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES79  1 e 1 @392 ]
+"3250
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"3294
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"3440
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"3526
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"3622
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"3650
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"3652
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"3654
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"3710
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"3714
+[v _RD RD `VEb  1 e 0 @3168 ]
+"3970
+[v _WR WR `VEb  1 e 0 @3169 ]
+"3972
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+[v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
+"362
+[v _hexpowers hexpowers `DCC[4]ui  1 s 8 hexpowers ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c
+[v _randx randx `l  1 s 4 randx ]
+"85 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"115
+[v main@n_769 n `i  1 a 2 73 ]
+"105
+[v main@n_765 n `i  1 a 2 71 ]
+"102
+[v main@n n `i  1 a 2 69 ]
+"89
+[v main@hit_res hit_res `uc  1 a 1 75 ]
+"154
+} 0
+"65
+[v _main_init main_init `(v  1 e 1 0 ]
+{
+"78
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c
+[v _srand srand `(v  1 e 1 0 ]
+{
+[v srand@x x `ui  1 p 2 0 ]
+"9
+} 0
+"87 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/max7219.h
+[v _max7219_init1 max7219_init1 `(v  1 e 1 0 ]
+{
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+"99
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v max7219_init1@matrix matrix `S22  1 a 16 1 ]
+"115
+} 0
+"12 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/eeprom_operator.h
+[v _eeprom_read_int eeprom_read_int `(ui  1 e 2 0 ]
+{
+[v eeprom_read_int@at at `uc  1 a 1 wreg ]
+"17
+[v eeprom_read_int@n n `i  1 a 2 25 ]
+"14
+[v eeprom_read_int@value value `ui  1 a 2 28 ]
+"12
+[v eeprom_read_int@at at `uc  1 a 1 wreg ]
+"14
+[v eeprom_read_int@at at `uc  1 a 1 27 ]
+"19
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 1 ]
+"12
+} 0
+"116 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug_uart.h
+[v _dbg_init dbg_init `(v  1 e 1 0 ]
+{
+"119
+} 0
+"31 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/usart_pic16.c
+[v _USARTInit USARTInit `(v  1 e 1 0 ]
+{
+[v USARTInit@baud_rate baud_rate `ui  1 p 2 0 ]
+"65
+} 0
+"234 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_merge lg_merge `(v  1 e 1 0 ]
+{
+[v lg_merge@x x `c  1 a 1 wreg ]
+"241
+[v lg_merge@col col `uc  1 a 1 58 ]
+"239
+[v lg_merge@row row `uc  1 a 1 57 ]
+"234
+[v lg_merge@x x `c  1 a 1 wreg ]
+[v lg_merge@y y `c  1 p 1 50 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_merge@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 51 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_merge@matrix16x8 matrix16x8 `*.4S29  1 p 1 53 ]
+"236
+[v lg_merge@x x `c  1 a 1 56 ]
+"250
+} 0
+"93
+[v _lg_hit_land lg_hit_land `(uc  1 e 1 0 ]
+{
+[v lg_hit_land@x x `c  1 a 1 wreg ]
+"111
+[v lg_hit_land@n_485 n `i  1 a 2 31 ]
+"105
+[v lg_hit_land@n_481 n `i  1 a 2 29 ]
+"99
+[v lg_hit_land@col col `c  1 a 1 36 ]
+"117
+[v lg_hit_land@n_488 n `i  1 a 2 33 ]
+"95
+[v lg_hit_land@n n `i  1 a 2 27 ]
+"97
+[v lg_hit_land@row row `c  1 a 1 37 ]
+"93
+[v lg_hit_land@x x `c  1 a 1 wreg ]
+[v lg_hit_land@y y `c  1 p 1 21 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_hit_land@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 22 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_hit_land@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 24 ]
+[v lg_hit_land@x x `c  1 a 1 35 ]
+"119
+} 0
+"478
+[v _lg_find_best_solution lg_find_best_solution `(uc  1 e 1 0 ]
+{
+"533
+[v lg_find_best_solution@n_720 n `i  1 a 2 24 ]
+"540
+[v lg_find_best_solution@n_723 n `i  1 a 2 26 ]
+"530
+[v lg_find_best_solution@n_717 n `i  1 a 2 22 ]
+"529
+[v lg_find_best_solution@n_714 n `i  1 a 2 20 ]
+"568
+[v lg_find_best_solution@n_731 n `i  1 a 2 30 ]
+"557
+[v lg_find_best_solution@n_728 n `i  1 a 2 28 ]
+"497
+[v lg_find_best_solution@temp_x temp_x `c  1 a 1 45 ]
+"480
+[v lg_find_best_solution@n n `i  1 a 2 18 ]
+"491
+[v lg_find_best_solution@tem_sub_index tem_sub_index `uc  1 a 1 39 ]
+"488
+[v lg_find_best_solution@temp_risk temp_risk `i  1 a 2 43 ]
+"486
+[v lg_find_best_solution@temp_pre_risk temp_pre_risk `i  1 a 2 41 ]
+"489
+[v lg_find_best_solution@temp_high temp_high `ui  1 a 2 35 ]
+"487
+[v lg_find_best_solution@temp_y temp_y `c  1 a 1 40 ]
+"485
+[v lg_find_best_solution@tem_pre_sub_index tem_pre_sub_index `c  1 a 1 38 ]
+[v lg_find_best_solution@temp_pre_x temp_pre_x `c  1 a 1 37 ]
+"482
+[v lg_find_best_solution@res res `uc  1 a 1 34 ]
+"483
+[v lg_find_best_solution@right_most_index right_most_index `c  1 a 1 33 ]
+[v lg_find_best_solution@left_most_index left_most_index `c  1 a 1 32 ]
+"571
+} 0
+"362
+[v _lg_right_most lg_right_most `(c  1 e 1 0 ]
+{
+[v lg_right_most@x x `c  1 a 1 wreg ]
+"371
+[v lg_right_most@n n `i  1 a 2 36 ]
+"362
+[v lg_right_most@x x `c  1 a 1 wreg ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_right_most@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 31 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_right_most@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 33 ]
+[v lg_right_most@x x `c  1 a 1 38 ]
+"376
+} 0
+"172
+[v _lg_is_right_boundary lg_is_right_boundary `(uc  1 e 1 0 ]
+{
+[v lg_is_right_boundary@x x `c  1 a 1 wreg ]
+"182
+[v lg_is_right_boundary@n n `i  1 a 2 26 ]
+"176
+[v lg_is_right_boundary@col col `c  1 a 1 30 ]
+"174
+[v lg_is_right_boundary@row row `c  1 a 1 29 ]
+"172
+[v lg_is_right_boundary@x x `c  1 a 1 wreg ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_is_right_boundary@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 21 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_is_right_boundary@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 23 ]
+"174
+[v lg_is_right_boundary@x x `c  1 a 1 28 ]
+"189
+} 0
+"251
+[v _lg_merge1 lg_merge1 `(v  1 e 1 0 ]
+{
+[v lg_merge1@x x `c  1 a 1 wreg ]
+"263
+[v lg_merge1@col col `uc  1 a 1 11 ]
+"261
+[v lg_merge1@row row `uc  1 a 1 10 ]
+"254
+[v lg_merge1@len len `ui  1 a 2 8 ]
+"251
+[v lg_merge1@x x `c  1 a 1 wreg ]
+[v lg_merge1@y y `c  1 p 1 0 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_merge1@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 1 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_merge1@matrix16x8_in matrix16x8_in `*.4DCCS29  1 p 1 3 ]
+[v lg_merge1@matrix16x8_out matrix16x8_out `*.5S29  1 p 1 4 ]
+"258
+[v lg_merge1@x x `c  1 a 1 7 ]
+"271
+} 0
+"11 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memcpy.c
+[v _memcpy memcpy `(*.5v  1 e 1 0 ]
+{
+[v memcpy@d1 d1 `*.5v  1 a 1 wreg ]
+"20
+[v memcpy@s s `*.4DCCuc  1 a 1 6 ]
+"18
+[v memcpy@d d `*.5uc  1 a 1 5 ]
+"11
+[v memcpy@d1 d1 `*.5v  1 a 1 wreg ]
+[v memcpy@s1 s1 `*.4DCCv  1 p 1 0 ]
+[v memcpy@n n `ui  1 p 2 1 ]
+"24
+[v memcpy@d1 d1 `*.5v  1 a 1 4 ]
+"32
+} 0
+"347 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_left_most lg_left_most `(c  1 e 1 0 ]
+{
+[v lg_left_most@x x `c  1 a 1 wreg ]
+"356
+[v lg_left_most@n n `i  1 a 2 38 ]
+"347
+[v lg_left_most@x x `c  1 a 1 wreg ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_left_most@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 34 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_left_most@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 36 ]
+[v lg_left_most@x x `c  1 a 1 40 ]
+"361
+} 0
+"154
+[v _lg_is_left_boundary lg_is_left_boundary `(uc  1 e 1 0 ]
+{
+[v lg_is_left_boundary@x x `c  1 a 1 wreg ]
+"164
+[v lg_is_left_boundary@n n `i  1 a 2 29 ]
+"158
+[v lg_is_left_boundary@col col `c  1 a 1 33 ]
+"156
+[v lg_is_left_boundary@row row `c  1 a 1 32 ]
+"154
+[v lg_is_left_boundary@x x `c  1 a 1 wreg ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_is_left_boundary@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 21 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_is_left_boundary@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 23 ]
+"156
+[v lg_is_left_boundary@x x `c  1 a 1 31 ]
+"171
+} 0
+"120
+[v _lg_is_valid lg_is_valid `(uc  1 e 1 0 ]
+{
+[v lg_is_valid@x x `c  1 a 1 wreg ]
+"145
+[v lg_is_valid@n_518 n `i  1 a 2 39 ]
+"144
+[v lg_is_valid@n_515 n `i  1 a 2 37 ]
+"139
+[v lg_is_valid@n_512 n `i  1 a 2 35 ]
+"138
+[v lg_is_valid@n_509 n `i  1 a 2 33 ]
+"132
+[v lg_is_valid@n_506 n `i  1 a 2 31 ]
+"131
+[v lg_is_valid@n_503 n `i  1 a 2 29 ]
+"125
+[v lg_is_valid@col col `c  1 a 1 45 ]
+"151
+[v lg_is_valid@n_521 n `i  1 a 2 41 ]
+"122
+[v lg_is_valid@n n `i  1 a 2 27 ]
+"123
+[v lg_is_valid@row row `c  1 a 1 44 ]
+"120
+[v lg_is_valid@x x `c  1 a 1 wreg ]
+[v lg_is_valid@y y `c  1 p 1 21 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_is_valid@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 22 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_is_valid@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 24 ]
+[v lg_is_valid@x x `c  1 a 1 43 ]
+"153
+} 0
+"302
+[v _lg_get_weight lg_get_weight `(ui  1 e 2 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_get_weight@matrix matrix `*.5DCCS29  1 a 1 wreg ]
+"311
+[v lg_get_weight@row row `c  1 a 1 34 ]
+"338
+[v lg_get_weight@n n `i  1 a 2 26 ]
+"307
+[v lg_get_weight@col col `uc  1 a 1 33 ]
+"305
+[v lg_get_weight@risk risk `ui  1 a 2 29 ]
+"306
+[v lg_get_weight@pre pre `uc  1 a 1 32 ]
+"304
+[v lg_get_weight@start start `uc  1 a 1 28 ]
+"302
+[v lg_get_weight@matrix matrix `*.5DCCS29  1 a 1 wreg ]
+"305
+"302
+[v lg_get_weight@matrix matrix `*.5DCCS29  1 a 1 31 ]
+"341
+} 0
+"71
+[v _lg_get_num_removed_rows lg_get_num_removed_rows `(uc  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_get_num_removed_rows@matrix matrix `*.5S29  1 a 1 wreg ]
+"81
+[v lg_get_num_removed_rows@n n `i  1 a 2 57 ]
+"74
+[v lg_get_num_removed_rows@row row `c  1 a 1 61 ]
+"73
+[v lg_get_num_removed_rows@count count `uc  1 a 1 60 ]
+"71
+[v lg_get_num_removed_rows@matrix matrix `*.5S29  1 a 1 wreg ]
+"73
+"71
+[v lg_get_num_removed_rows@matrix matrix `*.5S29  1 a 1 59 ]
+"83
+} 0
+"272
+[v _lg_get_num_of_orphan lg_get_num_of_orphan `(ui  1 e 2 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_get_num_of_orphan@matrix matrix `*.5DCCS29  1 a 1 wreg ]
+"279
+[v lg_get_num_of_orphan@row row `c  1 a 1 33 ]
+"298
+[v lg_get_num_of_orphan@n n `i  1 a 2 26 ]
+"276
+[v lg_get_num_of_orphan@col col `uc  1 a 1 32 ]
+"274
+[v lg_get_num_of_orphan@risk risk `ui  1 a 2 28 ]
+"275
+[v lg_get_num_of_orphan@full full `uc  1 a 1 30 ]
+"272
+[v lg_get_num_of_orphan@matrix matrix `*.5DCCS29  1 a 1 wreg ]
+"274
+"272
+[v lg_get_num_of_orphan@matrix matrix `*.5DCCS29  1 a 1 31 ]
+"301
+} 0
+"406
+[v _lg_get_holes_after_merge lg_get_holes_after_merge `(uc  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_get_holes_after_merge@matrix matrix `*.5S29  1 a 1 wreg ]
+"469
+[v lg_get_holes_after_merge@n_675 n `i  1 a 2 31 ]
+"468
+[v lg_get_holes_after_merge@n_672 n `i  1 a 2 29 ]
+"467
+[v lg_get_holes_after_merge@n n `i  1 a 2 27 ]
+"414
+[v lg_get_holes_after_merge@row row `c  1 a 1 40 ]
+"473
+[v lg_get_holes_after_merge@n_678 n `i  1 a 2 33 ]
+"411
+[v lg_get_holes_after_merge@col col `c  1 a 1 39 ]
+"408
+[v lg_get_holes_after_merge@start start `c  1 a 1 37 ]
+"409
+[v lg_get_holes_after_merge@stop stop `c  1 a 1 36 ]
+"410
+[v lg_get_holes_after_merge@num_hole num_hole `uc  1 a 1 35 ]
+"406
+[v lg_get_holes_after_merge@matrix matrix `*.5S29  1 a 1 wreg ]
+"408
+"406
+[v lg_get_holes_after_merge@matrix matrix `*.5S29  1 a 1 38 ]
+"475
+} 0
+"389
+[v _lg_get_height_after_merge lg_get_height_after_merge `(uc  1 e 1 0 ]
+{
+[v lg_get_height_after_merge@y y `c  1 a 1 wreg ]
+"400
+[v lg_get_height_after_merge@n_658 n `i  1 a 2 31 ]
+"399
+[v lg_get_height_after_merge@n_655 n `i  1 a 2 29 ]
+"398
+[v lg_get_height_after_merge@n_652 n `i  1 a 2 27 ]
+"394
+[v lg_get_height_after_merge@col col `c  1 a 1 34 ]
+"391
+[v lg_get_height_after_merge@n n `i  1 a 2 25 ]
+"392
+[v lg_get_height_after_merge@row row `c  1 a 1 35 ]
+"389
+[v lg_get_height_after_merge@y y `c  1 a 1 wreg ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_get_height_after_merge@matrix matrix `*.25S27  1 p 2 21 ]
+[v lg_get_height_after_merge@y y `c  1 a 1 33 ]
+"405
+} 0
+"377
+[v _lg_get_height lg_get_height `(uc  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_get_height@matrix matrix `*.4S29  1 a 1 wreg ]
+"383
+[v lg_get_height@n n `i  1 a 2 23 ]
+"379
+[v lg_get_height@row row `c  1 a 1 26 ]
+"377
+[v lg_get_height@matrix matrix `*.4S29  1 a 1 wreg ]
+"379
+"377
+[v lg_get_height@matrix matrix `*.4S29  1 a 1 25 ]
+"388
+} 0
+"85
+[v _lg_is_row_empty lg_is_row_empty `(uc  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_is_row_empty@matrix matrix `*.4DCCS29  1 a 1 wreg ]
+[v lg_is_row_empty@matrix matrix `*.4DCCS29  1 a 1 wreg ]
+[v lg_is_row_empty@row row `uc  1 p 1 0 ]
+"87
+"85
+[v lg_is_row_empty@matrix matrix `*.4DCCS29  1 a 1 1 ]
+"92
+} 0
+"190
+[v _lg_fall_off lg_fall_off `(uc  1 e 1 0 ]
+{
+[v lg_fall_off@x x `c  1 a 1 wreg ]
+"212
+[v lg_fall_off@n_562 n `i  1 a 2 33 ]
+"211
+[v lg_fall_off@n_559 n `i  1 a 2 31 ]
+"206
+[v lg_fall_off@n_556 n `i  1 a 2 29 ]
+"205
+[v lg_fall_off@n n `i  1 a 2 27 ]
+"196
+[v lg_fall_off@col col `c  1 a 1 36 ]
+"194
+[v lg_fall_off@row row `c  1 a 1 37 ]
+"190
+[v lg_fall_off@x x `c  1 a 1 wreg ]
+[v lg_fall_off@y y `c  1 p 1 21 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_fall_off@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 22 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_fall_off@matrix16x8 matrix16x8 `*.4DCCS29  1 p 1 24 ]
+[v lg_fall_off@x x `c  1 a 1 35 ]
+"220
+} 0
+"137 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug.h
+[v _dbg_print_cur_MATRIX4x4 dbg_print_cur_MATRIX4x4 `(v  1 e 1 0 ]
+{
+[v dbg_print_cur_MATRIX4x4@enable enable `uc  1 a 1 wreg ]
+"144
+[v dbg_print_cur_MATRIX4x4@n_384 n `i  1 a 2 60 ]
+"143
+[v dbg_print_cur_MATRIX4x4@n n `i  1 a 2 58 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+"146
+[v dbg_print_cur_MATRIX4x4@matrix matrix `*.25S27  1 a 2 62 ]
+"137
+[v dbg_print_cur_MATRIX4x4@enable enable `uc  1 a 1 wreg ]
+[v dbg_print_cur_MATRIX4x4@lable lable `*.25DCCuc  1 p 2 50 ]
+[v dbg_print_cur_MATRIX4x4@x x `c  1 p 1 52 ]
+[v dbg_print_cur_MATRIX4x4@y y `c  1 p 1 53 ]
+"139
+[v dbg_print_cur_MATRIX4x4@enable enable `uc  1 a 1 64 ]
+"149
+} 0
+"11
+[v _dbg_print_MATRIX4x4 dbg_print_MATRIX4x4 `(v  1 e 1 0 ]
+{
+[v dbg_print_MATRIX4x4@enable enable `uc  1 a 1 wreg ]
+"33
+[v dbg_print_MATRIX4x4@n_306 n `i  1 a 2 41 ]
+"29
+[v dbg_print_MATRIX4x4@n_303 n `i  1 a 2 39 ]
+"36
+[v dbg_print_MATRIX4x4@n_309 n `i  1 a 2 43 ]
+"23
+[v dbg_print_MATRIX4x4@col col `c  1 a 1 49 ]
+"18
+[v dbg_print_MATRIX4x4@n_293 n `i  1 a 2 35 ]
+"17
+[v dbg_print_MATRIX4x4@n n `i  1 a 2 33 ]
+"38
+[v dbg_print_MATRIX4x4@n_312 n `i  1 a 2 45 ]
+"20
+[v dbg_print_MATRIX4x4@n_296 n `i  1 a 2 37 ]
+"21
+[v dbg_print_MATRIX4x4@row row `c  1 a 1 48 ]
+"11
+[v dbg_print_MATRIX4x4@enable enable `uc  1 a 1 wreg ]
+[v dbg_print_MATRIX4x4@lable lable `*.25DCCuc  1 p 2 21 ]
+[v dbg_print_MATRIX4x4@x x `c  1 p 1 23 ]
+[v dbg_print_MATRIX4x4@y y `c  1 p 1 24 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v dbg_print_MATRIX4x4@matrix matrix `*.25DCCS27  1 p 2 25 ]
+"13
+[v dbg_print_MATRIX4x4@enable enable `uc  1 a 1 47 ]
+"41
+} 0
+"118
+[v _dbg_print_Screen dbg_print_Screen `(v  1 e 1 0 ]
+{
+[v dbg_print_Screen@enable enable `uc  1 a 1 wreg ]
+"125
+[v dbg_print_Screen@n_373 n `i  1 a 2 49 ]
+"124
+[v dbg_print_Screen@n n `i  1 a 2 47 ]
+"118
+[v dbg_print_Screen@enable enable `uc  1 a 1 wreg ]
+[v dbg_print_Screen@lable lable `*.25DCCuc  1 p 2 44 ]
+"120
+[v dbg_print_Screen@enable enable `uc  1 a 1 46 ]
+"130
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 45 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 41 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 43 ]
+"53
+} 0
+"47 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_delete_matrix lg_delete_matrix `(uc  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_delete_matrix@matrix matrix `*.4S29  1 a 1 wreg ]
+"68
+[v lg_delete_matrix@n n `i  1 a 2 57 ]
+"50
+[v lg_delete_matrix@row row `c  1 a 1 61 ]
+"49
+[v lg_delete_matrix@count count `uc  1 a 1 59 ]
+"47
+[v lg_delete_matrix@matrix matrix `*.4S29  1 a 1 wreg ]
+"49
+"47
+[v lg_delete_matrix@matrix matrix `*.4S29  1 a 1 60 ]
+"70
+} 0
+"19
+[v _lg_is_row_full lg_is_row_full `(uc  1 e 1 0 ]
+{
+"24
+[v lg_is_row_full@n_439 n `i  1 a 2 53 ]
+"23
+[v lg_is_row_full@n n `i  1 a 2 51 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+"19
+[v lg_is_row_full@matrix matrix `*.39DCCS29  1 p 2 44 ]
+[v lg_is_row_full@row row `uc  1 p 1 46 ]
+"29
+} 0
+"48 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/debug.h
+[v _dbg_print_MATRIX16x8 dbg_print_MATRIX16x8 `(v  1 e 1 0 ]
+{
+[v dbg_print_MATRIX16x8@enable enable `uc  1 a 1 wreg ]
+"68
+[v dbg_print_MATRIX16x8@n_333 n `i  1 a 2 35 ]
+"64
+[v dbg_print_MATRIX16x8@n_330 n `i  1 a 2 33 ]
+"71
+[v dbg_print_MATRIX16x8@n_336 n `i  1 a 2 37 ]
+"60
+[v dbg_print_MATRIX16x8@col col `uc  1 a 1 43 ]
+"55
+[v dbg_print_MATRIX16x8@n_321 n `i  1 a 2 29 ]
+"54
+[v dbg_print_MATRIX16x8@n n `i  1 a 2 27 ]
+"73
+[v dbg_print_MATRIX16x8@n_339 n `i  1 a 2 39 ]
+"57
+[v dbg_print_MATRIX16x8@n_324 n `i  1 a 2 31 ]
+"58
+[v dbg_print_MATRIX16x8@row row `uc  1 a 1 42 ]
+"48
+[v dbg_print_MATRIX16x8@enable enable `uc  1 a 1 wreg ]
+[v dbg_print_MATRIX16x8@lable lable `*.25DCCuc  1 p 2 21 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v dbg_print_MATRIX16x8@matrix matrix `*.39DCCS29  1 p 2 23 ]
+"50
+[v dbg_print_MATRIX16x8@enable enable `uc  1 a 1 41 ]
+"75
+} 0
+"30 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_delete_matrix_row lg_delete_matrix_row `(v  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_delete_matrix_row@matrix matrix `*.4S29  1 a 1 wreg ]
+"32
+[v lg_delete_matrix_row@i i `c  1 a 1 5 ]
+"30
+[v lg_delete_matrix_row@matrix matrix `*.4S29  1 a 1 wreg ]
+[v lg_delete_matrix_row@row row `uc  1 p 1 0 ]
+"32
+"30
+[v lg_delete_matrix_row@matrix matrix `*.4S29  1 a 1 4 ]
+"46
+} 0
+"14
+[v _lg_clear_matrix lg_clear_matrix `(v  1 e 1 0 ]
+{
+"18
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+{
+[v memset@p1 p1 `*.4v  1 a 1 wreg ]
+"15
+[v memset@p p `*.4uc  1 a 1 5 ]
+"8
+[v memset@p1 p1 `*.4v  1 a 1 wreg ]
+[v memset@c c `i  1 p 2 0 ]
+[v memset@n n `ui  1 p 2 2 ]
+"18
+[v memset@p1 p1 `*.4v  1 a 1 6 ]
+"22
+} 0
+"10 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/hal.h
+[v _hal_print_Screen hal_print_Screen `(v  1 e 1 0 ]
+{
+"13
+} 0
+"34 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/hal_max7219.h
+[v _hal_print_MATRIX16x8 hal_print_MATRIX16x8 `(v  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v hal_print_MATRIX16x8@matrix88 matrix88 `*.4DCCS29  1 a 1 wreg ]
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+"36
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v hal_print_MATRIX16x8@matrix7219 matrix7219 `S22  1 a 16 24 ]
+"34
+[v hal_print_MATRIX16x8@matrix88 matrix88 `*.4DCCS29  1 a 1 wreg ]
+"37
+"34
+[v hal_print_MATRIX16x8@matrix88 matrix88 `*.4DCCS29  1 a 1 23 ]
+"39
+} 0
+"16
+[v _hal_print_MATRIX_MATRIX7219 hal_print_MATRIX_MATRIX7219 `(v  1 e 1 0 ]
+{
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v hal_print_MATRIX_MATRIX7219@matrix7219 matrix7219 `*.4DCCS22  1 a 1 wreg ]
+"26
+[v hal_print_MATRIX_MATRIX7219@matrix_col matrix_col `uc  1 a 1 13 ]
+"24
+[v hal_print_MATRIX_MATRIX7219@matrix_row matrix_row `uc  1 a 1 12 ]
+[s S49 . 2 `[2][1]uc 1 data 2 0 ]
+"18
+[v hal_print_MATRIX_MATRIX7219@matrix matrix `S49  1 a 2 9 ]
+"20
+[v hal_print_MATRIX_MATRIX7219@col col `uc  1 a 1 11 ]
+"16
+[v hal_print_MATRIX_MATRIX7219@matrix7219 matrix7219 `*.4DCCS22  1 a 1 wreg ]
+"22
+"16
+[v hal_print_MATRIX_MATRIX7219@matrix7219 matrix7219 `*.4DCCS22  1 a 1 8 ]
+"33
+} 0
+"58 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/max7219.h
+[v _Write_Matrix Write_Matrix `(v  1 e 1 0 ]
+{
+[s S49 . 2 `[2][1]uc 1 data 2 0 ]
+[v Write_Matrix@matrix matrix `*.4DCCS49  1 a 1 wreg ]
+"66
+[v Write_Matrix@col col `uc  1 a 1 12 ]
+"64
+[v Write_Matrix@row row `uc  1 a 1 13 ]
+"63
+[v Write_Matrix@value value `uc  1 a 1 10 ]
+"62
+[v Write_Matrix@at at `uc  1 a 1 9 ]
+"58
+[v Write_Matrix@matrix matrix `*.4DCCS49  1 a 1 wreg ]
+[v Write_Matrix@option option `uc  1 p 1 4 ]
+[v Write_Matrix@column column `uc  1 p 1 5 ]
+"60
+"58
+[v Write_Matrix@matrix matrix `*.4DCCS49  1 a 1 11 ]
+"84
+} 0
+"70 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_operator.h
+[v _reverse reverse `(uc  1 e 1 0 ]
+{
+[v reverse@byte byte `uc  1 a 1 wreg ]
+[s S31 . 1 `uc 1 b0 1 0 :1:0 
+`uc 1 b1 1 0 :1:1 
+`uc 1 b2 1 0 :1:2 
+`uc 1 b3 1 0 :1:3 
+`uc 1 b4 1 0 :1:4 
+`uc 1 b5 1 0 :1:5 
+`uc 1 b6 1 0 :1:6 
+`uc 1 b7 1 0 :1:7 
+]
+"72
+[v reverse@temp temp `*.1S31  1 a 1 3 ]
+"73
+[v reverse@res res `S31  1 a 1 2 ]
+"70
+[v reverse@byte byte `uc  1 a 1 wreg ]
+"72
+[v reverse@byte byte `uc  1 a 1 1 ]
+"85
+} 0
+"26 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/max7219.h
+[v _SPI1_write SPI1_write `(v  1 e 1 0 ]
+{
+[v SPI1_write@data data `uc  1 a 1 wreg ]
+"29
+[v SPI1_write@i i `uc  1 a 1 3 ]
+"28
+[v SPI1_write@mask mask `uc  1 a 1 2 ]
+"26
+[v SPI1_write@data data `uc  1 a 1 wreg ]
+"28
+[v SPI1_write@data data `uc  1 a 1 1 ]
+"48
+} 0
+"6 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/hal_max7219.h
+[v _hal_MATRIX16x8_to_MATRIX_MATRIX7219 hal_MATRIX16x8_to_MATRIX_MATRIX7219 `(v  1 e 1 0 ]
+{
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix16x8 matrix16x8 `*.4DCCS29  1 a 1 wreg ]
+"10
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@row row `uc  1 a 1 21 ]
+"8
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@col col `uc  1 a 1 20 ]
+"6
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix16x8 matrix16x8 `*.4DCCS29  1 a 1 wreg ]
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix7219 matrix7219 `*.4S22  1 p 1 13 ]
+"8
+"6
+[v hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix16x8 matrix16x8 `*.4DCCS29  1 a 1 19 ]
+"15
+} 0
+"62 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/matrix_matrix7219.h
+[v _set_matrix_matrix7219_bit set_matrix_matrix7219_bit `(v  1 e 1 0 ]
+{
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v set_matrix_matrix7219_bit@matrix_matrix matrix_matrix `*.4S22  1 a 1 wreg ]
+"64
+[v set_matrix_matrix7219_bit@matrix matrix `*.4S19  1 a 1 12 ]
+"62
+[v set_matrix_matrix7219_bit@matrix_matrix matrix_matrix `*.4S22  1 a 1 wreg ]
+[v set_matrix_matrix7219_bit@matrix_row matrix_row `uc  1 p 1 7 ]
+[v set_matrix_matrix7219_bit@matrix_col matrix_col `uc  1 p 1 8 ]
+[v set_matrix_matrix7219_bit@value value `uc  1 p 1 9 ]
+"64
+"62
+[v set_matrix_matrix7219_bit@matrix_matrix matrix_matrix `*.4S22  1 a 1 13 ]
+"67
+} 0
+"41
+[v _set_matrix7219_bit set_matrix7219_bit `(uc  1 e 1 0 ]
+{
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+[v set_matrix7219_bit@matrix matrix `*.4S19  1 a 1 wreg ]
+"43
+[v set_matrix7219_bit@mask mask `uc  1 a 1 8 ]
+"41
+[v set_matrix7219_bit@matrix matrix `*.4S19  1 a 1 wreg ]
+[v set_matrix7219_bit@row row `uc  1 p 1 0 ]
+[v set_matrix7219_bit@col col `uc  1 p 1 1 ]
+[v set_matrix7219_bit@value value `uc  1 p 1 2 ]
+"43
+"41
+[v set_matrix7219_bit@matrix matrix `*.4S19  1 a 1 7 ]
+"54
+} 0
+"14
+[s S19 . 8 `[8]uc 1 data 8 0 ]
+"23
+[v _get_matrix7219 get_matrix7219 `(*.4S19  1 e 1 0 ]
+{
+[s S22 . 16 `[2][1]S19 1 data 16 0 ]
+[v get_matrix7219@matrix_matrix matrix_matrix `*.4DCCS22  1 a 1 wreg ]
+[v get_matrix7219@matrix_matrix matrix_matrix `*.4DCCS22  1 a 1 wreg ]
+[v get_matrix7219@matrix_row matrix_row `uc  1 p 1 9 ]
+[v get_matrix7219@matrix_col matrix_col `uc  1 p 1 10 ]
+"25
+"23
+[v get_matrix7219@matrix_matrix matrix_matrix `*.4DCCS22  1 a 1 11 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"221 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_clear lg_clear `(v  1 e 1 0 ]
+{
+[v lg_clear@x x `c  1 a 1 wreg ]
+"225
+[v lg_clear@col col `uc  1 a 1 8 ]
+"223
+[v lg_clear@row row `uc  1 a 1 7 ]
+"221
+[v lg_clear@x x `c  1 a 1 wreg ]
+[v lg_clear@y y `c  1 p 1 0 ]
+[s S27 . 4 `[4]uc 1 row 4 0 ]
+[v lg_clear@matrix4x4 matrix4x4 `*.25DCCS27  1 p 2 1 ]
+[s S29 . 16 `[16]uc 1 row 16 0 ]
+[v lg_clear@matrix16x8 matrix16x8 `*.4S29  1 p 1 3 ]
+"223
+[v lg_clear@x x `c  1 a 1 6 ]
+"233
+} 0
+"4 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_matrix.h
+[v _set_matrix_bit set_matrix_bit `(v  1 e 1 0 ]
+{
+[v set_matrix_bit@byte byte `*.39uc  1 p 2 6 ]
+[v set_matrix_bit@row row `uc  1 p 1 8 ]
+[v set_matrix_bit@col col `uc  1 p 1 9 ]
+[v set_matrix_bit@value value `uc  1 p 1 10 ]
+"7
+} 0
+"8 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_operator.h
+[v _setbit setbit `(v  1 e 1 0 ]
+{
+[s S31 . 1 `uc 1 b0 1 0 :1:0 
+`uc 1 b1 1 0 :1:1 
+`uc 1 b2 1 0 :1:2 
+`uc 1 b3 1 0 :1:3 
+`uc 1 b4 1 0 :1:4 
+`uc 1 b5 1 0 :1:5 
+`uc 1 b6 1 0 :1:6 
+`uc 1 b7 1 0 :1:7 
+]
+"10
+[v setbit@temp temp `*.39S31  1 a 2 4 ]
+"8
+[v setbit@byte byte `*.39uc  1 p 2 0 ]
+[v setbit@at at `uc  1 p 1 2 ]
+[v setbit@value value `uc  1 p 1 3 ]
+"38
+} 0
+"8 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_matrix.h
+[v _get_matrix_bit get_matrix_bit `(uc  1 e 1 0 ]
+{
+[v get_matrix_bit@byte byte `*.26DCCuc  1 p 2 7 ]
+[v get_matrix_bit@row row `uc  1 p 1 9 ]
+[v get_matrix_bit@col col `uc  1 p 1 10 ]
+"11
+} 0
+"39 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/bit_operator.h
+[v _getbit getbit `(uc  1 e 1 0 ]
+{
+[s S31 . 1 `uc 1 b0 1 0 :1:0 
+`uc 1 b1 1 0 :1:1 
+`uc 1 b2 1 0 :1:2 
+`uc 1 b3 1 0 :1:3 
+`uc 1 b4 1 0 :1:4 
+`uc 1 b5 1 0 :1:5 
+`uc 1 b6 1 0 :1:6 
+`uc 1 b7 1 0 :1:7 
+]
+"41
+[v getbit@temp temp `*.26S31  1 a 2 5 ]
+"39
+[v getbit@byte byte `*.26DCCuc  1 p 2 0 ]
+[v getbit@at at `uc  1 p 1 2 ]
+"69
+} 0
+"343 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/logic.h
+[v _lg_char_info_index_rand lg_char_info_index_rand `(uc  1 e 1 0 ]
+{
+"346
+} 0
+"12 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
+{
+"17
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 9 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 12 ]
+[v ___awmod@counter counter `uc  1 a 1 11 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 7 ]
+[v ___awmod@dividend dividend `i  1 p 2 9 ]
+"35
+} 0
+"2 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/eeprom_operator.h
+[v _eeprom_write_int eeprom_write_int `(v  1 e 1 0 ]
+{
+[v eeprom_write_int@at at `uc  1 a 1 wreg ]
+"10
+[v eeprom_write_int@n n `i  1 a 2 24 ]
+"4
+[v eeprom_write_int@temp temp `uc  1 a 1 27 ]
+"2
+[v eeprom_write_int@at at `uc  1 a 1 wreg ]
+[v eeprom_write_int@value value `ui  1 p 2 21 ]
+"5
+[v eeprom_write_int@at at `uc  1 a 1 26 ]
+"11
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
+"1500
+[v sprintf@idx idx `uc  1 a 1 11 ]
+"528
+[v sprintf@val val `ui  1 a 2 17 ]
+"510
+[v sprintf@ccnt ccnt `i  1 a 2 12 ]
+"499
+[v sprintf@c c `c  1 a 1 19 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 16 ]
+"506
+[v sprintf@prec prec `c  1 a 1 15 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 14 ]
+"492
+[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
+[v sprintf@f f `*.25DCCuc  1 p 2 0 ]
+"510
+[v sprintf@sp sp `*.5uc  1 a 1 20 ]
+"1541
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 0 ]
+[v eeprom_write@addr addr `uc  1 a 1 2 ]
+"9
+} 0
+"73 D:\Working\working\MyLocalRepositorywc\blogspot\Multi_LED8x8\mplab/usart_pic16.c
+[v _USARTWriteString USARTWriteString `(v  1 e 1 0 ]
+{
+[v USARTWriteString@str str `*.26DCCuc  1 p 2 1 ]
+"78
+} 0
+"67
+[v _USARTWriteChar USARTWriteChar `(v  1 e 1 0 ]
+{
+[v USARTWriteChar@ch ch `uc  1 a 1 wreg ]
+[v USARTWriteChar@ch ch `uc  1 a 1 wreg ]
+[v USARTWriteChar@ch ch `uc  1 a 1 0 ]
+"71
+} 0

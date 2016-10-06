@@ -1,0 +1,3672 @@
+Microchip MPLAB XC8 Compiler V1.37 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.37\dat\en_msgs.txt -cs \
+  -h+dist/default/production\Multi_LED8x8.X.production.sym \
+  --cmf=dist/default/production\Multi_LED8x8.X.production.cmf -z -Q16F886 \
+  -oC:\Users\Admin\AppData\Local\Temp\s3cc.2 \
+  -Mdist/default/production/Multi_LED8x8.X.production.map -E1 -ver=XC8 \
+  -ASTACK=0122h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=CODE -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k C:\Users\Admin\AppData\Local\Temp\s3cc.obj \
+  dist/default/production\Multi_LED8x8.X.production.obj 
+
+Object code version is 3.11
+
+Machine type is 16F886
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\Admin\AppData\Local\Temp\s3cc.obj
+                end_init                              0        0        3        0       0
+                config                             2007     2007        2     400E       0
+dist/default/production\Multi_LED8x8.X.production.obj
+                cinit                               7CD      7CD       33      F9A       0
+                text62                             196F     196F        8     32DE       0
+                text61                             1A33     1A33       23     3466       0
+                text60                             1AC1     1AC1       26     3582       0
+                text59                             1D32     1D32       3C     3A64       0
+                text58                             1CC9     1CC9       32     3992       0
+                text57                              E7C      E7C      184     1CF8       0
+                text56                             1A79     1A79       24     34F2       0
+                text55                             1002     1002       4D     2004       0
+                text54                             1D6E     1D6E       3F     3ADC       0
+                text53                             1EFD     1EFD       55     3DFA       0
+                text52                             1A00     1A00       18     3400       0
+                text51                             15B7     15B7       93     2B6E       0
+                text50                             1998     1998        F     3330       0
+                text49                             122D     122D       78     245A       0
+                text48                             19ED     19ED       13     33DA       0
+                text47                             1E6C     1E6C       46     3CD8       0
+                text46                             1FA7     1FA7       59     3F4E       0
+                text45                             1DAD     1DAD       3F     3B5A       0
+                text44                             1B8A     1B8A       2B     3714       0
+                text43                             1B0E     1B0E       29     361C       0
+                text42                             1DEC     1DEC       40     3BD8       0
+                text41                             1B60     1B60       2A     36C0       0
+                text40                             1C6B     1C6B       2F     38D6       0
+                text39                             1107     1107       5E     220E       0
+                text38                             10AA     10AA       5D     2154       0
+                text37                             19C9     19C9       12     3392       0
+                text36                             1965     1965        5     32CA       0
+                text35                              CF4      CF4       1C     19E8       0
+                text34                             19A7     19A7       11     334E       0
+                text33                             1CFB     1CFB       37     39F6       0
+                text32                              107      107      18D      20E       0
+                text31                             1B37     1B37       29     366E       0
+                text30                             1165     1165       61     22CA       0
+                text29                             1A56     1A56       23     34AC       0
+                text28                             12A5     12A5       7A     254A       0
+                text27                              294      294      20F      528       0
+                text26                             164A     164A       9D     2C94       0
+                text25                             149E     149E       8B     293C       0
+                text24                             1977     1977        8     32EE       0
+                text23                             1BB5     1BB5       2C     376A       0
+                text22                             1EB2     1EB2       4B     3D64       0
+                text21                             16E7     16E7      119     2DCE       0
+                text20                             11C6     11C6       67     238C       0
+                text19                             1BE1     1BE1       2E     37C2       0
+                text18                             141A     141A       84     2834       0
+                text17                               56       56       B1       AC       0
+                text16                                5        5       51        A       0
+                text15                             1C0F     1C0F       2E     381E       0
+                text14                             1AE7     1AE7       27     35CE       0
+                text13                             104F     104F       5B     209E       0
+                text12                             1F52     1F52       55     3EA4       0
+                text11                             1C3D     1C3D       2E     387A       0
+                text10                              4A3      4A3      32A      946       0
+                text9                              131F     131F       7C     263E       0
+                text8                              139B     139B       7F     2736       0
+                text7                              1E2C     1E2C       40     3C58       0
+                text6                              197F     197F        8     32FE       0
+                text5                              1A18     1A18       1B     3430       0
+                text4                              1C9A     1C9A       2F     3934       0
+                text3                              1529     1529       8E     2A52       0
+                text2                              198F     198F        9     331E       0
+                text1                              1A9D     1A9D       24     353A       0
+                maintext                            D10      D10      16C     1A20       0
+                cstackBANK0                          20       20       4C       20       1
+                cstackCOMMON                         70       70        E       70       1
+                cstackBANK1                          A0       A0       2E       A0       1
+                inittext                           19B8     19B8       11     3370       0
+                clrtext                            1987     1987        8     330E       0
+                dataBANK2                           110      110       12      110       1
+                bssBANK3                            190      190       50      190       1
+                dataBANK1                            E8       E8        5       A0       1
+                bssBANK1                             CE       CE       1A       A0       1
+                bssBANK0                             6C       6C        4       20       1
+                stringtext                          800      800      4F1       10       0
+                idataBANK2                         19DB     19DB       12     33B6       0
+                idataBANK1                         196A     196A        5     32D4       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        3         0
+                cinit                               7CD      7CD       33         0
+                text62                             196F     196F        8         0
+                text61                             1A33     1A33       23         0
+                text60                             1AC1     1AC1       26         0
+                text59                             1D32     1D32       3C         0
+                text58                             1CC9     1CC9       32         0
+                text57                              E7C      E7C      184         0
+                text56                             1A79     1A79       24         0
+                text55                             1002     1002       4D         0
+                text54                             1D6E     1D6E       3F         0
+                text53                             1EFD     1EFD       55         0
+                text52                             1A00     1A00       18         0
+                text51                             15B7     15B7       93         0
+                text50                             1998     1998        F         0
+                text49                             122D     122D       78         0
+                text48                             19ED     19ED       13         0
+                text47                             1E6C     1E6C       46         0
+                text46                             1FA7     1FA7       59         0
+                text45                             1DAD     1DAD       3F         0
+                text44                             1B8A     1B8A       2B         0
+                text43                             1B0E     1B0E       29         0
+                text42                             1DEC     1DEC       40         0
+                text41                             1B60     1B60       2A         0
+                text40                             1C6B     1C6B       2F         0
+                text39                             1107     1107       5E         0
+                text38                             10AA     10AA       5D         0
+                text37                             19C9     19C9       12         0
+                text36                             1965     1965        5         0
+                text35                              CF4      CF4       1C         0
+                text34                             19A7     19A7       11         0
+                text33                             1CFB     1CFB       37         0
+                text32                              107      107      18D         0
+                text31                             1B37     1B37       29         0
+                text30                             1165     1165       61         0
+                text29                             1A56     1A56       23         0
+                text28                             12A5     12A5       7A         0
+                text27                              294      294      20F         0
+                text26                             164A     164A       9D         0
+                text25                             149E     149E       8B         0
+                text24                             1977     1977        8         0
+                text23                             1BB5     1BB5       2C         0
+                text22                             1EB2     1EB2       4B         0
+                text21                             16E7     16E7      119         0
+                text20                             11C6     11C6       67         0
+                text19                             1BE1     1BE1       2E         0
+                text18                             141A     141A       84         0
+                text17                               56       56       B1         0
+                text16                                5        5       51         0
+                text15                             1C0F     1C0F       2E         0
+                text14                             1AE7     1AE7       27         0
+                text13                             104F     104F       5B         0
+                text12                             1F52     1F52       55         0
+                text11                             1C3D     1C3D       2E         0
+                text10                              4A3      4A3      32A         0
+                text9                              131F     131F       7C         0
+                text8                              139B     139B       7F         0
+                text7                              1E2C     1E2C       40         0
+                text6                              197F     197F        8         0
+                text5                              1A18     1A18       1B         0
+                text4                              1C9A     1C9A       2F         0
+                text3                              1529     1529       8E         0
+                text2                              198F     198F        9         0
+                text1                              1A9D     1A9D       24         0
+                maintext                            D10      D10      16C         0
+                inittext                           19B8     19B8       11         0
+                clrtext                            1987     1987        8         0
+                idataBANK2                         19DB     19DB       12         0
+                idataBANK1                         196A     196A        5         0
+
+        CLASS   STRCODE        
+                stringtext                          800      800      4F1         0
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       4C         1
+                bssBANK0                             6C       6C        4         1
+
+        CLASS   BANK1          
+                cstackBANK1                          A0       A0       2E         1
+                dataBANK1                            E8       E8        5         1
+                bssBANK1                             CE       CE       1A         1
+
+        CLASS   BANK2          
+                dataBANK2                           110      110       12         1
+
+        CLASS   BANK3          
+                bssBANK3                            190      190       50         1
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        2         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                text16                         000005  000051  000056         A       0  CODE        2
+                cstackBANK0                    000020  000050  000070        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                cstackBANK1                    0000A0  00004D  0000ED        A0       1  BANK1       1
+                text17                         000056  0000B1  000107        AC       0  CODE        2
+                dataBANK2                      000110  000012  000122       110       1  BANK2       1
+                bssBANK3                       000190  000050  0001E0       190       1  BANK3       1
+                text32                         000107  00018D  000294       20E       0  CODE        2
+                text27                         000294  00020F  0004A3       528       0  CODE        2
+                text10                         0004A3  00032A  0007CD       946       0  CODE        2
+                cinit                          0007CD  000033  000800       F9A       0  CODE        2
+                stringtext                     000800  0004F1  000CF1        10       0  STRCODE     2
+                text35                         000CF4  00001C  000D10      19E8       0  CODE        2
+                maintext                       000D10  00016C  000E7C      1A20       0  CODE        2
+                text57                         000E7C  000184  001000      1CF8       0  CODE        2
+                text55                         001002  00004D  00104F      2004       0  CODE        2
+                text13                         00104F  00005B  0010AA      209E       0  CODE        2
+                text38                         0010AA  00005D  001107      2154       0  CODE        2
+                text39                         001107  00005E  001165      220E       0  CODE        2
+                text30                         001165  000061  0011C6      22CA       0  CODE        2
+                text20                         0011C6  000067  00122D      238C       0  CODE        2
+                text49                         00122D  000078  0012A5      245A       0  CODE        2
+                text28                         0012A5  00007A  00131F      254A       0  CODE        2
+                text9                          00131F  00007C  00139B      263E       0  CODE        2
+                text8                          00139B  00007F  00141A      2736       0  CODE        2
+                text18                         00141A  000084  00149E      2834       0  CODE        2
+                text25                         00149E  00008B  001529      293C       0  CODE        2
+                text3                          001529  00008E  0015B7      2A52       0  CODE        2
+                text51                         0015B7  000093  00164A      2B6E       0  CODE        2
+                text26                         00164A  00009D  0016E7      2C94       0  CODE        2
+                text21                         0016E7  000119  001800      2DCE       0  CODE        2
+                text36                         001965  000005  00196A      32CA       0  CODE        2
+                idataBANK1                     00196A  000005  00196F      32D4       0  CODE        2
+                text62                         00196F  000008  001977      32DE       0  CODE        2
+                text24                         001977  000008  00197F      32EE       0  CODE        2
+                text6                          00197F  000008  001987      32FE       0  CODE        2
+                clrtext                        001987  000008  00198F      330E       0  CODE        2
+                text2                          00198F  000009  001998      331E       0  CODE        2
+                text50                         001998  00000F  0019A7      3330       0  CODE        2
+                text34                         0019A7  000011  0019B8      334E       0  CODE        2
+                inittext                       0019B8  000011  0019C9      3370       0  CODE        2
+                text37                         0019C9  000012  0019DB      3392       0  CODE        2
+                idataBANK2                     0019DB  000012  0019ED      33B6       0  CODE        2
+                text48                         0019ED  000013  001A00      33DA       0  CODE        2
+                text52                         001A00  000018  001A18      3400       0  CODE        2
+                text5                          001A18  00001B  001A33      3430       0  CODE        2
+                text61                         001A33  000023  001A56      3466       0  CODE        2
+                text29                         001A56  000023  001A79      34AC       0  CODE        2
+                text56                         001A79  000024  001A9D      34F2       0  CODE        2
+                text1                          001A9D  000024  001AC1      353A       0  CODE        2
+                text60                         001AC1  000026  001AE7      3582       0  CODE        2
+                text14                         001AE7  000027  001B0E      35CE       0  CODE        2
+                text43                         001B0E  000029  001B37      361C       0  CODE        2
+                text31                         001B37  000029  001B60      366E       0  CODE        2
+                text41                         001B60  00002A  001B8A      36C0       0  CODE        2
+                text44                         001B8A  00002B  001BB5      3714       0  CODE        2
+                text23                         001BB5  00002C  001BE1      376A       0  CODE        2
+                text19                         001BE1  00002E  001C0F      37C2       0  CODE        2
+                text15                         001C0F  00002E  001C3D      381E       0  CODE        2
+                text11                         001C3D  00002E  001C6B      387A       0  CODE        2
+                text40                         001C6B  00002F  001C9A      38D6       0  CODE        2
+                text4                          001C9A  00002F  001CC9      3934       0  CODE        2
+                text58                         001CC9  000032  001CFB      3992       0  CODE        2
+                text33                         001CFB  000037  001D32      39F6       0  CODE        2
+                text59                         001D32  00003C  001D6E      3A64       0  CODE        2
+                text54                         001D6E  00003F  001DAD      3ADC       0  CODE        2
+                text45                         001DAD  00003F  001DEC      3B5A       0  CODE        2
+                text42                         001DEC  000040  001E2C      3BD8       0  CODE        2
+                text7                          001E2C  000040  001E6C      3C58       0  CODE        2
+                text47                         001E6C  000046  001EB2      3CD8       0  CODE        2
+                text22                         001EB2  00004B  001EFD      3D64       0  CODE        2
+                text53                         001EFD  000055  001F52      3DFA       0  CODE        2
+                text12                         001F52  000055  001FA7      3EA4       0  CODE        2
+                text46                         001FA7  000059  002000      3F4E       0  CODE        2
+                config                         002007  000002  002009      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK1            00ED-00EF              3           1
+        BANK2            0122-016F             4E           1
+        BANK3            01E0-01EF             10           1
+        CODE             0003-0004              2           2
+                         0CF1-0CF3              3
+                         1000-1001              2
+                         1800-1964            165
+        CONST            0003-0004              2           2
+                         0CF1-0CF3              3
+                         1000-1001              2
+                         1800-1964            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0003-0004              2           2
+                         0CF1-0CF3              3
+                         1000-1001              2
+                         1800-1964            100
+        IDLOC            2000-2003              4           2
+        RAM              00ED-00EF              3           1
+                         0122-016F             4E
+                         01E0-01EF             10
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STACK            0122-016F             4E           1
+        STRCODE          0003-0004              2           2
+                         0CF1-0CF3              3
+                         1000-1001              2
+                         1800-1964            165
+        STRING           0003-0004              2           2
+                         0CF1-0CF3              3
+                         1000-1001              2
+                         1800-1964            100
+
+                                  Symbol Table
+
+?___awdiv                                      cstackCOMMON 0070
+?___awmod                                      cstackBANK0  0027
+?___lmul                                       cstackCOMMON 0070
+?___lwdiv                                      cstackCOMMON 0070
+?___lwmod                                      cstackCOMMON 0078
+?___wmul                                       cstackBANK0  0049
+?_eeprom_read_int                              cstackBANK0  0035
+?_lg_get_num_of_orphan                         cstackBANK0  0035
+?_lg_get_weight                                cstackBANK0  0035
+?_rand                                         cstackBANK0  0020
+?_sprintf                                      cstackBANK0  0020
+SPI1_write@data                                cstackCOMMON 0071
+SPI1_write@i                                   cstackCOMMON 0073
+SPI1_write@mask                                cstackCOMMON 0072
+USARTInit@baud_rate                            cstackCOMMON 0070
+USARTWriteChar@ch                              cstackCOMMON 0070
+USARTWriteInt@F1605                            bssBANK1     00CE
+USARTWriteString@str                           cstackCOMMON 0071
+Write_Matrix@at                                cstackCOMMON 0079
+Write_Matrix@col                               cstackCOMMON 007C
+Write_Matrix@column                            cstackCOMMON 0075
+Write_Matrix@matrix                            cstackCOMMON 007B
+Write_Matrix@option                            cstackCOMMON 0074
+Write_Matrix@row                               cstackCOMMON 007D
+Write_Matrix@value                             cstackCOMMON 007A
+_ANSELbits                                     (abs)        0188
+_CARRY                                         (abs)        0018
+_EEADR                                         (abs)        010D
+_EECON1                                        (abs)        018C
+_EECON2                                        (abs)        018D
+_EEDATA                                        (abs)        010C
+_GIE                                           (abs)        005F
+_PEIE                                          (abs)        005E
+_PIR1bits                                      (abs)        000C
+_RA1                                           (abs)        0029
+_RA2                                           (abs)        002A
+_RA3                                           (abs)        002B
+_RCIE                                          (abs)        0465
+_RCSTAbits                                     (abs)        0018
+_RD                                            (abs)        0C60
+_SPBRG                                         (abs)        0099
+_SPI1_write                                    text41       1B60
+_Seed                                          bssBANK1     00D3
+_TRISAbits                                     (abs)        0085
+_TXREG                                         (abs)        0019
+_TXSTAbits                                     (abs)        0098
+_USARTInit                                     text7        1E2C
+_USARTWriteChar                                text62       196F
+_USARTWriteString                              text61       1A33
+_WR                                            (abs)        0C61
+_WREN                                          (abs)        0C62
+_Write_Matrix                                  text39       1107
+__CFG_BOR4V$BOR21V                             (abs)        0000
+__CFG_BOREN$ON                                 (abs)        0000
+__CFG_CP$ON                                    (abs)        0000
+__CFG_CPD$ON                                   (abs)        0000
+__CFG_FCMEN$ON                                 (abs)        0000
+__CFG_FOSC$INTRC_NOCLKOUT                      (abs)        0000
+__CFG_IESO$ON                                  (abs)        0000
+__CFG_LVP$ON                                   (abs)        0000
+__CFG_MCLRE$ON                                 (abs)        0000
+__CFG_PWRTE$OFF                                (abs)        0000
+__CFG_WDTE$ON                                  (abs)        0000
+__CFG_WRT$OFF                                  (abs)        0000
+__Habs1                                        abs1         0000
+__Hbank0                                       bank0        0000
+__Hbank1                                       bank1        0000
+__Hbank2                                       bank2        0000
+__Hbank3                                       bank3        0000
+__HbssBANK0                                    bssBANK0     0000
+__HbssBANK1                                    bssBANK1     0000
+__HbssBANK3                                    bssBANK3     0000
+__Hcinit                                       cinit        0800
+__Hclrtext                                     clrtext      0000
+__Hcode                                        code         0000
+__Hcommon                                      common       0000
+__Hconfig                                      config       2009
+__HcstackBANK0                                 cstackBANK0  0000
+__HcstackBANK1                                 cstackBANK1  0000
+__HcstackCOMMON                                cstackCOMMON 0000
+__HdataBANK1                                   dataBANK1    0000
+__HdataBANK2                                   dataBANK2    0000
+__Heeprom_data                                 eeprom_data  0000
+__Hend_init                                    end_init     0003
+__Hfunctab                                     functab      0000
+__HidataBANK1                                  idataBANK1   0000
+__HidataBANK2                                  idataBANK2   0000
+__Hidloc                                       idloc        0000
+__Hinit                                        init         0000
+__Hinittext                                    inittext     0000
+__Hintentry                                    intentry     0000
+__Hmaintext                                    maintext     0000
+__Hpowerup                                     powerup      0000
+__Hram                                         ram          0000
+__Hreset_vec                                   reset_vec    0000
+__Hsfr0                                        sfr0         0000
+__Hsfr1                                        sfr1         0000
+__Hsfr2                                        sfr2         0000
+__Hsfr3                                        sfr3         0000
+__Hspace_0                                     (abs)        2009
+__Hspace_1                                     (abs)        01E0
+__Hspace_2                                     (abs)        0000
+__Hspace_3                                     (abs)        0000
+__Hstack                                       stack        0000
+__Hstrings                                     strings      0000
+__Hstringtext                                  stringtext   0000
+__Htext                                        text         0000
+__Labs1                                        abs1         0000
+__Lbank0                                       bank0        0000
+__Lbank1                                       bank1        0000
+__Lbank2                                       bank2        0000
+__Lbank3                                       bank3        0000
+__LbssBANK0                                    bssBANK0     0000
+__LbssBANK1                                    bssBANK1     0000
+__LbssBANK3                                    bssBANK3     0000
+__Lcinit                                       cinit        07CD
+__Lclrtext                                     clrtext      0000
+__Lcode                                        code         0000
+__Lcommon                                      common       0000
+__Lconfig                                      config       2007
+__LcstackBANK0                                 cstackBANK0  0000
+__LcstackBANK1                                 cstackBANK1  0000
+__LcstackCOMMON                                cstackCOMMON 0000
+__LdataBANK1                                   dataBANK1    0000
+__LdataBANK2                                   dataBANK2    0000
+__Leeprom_data                                 eeprom_data  0000
+__Lend_init                                    end_init     0000
+__Lfunctab                                     functab      0000
+__LidataBANK1                                  idataBANK1   0000
+__LidataBANK2                                  idataBANK2   0000
+__Lidloc                                       idloc        0000
+__Linit                                        init         0000
+__Linittext                                    inittext     0000
+__Lintentry                                    intentry     0000
+__Lmaintext                                    maintext     0000
+__Lpowerup                                     powerup      0000
+__Lram                                         ram          0000
+__Lreset_vec                                   reset_vec    0000
+__Lsfr0                                        sfr0         0000
+__Lsfr1                                        sfr1         0000
+__Lsfr2                                        sfr2         0000
+__Lsfr3                                        sfr3         0000
+__Lspace_0                                     (abs)        0000
+__Lspace_1                                     (abs)        0000
+__Lspace_2                                     (abs)        0000
+__Lspace_3                                     (abs)        0000
+__Lstack                                       stack        0000
+__Lstrings                                     strings      0000
+__Lstringtext                                  stringtext   0000
+__Ltext                                        text         0000
+__S0                                           (abs)        2009
+__S1                                           (abs)        01E0
+__S2                                           (abs)        0000
+__S3                                           (abs)        0000
+___awdiv                                       text46       1FA7
+___awdiv@counter                               cstackCOMMON 0075
+___awdiv@dividend                              cstackCOMMON 0072
+___awdiv@divisor                               cstackCOMMON 0070
+___awdiv@quotient                              cstackCOMMON 0077
+___awdiv@sign                                  cstackCOMMON 0076
+___awmod                                       text55       1002
+___awmod@counter                               cstackBANK0  002B
+___awmod@dividend                              cstackBANK0  0029
+___awmod@divisor                               cstackBANK0  0027
+___awmod@sign                                  cstackBANK0  002C
+___int_sp                                      stack        0000
+___latbits                                     (abs)        0002
+___lmul                                        text54       1D6E
+___lmul@multiplicand                           cstackCOMMON 0074
+___lmul@multiplier                             cstackCOMMON 0070
+___lmul@product                                cstackCOMMON 0079
+___lwdiv                                       text59       1D32
+___lwdiv@counter                               cstackCOMMON 0077
+___lwdiv@dividend                              cstackCOMMON 0072
+___lwdiv@divisor                               cstackCOMMON 0070
+___lwdiv@quotient                              cstackCOMMON 0075
+___lwmod                                       text58       1CC9
+___lwmod@counter                               cstackCOMMON 007D
+___lwmod@dividend                              cstackCOMMON 007A
+___lwmod@divisor                               cstackCOMMON 0078
+___sp                                          stack        0000
+___wmul                                        text29       1A56
+___wmul@multiplicand                           cstackBANK0  004B
+___wmul@multiplier                             cstackBANK0  0049
+___wmul@product                                cstackBANK0  004D
+__end_of_SPI1_write                            text41       1B8A
+__end_of_USARTInit                             text7        1E6C
+__end_of_USARTWriteChar                        text62       1977
+__end_of_USARTWriteString                      text61       1A56
+__end_of_Write_Matrix                          text39       1165
+__end_of___awdiv                               text46       2000
+__end_of___awmod                               text55       104F
+__end_of___lmul                                text54       1DAD
+__end_of___lwdiv                               text59       1D6E
+__end_of___lwmod                               text58       1CFB
+__end_of___wmul                                text29       1A79
+__end_of__initialization                       cinit        07FC
+__end_of__stringtab                            stringtext   0812
+__end_of_dbg_init                              text6        1987
+__end_of_dbg_print_MATRIX16x8                  text32       0294
+__end_of_dbg_print_MATRIX4x4                   text27       04A3
+__end_of_dbg_print_Screen                      text28       131F
+__end_of_dbg_print_cur_MATRIX4x4               text26       16E7
+__end_of_dpowers                               stringtext   081C
+__end_of_eeprom_read                           text5        1A33
+__end_of_eeprom_read_int                       text4        1CC9
+__end_of_eeprom_write                          text60       1AE7
+__end_of_eeprom_write_int                      text56       1A9D
+__end_of_g_matrix4x4                           stringtext   0884
+__end_of_get_matrix7219                        text45       1DEC
+__end_of_get_matrix_bit                        text50       19A7
+__end_of_getbit                                text51       164A
+__end_of_hal_MATRIX16x8_to_MATRIX_MATRIX7219   text42       1E2C
+__end_of_hal_print_MATRIX16x8                  text37       19DB
+__end_of_hal_print_MATRIX_MATRIX7219           text38       1107
+__end_of_hal_print_Screen                      text36       196A
+__end_of_hexpowers                             stringtext   0824
+__end_of_lg_char_info_index_rand               text52       1A18
+__end_of_lg_clear                              text47       1EB2
+__end_of_lg_clear_matrix                       text34       19B8
+__end_of_lg_delete_matrix                      text30       11C6
+__end_of_lg_delete_matrix_row                  text33       1D32
+__end_of_lg_fall_off                           text25       1529
+__end_of_lg_find_best_solution                 text10       07CD
+__end_of_lg_get_height                         text23       1BE1
+__end_of_lg_get_height_after_merge             text22       1EFD
+__end_of_lg_get_holes_after_merge              text21       1800
+__end_of_lg_get_num_of_orphan                  text20       122D
+__end_of_lg_get_num_removed_rows               text19       1C0F
+__end_of_lg_get_weight                         text18       149E
+__end_of_lg_hit_land                           text9        139B
+__end_of_lg_is_left_boundary                   text16       0056
+__end_of_lg_is_right_boundary                  text12       1FA7
+__end_of_lg_is_row_empty                       text24       197F
+__end_of_lg_is_row_full                        text31       1B60
+__end_of_lg_is_valid                           text17       0107
+__end_of_lg_left_most                          text15       1C3D
+__end_of_lg_merge                              text8        141A
+__end_of_lg_merge1                             text13       10AA
+__end_of_lg_right_most                         text11       1C6B
+__end_of_main                                  maintext     0E7C
+__end_of_main_init                             text1        1AC1
+__end_of_max7219_init1                         text3        15B7
+__end_of_memcpy                                text14       1B0E
+__end_of_memset                                text35       0D10
+__end_of_rand                                  text53       1F52
+__end_of_reverse                               text40       1C9A
+__end_of_set_matrix7219_bit                    text44       1BB5
+__end_of_set_matrix_bit                        text48       1A00
+__end_of_set_matrix_matrix7219_bit             text43       1B37
+__end_of_setbit                                text49       12A5
+__end_of_sprintf                               text57       1000
+__end_of_srand                                 text2        1998
+__initialization                               cinit        07CD
+__pbssBANK0                                    bssBANK0     006C
+__pbssBANK1                                    bssBANK1     00CE
+__pbssBANK3                                    bssBANK3     0190
+__pcstackBANK0                                 cstackBANK0  0020
+__pcstackBANK1                                 cstackBANK1  00A0
+__pcstackCOMMON                                cstackCOMMON 0070
+__pdataBANK1                                   dataBANK1    00E8
+__pdataBANK2                                   dataBANK2    0110
+__pidataBANK1                                  idataBANK1   196A
+__pidataBANK2                                  idataBANK2   19DB
+__pmaintext                                    maintext     0D10
+__pstringtext                                  stringtext   0800
+__ptext1                                       text1        1A9D
+__ptext10                                      text10       04A3
+__ptext11                                      text11       1C3D
+__ptext12                                      text12       1F52
+__ptext13                                      text13       104F
+__ptext14                                      text14       1AE7
+__ptext15                                      text15       1C0F
+__ptext16                                      text16       0005
+__ptext17                                      text17       0056
+__ptext18                                      text18       141A
+__ptext19                                      text19       1BE1
+__ptext2                                       text2        198F
+__ptext20                                      text20       11C6
+__ptext21                                      text21       16E7
+__ptext22                                      text22       1EB2
+__ptext23                                      text23       1BB5
+__ptext24                                      text24       1977
+__ptext25                                      text25       149E
+__ptext26                                      text26       164A
+__ptext27                                      text27       0294
+__ptext28                                      text28       12A5
+__ptext29                                      text29       1A56
+__ptext3                                       text3        1529
+__ptext30                                      text30       1165
+__ptext31                                      text31       1B37
+__ptext32                                      text32       0107
+__ptext33                                      text33       1CFB
+__ptext34                                      text34       19A7
+__ptext35                                      text35       0CF4
+__ptext36                                      text36       1965
+__ptext37                                      text37       19C9
+__ptext38                                      text38       10AA
+__ptext39                                      text39       1107
+__ptext4                                       text4        1C9A
+__ptext40                                      text40       1C6B
+__ptext41                                      text41       1B60
+__ptext42                                      text42       1DEC
+__ptext43                                      text43       1B0E
+__ptext44                                      text44       1B8A
+__ptext45                                      text45       1DAD
+__ptext46                                      text46       1FA7
+__ptext47                                      text47       1E6C
+__ptext48                                      text48       19ED
+__ptext49                                      text49       122D
+__ptext5                                       text5        1A18
+__ptext50                                      text50       1998
+__ptext51                                      text51       15B7
+__ptext52                                      text52       1A00
+__ptext53                                      text53       1EFD
+__ptext54                                      text54       1D6E
+__ptext55                                      text55       1002
+__ptext56                                      text56       1A79
+__ptext57                                      text57       0E7C
+__ptext58                                      text58       1CC9
+__ptext59                                      text59       1D32
+__ptext6                                       text6        197F
+__ptext60                                      text60       1AC1
+__ptext61                                      text61       1A33
+__ptext62                                      text62       196F
+__ptext7                                       text7        1E2C
+__ptext8                                       text8        139B
+__ptext9                                       text9        131F
+__size_of_SPI1_write                           (abs)        0000
+__size_of_USARTInit                            (abs)        0000
+__size_of_USARTWriteChar                       (abs)        0000
+__size_of_USARTWriteString                     (abs)        0000
+__size_of_Write_Matrix                         (abs)        0000
+__size_of___awdiv                              (abs)        0000
+__size_of___awmod                              (abs)        0000
+__size_of___lmul                               (abs)        0000
+__size_of___lwdiv                              (abs)        0000
+__size_of___lwmod                              (abs)        0000
+__size_of___wmul                               (abs)        0000
+__size_of_dbg_init                             (abs)        0000
+__size_of_dbg_print_MATRIX16x8                 (abs)        0000
+__size_of_dbg_print_MATRIX4x4                  (abs)        0000
+__size_of_dbg_print_Screen                     (abs)        0000
+__size_of_dbg_print_cur_MATRIX4x4              (abs)        0000
+__size_of_eeprom_read                          (abs)        0000
+__size_of_eeprom_read_int                      (abs)        0000
+__size_of_eeprom_write                         (abs)        0000
+__size_of_eeprom_write_int                     (abs)        0000
+__size_of_get_matrix7219                       (abs)        0000
+__size_of_get_matrix_bit                       (abs)        0000
+__size_of_getbit                               (abs)        0000
+__size_of_hal_MATRIX16x8_to_MATRIX_MATRIX7219  (abs)        0000
+__size_of_hal_print_MATRIX16x8                 (abs)        0000
+__size_of_hal_print_MATRIX_MATRIX7219          (abs)        0000
+__size_of_hal_print_Screen                     (abs)        0000
+__size_of_lg_char_info_index_rand              (abs)        0000
+__size_of_lg_clear                             (abs)        0000
+__size_of_lg_clear_matrix                      (abs)        0000
+__size_of_lg_delete_matrix                     (abs)        0000
+__size_of_lg_delete_matrix_row                 (abs)        0000
+__size_of_lg_fall_off                          (abs)        0000
+__size_of_lg_find_best_solution                (abs)        0000
+__size_of_lg_get_height                        (abs)        0000
+__size_of_lg_get_height_after_merge            (abs)        0000
+__size_of_lg_get_holes_after_merge             (abs)        0000
+__size_of_lg_get_num_of_orphan                 (abs)        0000
+__size_of_lg_get_num_removed_rows              (abs)        0000
+__size_of_lg_get_weight                        (abs)        0000
+__size_of_lg_hit_land                          (abs)        0000
+__size_of_lg_is_left_boundary                  (abs)        0000
+__size_of_lg_is_right_boundary                 (abs)        0000
+__size_of_lg_is_row_empty                      (abs)        0000
+__size_of_lg_is_row_full                       (abs)        0000
+__size_of_lg_is_valid                          (abs)        0000
+__size_of_lg_left_most                         (abs)        0000
+__size_of_lg_merge                             (abs)        0000
+__size_of_lg_merge1                            (abs)        0000
+__size_of_lg_right_most                        (abs)        0000
+__size_of_main                                 (abs)        0000
+__size_of_main_init                            (abs)        0000
+__size_of_max7219_init1                        (abs)        0000
+__size_of_memcpy                               (abs)        0000
+__size_of_memset                               (abs)        0000
+__size_of_rand                                 (abs)        0000
+__size_of_reverse                              (abs)        0000
+__size_of_set_matrix7219_bit                   (abs)        0000
+__size_of_set_matrix_bit                       (abs)        0000
+__size_of_set_matrix_matrix7219_bit            (abs)        0000
+__size_of_setbit                               (abs)        0000
+__size_of_sprintf                              (abs)        0000
+__size_of_srand                                (abs)        0000
+__stringbase                                   stringtext   0812
+__stringtab                                    stringtext   0800
+_cur_x                                         dataBANK1    00EC
+_cur_y                                         bssBANK1     00D7
+_dbg_init                                      text6        197F
+_dbg_print_MATRIX16x8                          text32       0107
+_dbg_print_MATRIX4x4                           text27       0294
+_dbg_print_Screen                              text28       12A5
+_dbg_print_cur_MATRIX4x4                       text26       164A
+_dpowers                                       stringtext   0812
+_eeprom_read                                   text5        1A18
+_eeprom_read_int                               text4        1C9A
+_eeprom_write                                  text60       1AC1
+_eeprom_write_int                              text56       1A79
+_g_char_info                                   dataBANK2    0110
+_g_char_info_index                             bssBANK0     006E
+_g_char_info_sub_index                         bssBANK0     006F
+_g_cur_matrix4x4                               bssBANK0     006C
+_g_debug                                       bssBANK3     0190
+_g_matrix16x8                                  bssBANK1     00D8
+_g_matrix4x4                                   stringtext   0824
+_get_matrix7219                                text45       1DAD
+_get_matrix_bit                                text50       1998
+_getbit                                        text51       15B7
+_hal_MATRIX16x8_to_MATRIX_MATRIX7219           text42       1DEC
+_hal_print_MATRIX16x8                          text37       19C9
+_hal_print_MATRIX_MATRIX7219                   text38       10AA
+_hal_print_Screen                              text36       1965
+_hexpowers                                     stringtext   081C
+_lg_char_info_index_rand                       text52       1A00
+_lg_clear                                      text47       1E6C
+_lg_clear_matrix                               text34       19A7
+_lg_delete_matrix                              text30       1165
+_lg_delete_matrix_row                          text33       1CFB
+_lg_fall_off                                   text25       149E
+_lg_find_best_solution                         text10       04A3
+_lg_get_height                                 text23       1BB5
+_lg_get_height_after_merge                     text22       1EB2
+_lg_get_holes_after_merge                      text21       16E7
+_lg_get_num_of_orphan                          text20       11C6
+_lg_get_num_removed_rows                       text19       1BE1
+_lg_get_weight                                 text18       141A
+_lg_hit_land                                   text9        131F
+_lg_is_left_boundary                           text16       0005
+_lg_is_right_boundary                          text12       1F52
+_lg_is_row_empty                               text24       1977
+_lg_is_row_full                                text31       1B37
+_lg_is_valid                                   text17       0056
+_lg_left_most                                  text15       1C0F
+_lg_merge                                      text8        139B
+_lg_merge1                                     text13       104F
+_lg_right_most                                 text11       1C3D
+_main                                          maintext     0D10
+_main_init                                     text1        1A9D
+_max7219_init1                                 text3        1529
+_memcpy                                        text14       1AE7
+_memset                                        text35       0CF4
+_rand                                          text53       1EFD
+_randx                                         dataBANK1    00E8
+_reverse                                       text40       1C6B
+_set_matrix7219_bit                            text44       1B8A
+_set_matrix_bit                                text48       19ED
+_set_matrix_matrix7219_bit                     text43       1B0E
+_setbit                                        text49       122D
+_sprintf                                       text57       0E7C
+_srand                                         text2        198F
+_temp_cur_matrix4x4                            bssBANK1     00D5
+_temp_matrix16x8                               bssBANK3     01D0
+btemp                                          (abs)        007E
+clear_ram0                                     clrtext      1987
+dbg_print_MATRIX16x8@col                       cstackBANK0  004B
+dbg_print_MATRIX16x8@enable                    cstackBANK0  0049
+dbg_print_MATRIX16x8@lable                     cstackBANK0  0035
+dbg_print_MATRIX16x8@matrix                    cstackBANK0  0037
+dbg_print_MATRIX16x8@n                         cstackBANK0  003B
+dbg_print_MATRIX16x8@n_321                     cstackBANK0  003D
+dbg_print_MATRIX16x8@n_324                     cstackBANK0  003F
+dbg_print_MATRIX16x8@n_330                     cstackBANK0  0041
+dbg_print_MATRIX16x8@n_333                     cstackBANK0  0043
+dbg_print_MATRIX16x8@n_336                     cstackBANK0  0045
+dbg_print_MATRIX16x8@n_339                     cstackBANK0  0047
+dbg_print_MATRIX16x8@row                       cstackBANK0  004A
+dbg_print_MATRIX4x4@col                        cstackBANK0  0051
+dbg_print_MATRIX4x4@enable                     cstackBANK0  004F
+dbg_print_MATRIX4x4@lable                      cstackBANK0  0035
+dbg_print_MATRIX4x4@matrix                     cstackBANK0  0039
+dbg_print_MATRIX4x4@n                          cstackBANK0  0041
+dbg_print_MATRIX4x4@n_293                      cstackBANK0  0043
+dbg_print_MATRIX4x4@n_296                      cstackBANK0  0045
+dbg_print_MATRIX4x4@n_303                      cstackBANK0  0047
+dbg_print_MATRIX4x4@n_306                      cstackBANK0  0049
+dbg_print_MATRIX4x4@n_309                      cstackBANK0  004B
+dbg_print_MATRIX4x4@n_312                      cstackBANK0  004D
+dbg_print_MATRIX4x4@row                        cstackBANK0  0050
+dbg_print_MATRIX4x4@x                          cstackBANK0  0037
+dbg_print_MATRIX4x4@y                          cstackBANK0  0038
+dbg_print_Screen@enable                        cstackBANK0  004E
+dbg_print_Screen@lable                         cstackBANK0  004C
+dbg_print_Screen@n                             cstackBANK0  004F
+dbg_print_Screen@n_373                         cstackBANK0  0051
+dbg_print_cur_MATRIX4x4@enable                 cstackBANK0  0060
+dbg_print_cur_MATRIX4x4@lable                  cstackBANK0  0052
+dbg_print_cur_MATRIX4x4@matrix                 cstackBANK0  005E
+dbg_print_cur_MATRIX4x4@n                      cstackBANK0  005A
+dbg_print_cur_MATRIX4x4@n_384                  cstackBANK0  005C
+dbg_print_cur_MATRIX4x4@x                      cstackBANK0  0054
+dbg_print_cur_MATRIX4x4@y                      cstackBANK0  0055
+eeprom_read@addr                               cstackCOMMON 0071
+eeprom_read_int@at                             cstackBANK0  003B
+eeprom_read_int@n                              cstackBANK0  0039
+eeprom_read_int@value                          cstackBANK0  003C
+eeprom_write@addr                              cstackCOMMON 0072
+eeprom_write@value                             cstackCOMMON 0070
+eeprom_write_int@at                            cstackBANK0  003A
+eeprom_write_int@n                             cstackBANK0  0038
+eeprom_write_int@temp                          cstackBANK0  003B
+eeprom_write_int@value                         cstackBANK0  0035
+end_of_initialization                          cinit        07FC
+get_matrix7219@matrix_col                      cstackCOMMON 007A
+get_matrix7219@matrix_matrix                   cstackCOMMON 007B
+get_matrix7219@matrix_row                      cstackCOMMON 0079
+get_matrix_bit@byte                            cstackCOMMON 0077
+get_matrix_bit@col                             cstackCOMMON 007A
+get_matrix_bit@row                             cstackCOMMON 0079
+getbit@at                                      cstackCOMMON 0072
+getbit@byte                                    cstackCOMMON 0070
+getbit@temp                                    cstackCOMMON 0075
+hal_MATRIX16x8_to_MATRIX_MATRIX7219@col        cstackBANK0  0034
+hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix16x8 cstackBANK0  0033
+hal_MATRIX16x8_to_MATRIX_MATRIX7219@matrix7219 cstackBANK0  002D
+hal_MATRIX16x8_to_MATRIX_MATRIX7219@row        cstackBANK0  0035
+hal_print_MATRIX16x8@matrix7219                cstackBANK0  0038
+hal_print_MATRIX16x8@matrix88                  cstackBANK0  0037
+hal_print_MATRIX_MATRIX7219@col                cstackBANK0  002B
+hal_print_MATRIX_MATRIX7219@matrix             cstackBANK0  0029
+hal_print_MATRIX_MATRIX7219@matrix7219         cstackBANK0  0028
+hal_print_MATRIX_MATRIX7219@matrix_col         cstackBANK0  002D
+hal_print_MATRIX_MATRIX7219@matrix_row         cstackBANK0  002C
+init_fetch0                                    inittext     19B8
+init_ram0                                      inittext     19BC
+intlevel0                                      functab      0000
+intlevel1                                      functab      0000
+intlevel2                                      functab      0000
+intlevel3                                      functab      0000
+intlevel4                                      functab      0000
+intlevel5                                      functab      0000
+lg_clear@col                                   cstackBANK0  0028
+lg_clear@matrix16x8                            cstackBANK0  0023
+lg_clear@matrix4x4                             cstackBANK0  0021
+lg_clear@row                                   cstackBANK0  0027
+lg_clear@x                                     cstackBANK0  0026
+lg_clear@y                                     cstackBANK0  0020
+lg_delete_matrix@count                         cstackBANK0  005B
+lg_delete_matrix@matrix                        cstackBANK0  005C
+lg_delete_matrix@n                             cstackBANK0  0059
+lg_delete_matrix@row                           cstackBANK0  005D
+lg_delete_matrix_row@i                         cstackCOMMON 0075
+lg_delete_matrix_row@matrix                    cstackCOMMON 0074
+lg_delete_matrix_row@row                       cstackCOMMON 0070
+lg_fall_off@col                                cstackBANK0  0044
+lg_fall_off@matrix16x8                         cstackBANK0  0038
+lg_fall_off@matrix4x4                          cstackBANK0  0036
+lg_fall_off@n                                  cstackBANK0  003B
+lg_fall_off@n_556                              cstackBANK0  003D
+lg_fall_off@n_559                              cstackBANK0  003F
+lg_fall_off@n_562                              cstackBANK0  0041
+lg_fall_off@row                                cstackBANK0  0045
+lg_fall_off@x                                  cstackBANK0  0043
+lg_fall_off@y                                  cstackBANK0  0035
+lg_find_best_solution@left_most_index          cstackBANK1  00C0
+lg_find_best_solution@n                        cstackBANK1  00B2
+lg_find_best_solution@n_714                    cstackBANK1  00B4
+lg_find_best_solution@n_717                    cstackBANK1  00B6
+lg_find_best_solution@n_720                    cstackBANK1  00B8
+lg_find_best_solution@n_723                    cstackBANK1  00BA
+lg_find_best_solution@n_728                    cstackBANK1  00BC
+lg_find_best_solution@n_731                    cstackBANK1  00BE
+lg_find_best_solution@res                      cstackBANK1  00C2
+lg_find_best_solution@right_most_index         cstackBANK1  00C1
+lg_find_best_solution@tem_pre_sub_index        cstackBANK1  00C6
+lg_find_best_solution@tem_sub_index            cstackBANK1  00C7
+lg_find_best_solution@temp_high                cstackBANK1  00C3
+lg_find_best_solution@temp_pre_risk            cstackBANK1  00C9
+lg_find_best_solution@temp_pre_x               cstackBANK1  00C5
+lg_find_best_solution@temp_risk                cstackBANK1  00CB
+lg_find_best_solution@temp_x                   cstackBANK1  00CD
+lg_find_best_solution@temp_y                   cstackBANK1  00C8
+lg_get_height@matrix                           cstackBANK0  0039
+lg_get_height@n                                cstackBANK0  0037
+lg_get_height@row                              cstackBANK0  003A
+lg_get_height_after_merge@col                  cstackBANK0  0042
+lg_get_height_after_merge@matrix               cstackBANK0  0035
+lg_get_height_after_merge@n                    cstackBANK0  0039
+lg_get_height_after_merge@n_652                cstackBANK0  003B
+lg_get_height_after_merge@n_655                cstackBANK0  003D
+lg_get_height_after_merge@n_658                cstackBANK0  003F
+lg_get_height_after_merge@row                  cstackBANK0  0043
+lg_get_height_after_merge@y                    cstackBANK0  0041
+lg_get_holes_after_merge@col                   cstackBANK0  0047
+lg_get_holes_after_merge@matrix                cstackBANK0  0046
+lg_get_holes_after_merge@n                     cstackBANK0  003B
+lg_get_holes_after_merge@n_672                 cstackBANK0  003D
+lg_get_holes_after_merge@n_675                 cstackBANK0  003F
+lg_get_holes_after_merge@n_678                 cstackBANK0  0041
+lg_get_holes_after_merge@num_hole              cstackBANK0  0043
+lg_get_holes_after_merge@row                   cstackBANK0  0048
+lg_get_holes_after_merge@start                 cstackBANK0  0045
+lg_get_holes_after_merge@stop                  cstackBANK0  0044
+lg_get_num_of_orphan@col                       cstackBANK0  0040
+lg_get_num_of_orphan@full                      cstackBANK0  003E
+lg_get_num_of_orphan@matrix                    cstackBANK0  003F
+lg_get_num_of_orphan@n                         cstackBANK0  003A
+lg_get_num_of_orphan@risk                      cstackBANK0  003C
+lg_get_num_of_orphan@row                       cstackBANK0  0041
+lg_get_num_removed_rows@count                  cstackBANK0  005C
+lg_get_num_removed_rows@matrix                 cstackBANK0  005B
+lg_get_num_removed_rows@n                      cstackBANK0  0059
+lg_get_num_removed_rows@row                    cstackBANK0  005D
+lg_get_weight@col                              cstackBANK0  0041
+lg_get_weight@matrix                           cstackBANK0  003F
+lg_get_weight@n                                cstackBANK0  003A
+lg_get_weight@pre                              cstackBANK0  0040
+lg_get_weight@risk                             cstackBANK0  003D
+lg_get_weight@row                              cstackBANK0  0042
+lg_get_weight@start                            cstackBANK0  003C
+lg_hit_land@col                                cstackBANK0  0044
+lg_hit_land@matrix16x8                         cstackBANK0  0038
+lg_hit_land@matrix4x4                          cstackBANK0  0036
+lg_hit_land@n                                  cstackBANK0  003B
+lg_hit_land@n_481                              cstackBANK0  003D
+lg_hit_land@n_485                              cstackBANK0  003F
+lg_hit_land@n_488                              cstackBANK0  0041
+lg_hit_land@row                                cstackBANK0  0045
+lg_hit_land@x                                  cstackBANK0  0043
+lg_hit_land@y                                  cstackBANK0  0035
+lg_is_left_boundary@col                        cstackBANK0  0041
+lg_is_left_boundary@matrix16x8                 cstackBANK0  0037
+lg_is_left_boundary@matrix4x4                  cstackBANK0  0035
+lg_is_left_boundary@n                          cstackBANK0  003D
+lg_is_left_boundary@row                        cstackBANK0  0040
+lg_is_left_boundary@x                          cstackBANK0  003F
+lg_is_right_boundary@col                       cstackBANK0  003E
+lg_is_right_boundary@matrix16x8                cstackBANK0  0037
+lg_is_right_boundary@matrix4x4                 cstackBANK0  0035
+lg_is_right_boundary@n                         cstackBANK0  003A
+lg_is_right_boundary@row                       cstackBANK0  003D
+lg_is_right_boundary@x                         cstackBANK0  003C
+lg_is_row_empty@matrix                         cstackCOMMON 0071
+lg_is_row_empty@row                            cstackCOMMON 0070
+lg_is_row_full@matrix                          cstackBANK0  004C
+lg_is_row_full@n                               cstackBANK0  0053
+lg_is_row_full@n_439                           cstackBANK0  0055
+lg_is_row_full@row                             cstackBANK0  004E
+lg_is_valid@col                                cstackBANK0  004D
+lg_is_valid@matrix16x8                         cstackBANK0  0038
+lg_is_valid@matrix4x4                          cstackBANK0  0036
+lg_is_valid@n                                  cstackBANK0  003B
+lg_is_valid@n_503                              cstackBANK0  003D
+lg_is_valid@n_506                              cstackBANK0  003F
+lg_is_valid@n_509                              cstackBANK0  0041
+lg_is_valid@n_512                              cstackBANK0  0043
+lg_is_valid@n_515                              cstackBANK0  0045
+lg_is_valid@n_518                              cstackBANK0  0047
+lg_is_valid@n_521                              cstackBANK0  0049
+lg_is_valid@row                                cstackBANK0  004C
+lg_is_valid@x                                  cstackBANK0  004B
+lg_is_valid@y                                  cstackBANK0  0035
+lg_left_most@matrix16x8                        cstackBANK0  0044
+lg_left_most@matrix4x4                         cstackBANK0  0042
+lg_left_most@n                                 cstackBANK0  0046
+lg_left_most@x                                 cstackBANK0  0048
+lg_merge1@col                                  cstackBANK0  002B
+lg_merge1@len                                  cstackBANK0  0028
+lg_merge1@matrix16x8_in                        cstackBANK0  0023
+lg_merge1@matrix16x8_out                       cstackBANK0  0024
+lg_merge1@matrix4x4                            cstackBANK0  0021
+lg_merge1@row                                  cstackBANK0  002A
+lg_merge1@x                                    cstackBANK0  0027
+lg_merge1@y                                    cstackBANK0  0020
+lg_merge@col                                   cstackBANK0  005A
+lg_merge@matrix16x8                            cstackBANK0  0055
+lg_merge@matrix4x4                             cstackBANK0  0053
+lg_merge@row                                   cstackBANK0  0059
+lg_merge@x                                     cstackBANK0  0058
+lg_merge@y                                     cstackBANK0  0052
+lg_right_most@matrix16x8                       cstackBANK0  0041
+lg_right_most@matrix4x4                        cstackBANK0  003F
+lg_right_most@n                                cstackBANK0  0044
+lg_right_most@x                                cstackBANK0  0046
+ltemp                                          (abs)        007E
+ltemp0                                         (abs)        007E
+ltemp1                                         (abs)        0082
+ltemp2                                         (abs)        0086
+ltemp3                                         (abs)        0080
+main@hit_res                                   cstackBANK0  006B
+main@n                                         cstackBANK0  0065
+main@n_765                                     cstackBANK0  0067
+main@n_769                                     cstackBANK0  0069
+max7219_init1@matrix                           cstackBANK0  0021
+memcpy@d                                       cstackCOMMON 0075
+memcpy@d1                                      cstackCOMMON 0074
+memcpy@n                                       cstackCOMMON 0071
+memcpy@s                                       cstackCOMMON 0076
+memcpy@s1                                      cstackCOMMON 0070
+memset@c                                       cstackCOMMON 0070
+memset@n                                       cstackCOMMON 0072
+memset@p                                       cstackCOMMON 0075
+memset@p1                                      cstackCOMMON 0076
+reset_vec                                      reset_vec    0000
+reverse@byte                                   cstackCOMMON 0071
+reverse@res                                    cstackCOMMON 0072
+reverse@temp                                   cstackCOMMON 0073
+set_matrix7219_bit@col                         cstackCOMMON 0071
+set_matrix7219_bit@mask                        cstackCOMMON 0078
+set_matrix7219_bit@matrix                      cstackCOMMON 0077
+set_matrix7219_bit@row                         cstackCOMMON 0070
+set_matrix7219_bit@value                       cstackCOMMON 0072
+set_matrix_bit@byte                            cstackCOMMON 0076
+set_matrix_bit@col                             cstackCOMMON 0079
+set_matrix_bit@row                             cstackCOMMON 0078
+set_matrix_bit@value                           cstackCOMMON 007A
+set_matrix_matrix7219_bit@matrix               cstackCOMMON 007C
+set_matrix_matrix7219_bit@matrix_col           cstackBANK0  0028
+set_matrix_matrix7219_bit@matrix_matrix        cstackCOMMON 007D
+set_matrix_matrix7219_bit@matrix_row           cstackBANK0  0027
+set_matrix_matrix7219_bit@value                cstackBANK0  0029
+setbit@at                                      cstackCOMMON 0072
+setbit@byte                                    cstackCOMMON 0070
+setbit@temp                                    cstackCOMMON 0074
+setbit@value                                   cstackCOMMON 0073
+sprintf@ap                                     cstackBANK0  002E
+sprintf@c                                      cstackBANK0  0033
+sprintf@ccnt                                   cstackBANK0  002C
+sprintf@f                                      cstackBANK0  0020
+sprintf@flag                                   cstackBANK0  0030
+sprintf@idx                                    cstackBANK0  002B
+sprintf@prec                                   cstackBANK0  002F
+sprintf@sp                                     cstackBANK0  0034
+sprintf@val                                    cstackBANK0  0031
+srand@x                                        cstackCOMMON 0070
+stackhi                                        (abs)        0000
+stacklo                                        (abs)        0000
+start                                          init         0000
+start_initialization                           cinit        07CD
+ttemp                                          (abs)        007E
+ttemp0                                         (abs)        007E
+ttemp1                                         (abs)        0081
+ttemp2                                         (abs)        0084
+ttemp3                                         (abs)        0087
+ttemp4                                         (abs)        007F
+wtemp                                          (abs)        007E
+wtemp0                                         (abs)        007E
+wtemp1                                         (abs)        0080
+wtemp2                                         (abs)        0082
+wtemp3                                         (abs)        0084
+wtemp4                                         (abs)        0086
+wtemp5                                         (abs)        0088
+wtemp6                                         (abs)        007F
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 85 in file "../main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  n               2   73[BANK0 ] int 
+  n               2   71[BANK0 ] int 
+  n               2   69[BANK0 ] int 
+  hit_res         1   75[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2  864[None  ] int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       7       0       0       0
+      Temps:          0       4       0       0       0
+      Totals:         0      11       0       0       0
+Total ram usage:       11 bytes
+ Hardware stack levels required when called:    7
+ This function calls:
+		_USARTWriteString
+		_dbg_print_MATRIX16x8
+		_eeprom_write_int
+		_hal_print_Screen
+		_lg_char_info_index_rand
+		_lg_clear
+		_lg_clear_matrix
+		_lg_delete_matrix
+		_lg_find_best_solution
+		_lg_hit_land
+		_lg_merge
+		_main_init
+		_sprintf
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _main_init *****************
+ Defined at:
+		line 65 in file "../main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_dbg_init
+		_eeprom_read_int
+		_max7219_init1
+		_srand
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _srand *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c"
+ Parameters:    Size  Location     Type
+  x               2    0[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main_init
+ This function uses a non-reentrant model
+
+
+ *************** function _max7219_init1 *****************
+ Defined at:
+		line 87 in file "../max7219.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  matrix         16    1[BANK0 ] struct .
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0      16       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0      17       0       0       0
+Total ram usage:       17 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_Write_Matrix
+		_memset
+ This function is called by:
+		_main_init
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_read_int *****************
+ Defined at:
+		line 12 in file "../eeprom_operator.h"
+ Parameters:    Size  Location     Type
+  at              1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  at              1   27[BANK0 ] unsigned char 
+  n               2   25[BANK0 ] int 
+  value           2   28[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  2   21[BANK0 ] unsigned int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       9       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_USARTWriteString
+		_eeprom_read
+		_sprintf
+ This function is called by:
+		_main_init
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_read *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeread.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_eeprom_read_int
+ This function uses a non-reentrant model
+
+
+ *************** function _dbg_init *****************
+ Defined at:
+		line 116 in file "../debug_uart.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_USARTInit
+ This function is called by:
+		_main_init
+ This function uses a non-reentrant model
+
+
+ *************** function _USARTInit *****************
+ Defined at:
+		line 31 in file "../usart_pic16.c"
+ Parameters:    Size  Location     Type
+  baud_rate       2    0[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_dbg_init
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_merge *****************
+ Defined at:
+		line 234 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1   50[BANK0 ] char 
+  matrix4x4       2   51[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   53[BANK0 ] PTR struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   56[BANK0 ] char 
+  col             1   58[BANK0 ] unsigned char 
+  row             1   57[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       9       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_dbg_print_MATRIX16x8
+		_dbg_print_MATRIX4x4
+		_get_matrix_bit
+		_set_matrix_bit
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_hit_land *****************
+ Defined at:
+		line 93 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1   21[BANK0 ] char 
+  matrix4x4       2   22[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   24[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   35[BANK0 ] char 
+  n               2   31[BANK0 ] int 
+  n               2   29[BANK0 ] int 
+  col             1   36[BANK0 ] char 
+  n               2   33[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  row             1   37[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0      11       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      17       0       0       0
+Total ram usage:       17 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_find_best_solution *****************
+ Defined at:
+		line 478 in file "../logic.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  n               2   24[BANK1 ] int 
+  n               2   26[BANK1 ] int 
+  n               2   22[BANK1 ] int 
+  n               2   20[BANK1 ] int 
+  n               2   30[BANK1 ] int 
+  n               2   28[BANK1 ] int 
+  temp_x          1   45[BANK1 ] char 
+  n               2   18[BANK1 ] int 
+  tem_sub_inde    1   39[BANK1 ] unsigned char 
+  temp_risk       2   43[BANK1 ] int 
+  temp_pre_ris    2   41[BANK1 ] int 
+  temp_high       2   35[BANK1 ] unsigned int 
+  temp_y          1   40[BANK1 ] char 
+  tem_pre_sub_    1   38[BANK1 ] char 
+  temp_pre_x      1   37[BANK1 ] char 
+  res             1   34[BANK1 ] unsigned char 
+  right_most_i    1   33[BANK1 ] char 
+  left_most_in    1   32[BANK1 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0      28       0       0
+      Temps:          0       0      18       0       0
+      Totals:         0       0      46       0       0
+Total ram usage:       46 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_USARTWriteString
+		___wmul
+		_dbg_print_MATRIX16x8
+		_dbg_print_MATRIX4x4
+		_dbg_print_Screen
+		_dbg_print_cur_MATRIX4x4
+		_lg_fall_off
+		_lg_get_height
+		_lg_get_height_after_merge
+		_lg_get_holes_after_merge
+		_lg_get_num_of_orphan
+		_lg_get_num_removed_rows
+		_lg_get_weight
+		_lg_is_valid
+		_lg_left_most
+		_lg_merge1
+		_lg_right_most
+		_sprintf
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_right_most *****************
+ Defined at:
+		line 362 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  matrix4x4       2   31[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   33[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   38[BANK0 ] char 
+  n               2   36[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       8       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USARTWriteString
+		_lg_is_right_boundary
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_is_right_boundary *****************
+ Defined at:
+		line 172 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  matrix4x4       2   21[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   23[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   28[BANK0 ] char 
+  n               2   26[BANK0 ] int 
+  col             1   30[BANK0 ] char 
+  row             1   29[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      10       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_right_most
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_merge1 *****************
+ Defined at:
+		line 251 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1    0[BANK0 ] char 
+  matrix4x4       2    1[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8_i    1    3[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+  matrix16x8_o    1    4[BANK0 ] PTR struct .
+		 -> temp_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1    7[BANK0 ] char 
+  col             1   11[BANK0 ] unsigned char 
+  row             1   10[BANK0 ] unsigned char 
+  len             2    8[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       5       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      12       0       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_get_matrix_bit
+		_memcpy
+		_set_matrix_bit
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _memcpy *****************
+ Defined at:
+		line 11 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memcpy.c"
+ Parameters:    Size  Location     Type
+  d1              1    wreg     PTR void 
+		 -> temp_matrix16x8(16), 
+  s1              1    0[COMMON] PTR const void 
+		 -> g_matrix16x8(16), 
+  n               2    1[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  d1              1    4[COMMON] PTR void 
+		 -> temp_matrix16x8(16), 
+  s               1    6[COMMON] PTR const unsigned char 
+		 -> g_matrix16x8(16), 
+  d               1    5[COMMON] PTR unsigned char 
+		 -> temp_matrix16x8(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      PTR void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         3       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_lg_merge1
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_left_most *****************
+ Defined at:
+		line 347 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  matrix4x4       2   34[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   36[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   40[BANK0 ] char 
+  n               2   38[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USARTWriteString
+		_lg_is_left_boundary
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_is_left_boundary *****************
+ Defined at:
+		line 154 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  matrix4x4       2   21[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   23[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   31[BANK0 ] char 
+  n               2   29[BANK0 ] int 
+  col             1   33[BANK0 ] char 
+  row             1   32[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       5       0       0       0
+      Totals:         0      13       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_left_most
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_is_valid *****************
+ Defined at:
+		line 120 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1   21[BANK0 ] char 
+  matrix4x4       2   22[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   24[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   43[BANK0 ] char 
+  n               2   39[BANK0 ] int 
+  n               2   37[BANK0 ] int 
+  n               2   35[BANK0 ] int 
+  n               2   33[BANK0 ] int 
+  n               2   31[BANK0 ] int 
+  n               2   29[BANK0 ] int 
+  col             1   45[BANK0 ] char 
+  n               2   41[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  row             1   44[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0      19       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      25       0       0       0
+Total ram usage:       25 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_weight *****************
+ Defined at:
+		line 302 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR const struct .
+		 -> temp_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   31[BANK0 ] PTR const struct .
+		 -> temp_matrix16x8(16), 
+  row             1   34[BANK0 ] char 
+  n               2   26[BANK0 ] int 
+  col             1   33[BANK0 ] unsigned char 
+  risk            2   29[BANK0 ] unsigned int 
+  pre             1   32[BANK0 ] unsigned char 
+  start           1   28[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2   21[BANK0 ] unsigned int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       9       0       0       0
+      Temps:          0       3       0       0       0
+      Totals:         0      14       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_num_removed_rows *****************
+ Defined at:
+		line 71 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> temp_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   59[BANK0 ] PTR struct .
+		 -> temp_matrix16x8(16), 
+  n               2   57[BANK0 ] int 
+  row             1   61[BANK0 ] char 
+  count           1   60[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_USARTWriteString
+		_lg_is_row_full
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_num_of_orphan *****************
+ Defined at:
+		line 272 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR const struct .
+		 -> temp_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   31[BANK0 ] PTR const struct .
+		 -> temp_matrix16x8(16), 
+  row             1   33[BANK0 ] char 
+  n               2   26[BANK0 ] int 
+  col             1   32[BANK0 ] unsigned char 
+  risk            2   28[BANK0 ] unsigned int 
+  full            1   30[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2   21[BANK0 ] unsigned int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       8       0       0       0
+      Temps:          0       3       0       0       0
+      Totals:         0      13       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_holes_after_merge *****************
+ Defined at:
+		line 406 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> temp_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   38[BANK0 ] PTR struct .
+		 -> temp_matrix16x8(16), 
+  n               2   31[BANK0 ] int 
+  n               2   29[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  row             1   40[BANK0 ] char 
+  n               2   33[BANK0 ] int 
+  col             1   39[BANK0 ] char 
+  start           1   37[BANK0 ] char 
+  stop            1   36[BANK0 ] char 
+  num_hole        1   35[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0      14       0       0       0
+      Temps:          0       6       0       0       0
+      Totals:         0      20       0       0       0
+Total ram usage:       20 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_height_after_merge *****************
+ Defined at:
+		line 389 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  y               1    wreg     char 
+  matrix          2   21[BANK0 ] PTR struct .
+		 -> NULL(0), g_matrix4x4(96), 
+ Auto vars:     Size  Location     Type
+  y               1   33[BANK0 ] char 
+  n               2   31[BANK0 ] int 
+  n               2   29[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  col             1   34[BANK0 ] char 
+  n               2   25[BANK0 ] int 
+  row             1   35[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0      11       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      15       0       0       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_get_height *****************
+ Defined at:
+		line 377 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   25[BANK0 ] PTR struct .
+		 -> g_matrix16x8(16), 
+  n               2   23[BANK0 ] int 
+  row             1   26[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       4       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       6       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_USARTWriteString
+		_lg_is_row_empty
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_is_row_empty *****************
+ Defined at:
+		line 85 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR const struct .
+		 -> g_matrix16x8(16), 
+  row             1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix          1    1[COMMON] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_lg_get_height
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_fall_off *****************
+ Defined at:
+		line 190 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1   21[BANK0 ] char 
+  matrix4x4       2   22[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1   24[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1   35[BANK0 ] char 
+  n               2   33[BANK0 ] int 
+  n               2   31[BANK0 ] int 
+  n               2   29[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  col             1   36[BANK0 ] char 
+  row             1   37[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0      11       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      17       0       0       0
+Total ram usage:       17 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _dbg_print_cur_MATRIX4x4 *****************
+ Defined at:
+		line 137 in file "../debug.h"
+ Parameters:    Size  Location     Type
+  enable          1    wreg     unsigned char 
+  lable           2   50[BANK0 ] PTR const unsigned char 
+		 -> STR_139(7), 
+  x               1   52[BANK0 ] char 
+  y               1   53[BANK0 ] char 
+ Auto vars:     Size  Location     Type
+  enable          1   64[BANK0 ] unsigned char 
+  n               2   60[BANK0 ] int 
+  n               2   58[BANK0 ] int 
+  matrix          2   62[BANK0 ] PTR struct .
+		 -> g_matrix4x4(96), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       7       0       0       0
+      Temps:          0       4       0       0       0
+      Totals:         0      15       0       0       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USARTWriteString
+		_dbg_print_MATRIX4x4
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _dbg_print_MATRIX4x4 *****************
+ Defined at:
+		line 11 in file "../debug.h"
+ Parameters:    Size  Location     Type
+  enable          1    wreg     unsigned char 
+  lable           2   21[BANK0 ] PTR const unsigned char 
+		 -> STR_128(15), STR_97(24), ROM(8192), 
+  x               1   23[BANK0 ] char 
+  y               1   24[BANK0 ] char 
+  matrix          2   25[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+ Auto vars:     Size  Location     Type
+  enable          1   47[BANK0 ] unsigned char 
+  n               2   41[BANK0 ] int 
+  n               2   39[BANK0 ] int 
+  n               2   43[BANK0 ] int 
+  col             1   49[BANK0 ] char 
+  n               2   35[BANK0 ] int 
+  n               2   33[BANK0 ] int 
+  n               2   45[BANK0 ] int 
+  n               2   37[BANK0 ] int 
+  row             1   48[BANK0 ] char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       6       0       0       0
+      Locals:         0      17       0       0       0
+      Temps:          0       6       0       0       0
+      Totals:         0      29       0       0       0
+Total ram usage:       29 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_dbg_print_cur_MATRIX4x4
+		_lg_merge
+		_lg_find_best_solution
+		_dbg_print_all_MATRIX4x4
+ This function uses a non-reentrant model
+
+
+ *************** function _dbg_print_Screen *****************
+ Defined at:
+		line 118 in file "../debug.h"
+ Parameters:    Size  Location     Type
+  enable          1    wreg     unsigned char 
+  lable           2   44[BANK0 ] PTR const unsigned char 
+		 -> STR_129(15), 
+ Auto vars:     Size  Location     Type
+  enable          1   46[BANK0 ] unsigned char 
+  n               2   49[BANK0 ] int 
+  n               2   47[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USARTWriteString
+		_dbg_print_MATRIX16x8
+		_sprintf
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function ___wmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c"
+ Parameters:    Size  Location     Type
+  multiplier      2   41[BANK0 ] unsigned int 
+  multiplicand    2   43[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  product         2   45[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  2   41[BANK0 ] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       6       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_lg_find_best_solution
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_delete_matrix *****************
+ Defined at:
+		line 47 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix          1   60[BANK0 ] PTR struct .
+		 -> g_matrix16x8(16), 
+  n               2   57[BANK0 ] int 
+  row             1   61[BANK0 ] char 
+  count           1   59[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_USARTWriteString
+		_dbg_print_MATRIX16x8
+		_lg_delete_matrix_row
+		_lg_is_row_full
+		_sprintf
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_is_row_full *****************
+ Defined at:
+		line 19 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          2   44[BANK0 ] PTR const struct .
+		 -> temp_matrix16x8(16), g_matrix16x8(16), 
+  row             1   46[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  n               2   53[BANK0 ] int 
+  n               2   51[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       4       0       0       0
+      Temps:          0       4       0       0       0
+      Totals:         0      11       0       0       0
+Total ram usage:       11 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USARTWriteString
+		_dbg_print_MATRIX16x8
+		_sprintf
+ This function is called by:
+		_lg_delete_matrix
+		_lg_get_num_removed_rows
+ This function uses a non-reentrant model
+
+
+ *************** function _dbg_print_MATRIX16x8 *****************
+ Defined at:
+		line 48 in file "../debug.h"
+ Parameters:    Size  Location     Type
+  enable          1    wreg     unsigned char 
+  lable           2   21[BANK0 ] PTR const unsigned char 
+		 -> STR_156(12), STR_130(15), STR_99(23), STR_98(24), 
+		 -> STR_56(24), STR_55(25), STR_54(12), ROM(8192), 
+  matrix          2   23[BANK0 ] PTR const struct .
+		 -> temp_matrix16x8(16), g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  enable          1   41[BANK0 ] unsigned char 
+  n               2   35[BANK0 ] int 
+  n               2   33[BANK0 ] int 
+  n               2   37[BANK0 ] int 
+  col             1   43[BANK0 ] unsigned char 
+  n               2   29[BANK0 ] int 
+  n               2   27[BANK0 ] int 
+  n               2   39[BANK0 ] int 
+  n               2   31[BANK0 ] int 
+  row             1   42[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0      17       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      23       0       0       0
+Total ram usage:       23 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_USARTWriteString
+		_get_matrix_bit
+		_sprintf
+ This function is called by:
+		_dbg_print_Screen
+		_lg_is_row_full
+		_lg_delete_matrix
+		_lg_merge
+		_lg_find_best_solution
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_delete_matrix_row *****************
+ Defined at:
+		line 30 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> g_matrix16x8(16), 
+  row             1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix          1    4[COMMON] PTR struct .
+		 -> g_matrix16x8(16), 
+  i               1    5[COMMON] char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          3       0       0       0       0
+      Totals:         6       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_lg_delete_matrix
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_clear_matrix *****************
+ Defined at:
+		line 14 in file "../logic.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_hal_print_Screen
+		_memset
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _memset *****************
+ Defined at:
+		line 8 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memset.c"
+ Parameters:    Size  Location     Type
+  p1              1    wreg     PTR void 
+		 -> max7219_init1@matrix(16), g_matrix16x8(16), 
+  c               2    0[COMMON] int 
+  n               2    2[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  p1              1    6[COMMON] PTR void 
+		 -> max7219_init1@matrix(16), g_matrix16x8(16), 
+  p               1    5[COMMON] PTR unsigned char 
+		 -> max7219_init1@matrix(16), g_matrix16x8(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      PTR void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_max7219_init1
+		_lg_clear_matrix
+ This function uses a non-reentrant model
+
+
+ *************** function _hal_print_Screen *****************
+ Defined at:
+		line 10 in file "../hal.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_hal_print_MATRIX16x8
+ This function is called by:
+		_lg_clear_matrix
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _hal_print_MATRIX16x8 *****************
+ Defined at:
+		line 34 in file "../hal_max7219.h"
+ Parameters:    Size  Location     Type
+  matrix88        1    wreg     PTR const struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  matrix88        1   23[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+  matrix7219     16   24[BANK0 ] struct .
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0      17       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0      18       0       0       0
+Total ram usage:       18 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_hal_MATRIX16x8_to_MATRIX_MATRIX7219
+		_hal_print_MATRIX_MATRIX7219
+ This function is called by:
+		_hal_print_Screen
+ This function uses a non-reentrant model
+
+
+ *************** function _hal_print_MATRIX_MATRIX7219 *****************
+ Defined at:
+		line 16 in file "../hal_max7219.h"
+ Parameters:    Size  Location     Type
+  matrix7219      1    wreg     PTR const struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+ Auto vars:     Size  Location     Type
+  matrix7219      1    8[BANK0 ] PTR const struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+  matrix_col      1   13[BANK0 ] unsigned char 
+  matrix_row      1   12[BANK0 ] unsigned char 
+  matrix          2    9[BANK0 ] struct .
+  col             1   11[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       6       0       0       0
+      Temps:          0       8       0       0       0
+      Totals:         0      14       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_Write_Matrix
+ This function is called by:
+		_hal_print_MATRIX16x8
+ This function uses a non-reentrant model
+
+
+ *************** function _Write_Matrix *****************
+ Defined at:
+		line 58 in file "../max7219.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR const struct .
+		 -> hal_print_MATRIX_MATRIX7219@matrix(2), max7219_init1@matrix(16), 
+  option          1    4[COMMON] unsigned char 
+  column          1    5[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix          1   11[COMMON] PTR const struct .
+		 -> hal_print_MATRIX_MATRIX7219@matrix(2), max7219_init1@matrix(16), 
+  col             1   12[COMMON] unsigned char 
+  row             1   13[COMMON] unsigned char 
+  value           1   10[COMMON] unsigned char 
+  at              1    9[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         5       0       0       0       0
+      Temps:          3       0       0       0       0
+      Totals:        10       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_SPI1_write
+		_reverse
+ This function is called by:
+		_max7219_init1
+		_hal_print_MATRIX_MATRIX7219
+ This function uses a non-reentrant model
+
+
+ *************** function _reverse *****************
+ Defined at:
+		line 70 in file "../bit_operator.h"
+ Parameters:    Size  Location     Type
+  byte            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  byte            1    1[COMMON] unsigned char 
+  temp            1    3[COMMON] PTR struct .
+		 -> reverse@byte(1), 
+  res             1    2[COMMON] struct .
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Write_Matrix
+ This function uses a non-reentrant model
+
+
+ *************** function _SPI1_write *****************
+ Defined at:
+		line 26 in file "../max7219.h"
+ Parameters:    Size  Location     Type
+  data            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data            1    1[COMMON] unsigned char 
+  i               1    3[COMMON] unsigned char 
+  mask            1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Write_Matrix
+ This function uses a non-reentrant model
+
+
+ *************** function _hal_MATRIX16x8_to_MATRIX_MATRIX7219 *****************
+ Defined at:
+		line 6 in file "../hal_max7219.h"
+ Parameters:    Size  Location     Type
+  matrix16x8      1    wreg     PTR const struct .
+		 -> g_matrix16x8(16), 
+  matrix7219      1   13[BANK0 ] PTR struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+ Auto vars:     Size  Location     Type
+  matrix16x8      1   19[BANK0 ] PTR const struct .
+		 -> g_matrix16x8(16), 
+  row             1   21[BANK0 ] unsigned char 
+  col             1   20[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       1       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       5       0       0       0
+      Totals:         0       9       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_get_matrix_bit
+		_set_matrix_matrix7219_bit
+ This function is called by:
+		_hal_print_MATRIX16x8
+ This function uses a non-reentrant model
+
+
+ *************** function _set_matrix_matrix7219_bit *****************
+ Defined at:
+		line 62 in file "../matrix_matrix7219.h"
+ Parameters:    Size  Location     Type
+  matrix_matri    1    wreg     PTR struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+  matrix_row      1    7[BANK0 ] unsigned char 
+  matrix_col      1    8[BANK0 ] unsigned char 
+  value           1    9[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix_matri    1   13[COMMON] PTR struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+  matrix          1   12[COMMON] PTR struct .
+		 -> matrix7219.data(16), hal_print_MATRIX16x8@matrix7219(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          0       3       0       0       0
+      Totals:         2       6       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_get_matrix7219
+		_set_matrix7219_bit
+ This function is called by:
+		_hal_MATRIX16x8_to_MATRIX_MATRIX7219
+ This function uses a non-reentrant model
+
+
+ *************** function _set_matrix7219_bit *****************
+ Defined at:
+		line 41 in file "../matrix_matrix7219.h"
+ Parameters:    Size  Location     Type
+  matrix          1    wreg     PTR struct .
+		 -> matrix7219.data(16), hal_print_MATRIX16x8@matrix7219(16), 
+  row             1    0[COMMON] unsigned char 
+  col             1    1[COMMON] unsigned char 
+  value           1    2[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix          1    7[COMMON] PTR struct .
+		 -> matrix7219.data(16), hal_print_MATRIX16x8@matrix7219(16), 
+  mask            1    8[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         3       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          4       0       0       0       0
+      Totals:         9       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_set_matrix_matrix7219_bit
+ This function uses a non-reentrant model
+
+
+ *************** function _get_matrix7219 *****************
+ Defined at:
+		line 23 in file "../matrix_matrix7219.h"
+ Parameters:    Size  Location     Type
+  matrix_matri    1    wreg     PTR const struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+  matrix_row      1    9[COMMON] unsigned char 
+  matrix_col      1   10[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  matrix_matri    1   11[COMMON] PTR const struct .
+		 -> hal_print_MATRIX16x8@matrix7219(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      PTR struct .
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          0       7       0       0       0
+      Totals:         3       7       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___awdiv
+ This function is called by:
+		_set_matrix_matrix7219_bit
+		_get_matrix_matrix7219_bit
+ This function uses a non-reentrant model
+
+
+ *************** function ___awdiv *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c"
+ Parameters:    Size  Location     Type
+  divisor         2    0[COMMON] int 
+  dividend        2    2[COMMON] int 
+ Auto vars:     Size  Location     Type
+  quotient        2    7[COMMON] int 
+  sign            1    6[COMMON] unsigned char 
+  counter         1    5[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         4       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         9       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_get_matrix7219
+		_USARTWriteInt
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_clear *****************
+ Defined at:
+		line 221 in file "../logic.h"
+ Parameters:    Size  Location     Type
+  x               1    wreg     char 
+  y               1    0[BANK0 ] char 
+  matrix4x4       2    1[BANK0 ] PTR const struct .
+		 -> NULL(0), g_matrix4x4(96), 
+  matrix16x8      1    3[BANK0 ] PTR struct .
+		 -> g_matrix16x8(16), 
+ Auto vars:     Size  Location     Type
+  x               1    6[BANK0 ] char 
+  col             1    8[BANK0 ] unsigned char 
+  row             1    7[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       9       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_get_matrix_bit
+		_set_matrix_bit
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _set_matrix_bit *****************
+ Defined at:
+		line 4 in file "../bit_matrix.h"
+ Parameters:    Size  Location     Type
+  byte            2    6[COMMON] PTR unsigned char 
+		 -> temp_matrix16x8(16), g_matrix16x8(16), 
+  row             1    8[COMMON] unsigned char 
+  col             1    9[COMMON] unsigned char 
+  value           1   10[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         5       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_setbit
+ This function is called by:
+		_lg_clear
+		_lg_merge
+		_lg_merge1
+ This function uses a non-reentrant model
+
+
+ *************** function _setbit *****************
+ Defined at:
+		line 8 in file "../bit_operator.h"
+ Parameters:    Size  Location     Type
+  byte            2    0[COMMON] PTR unsigned char 
+		 -> temp_matrix16x8(16), g_matrix16x8(16), 
+  at              1    2[COMMON] unsigned char 
+  value           1    3[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  temp            2    4[COMMON] PTR struct .
+		 -> temp_matrix16x8(16), g_matrix16x8(16), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         6       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_set_matrix_bit
+ This function uses a non-reentrant model
+
+
+ *************** function _get_matrix_bit *****************
+ Defined at:
+		line 8 in file "../bit_matrix.h"
+ Parameters:    Size  Location     Type
+  byte            2    7[COMMON] PTR const unsigned char 
+		 -> temp_matrix16x8.row(16), NULL(0), temp_matrix16x8(16), g_matrix16x8.row(16), 
+		 -> g_matrix16x8(16), g_matrix4x4.row(4), g_matrix4x4(96), 
+  row             1    9[COMMON] unsigned char 
+  col             1   10[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_getbit
+ This function is called by:
+		_dbg_print_MATRIX4x4
+		_dbg_print_MATRIX16x8
+		_hal_MATRIX16x8_to_MATRIX_MATRIX7219
+		_lg_hit_land
+		_lg_is_valid
+		_lg_is_left_boundary
+		_lg_is_right_boundary
+		_lg_fall_off
+		_lg_clear
+		_lg_merge
+		_lg_merge1
+		_lg_get_num_of_orphan
+		_lg_get_weight
+		_lg_get_height_after_merge
+		_lg_get_holes_after_merge
+ This function uses a non-reentrant model
+
+
+ *************** function _getbit *****************
+ Defined at:
+		line 39 in file "../bit_operator.h"
+ Parameters:    Size  Location     Type
+  byte            2    0[COMMON] PTR const unsigned char 
+		 -> temp_matrix16x8.row(16), NULL(0), temp_matrix16x8(16), g_matrix16x8.row(16), 
+		 -> g_matrix16x8(16), g_matrix4x4.row(4), g_matrix4x4(96), 
+  at              1    2[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  temp            2    5[COMMON] PTR struct .
+		 -> temp_matrix16x8.row(16), NULL(0), temp_matrix16x8(16), g_matrix16x8.row(16), 
+		 -> g_matrix16x8(16), g_matrix4x4.row(4), g_matrix4x4(96), 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         3       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_get_matrix_bit
+ This function uses a non-reentrant model
+
+
+ *************** function _lg_char_info_index_rand *****************
+ Defined at:
+		line 343 in file "../logic.h"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___awmod
+		_rand
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _rand *****************
+ Defined at:
+		line 12 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2    0[BANK0 ] int 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       5       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___lmul
+ This function is called by:
+		_lg_char_info_index_rand
+ This function uses a non-reentrant model
+
+
+ *************** function ___lmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c"
+ Parameters:    Size  Location     Type
+  multiplier      4    0[COMMON] unsigned long 
+  multiplicand    4    4[COMMON] unsigned long 
+ Auto vars:     Size  Location     Type
+  product         4    9[COMMON] unsigned long 
+ Return value:  Size  Location     Type
+                  4    0[COMMON] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         8       0       0       0       0
+      Locals:         4       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:        13       0       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_rand
+ This function uses a non-reentrant model
+
+
+ *************** function ___awmod *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c"
+ Parameters:    Size  Location     Type
+  divisor         2    7[BANK0 ] int 
+  dividend        2    9[BANK0 ] int 
+ Auto vars:     Size  Location     Type
+  sign            1   12[BANK0 ] unsigned char 
+  counter         1   11[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2    7[BANK0 ] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       6       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_lg_char_info_index_rand
+		_USARTWriteInt
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_write_int *****************
+ Defined at:
+		line 2 in file "../eeprom_operator.h"
+ Parameters:    Size  Location     Type
+  at              1    wreg     unsigned char 
+  value           2   21[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  at              1   26[BANK0 ] unsigned char 
+  n               2   24[BANK0 ] int 
+  temp            1   27[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       4       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       7       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_USARTWriteString
+		_eeprom_write
+		_sprintf
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _sprintf *****************
+ Defined at:
+		line 492 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c"
+ Parameters:    Size  Location     Type
+  sp              1    wreg     PTR unsigned char 
+		 -> g_debug(64), 
+  f               2    0[BANK0 ] PTR const unsigned char 
+		 -> STR_156(12), STR_154(15), STR_152(15), STR_150(25), 
+		 -> STR_148(29), STR_146(12), STR_144(23), STR_142(15), 
+		 -> STR_140(61), STR_139(7), STR_137(54), STR_135(20), 
+		 -> STR_133(17), STR_131(19), STR_130(15), STR_129(15), 
+		 -> STR_128(15), STR_126(27), STR_124(16), STR_122(12), 
+		 -> STR_120(13), STR_118(11), STR_116(14), STR_114(11), 
+		 -> STR_112(9), STR_110(28), STR_108(28), STR_106(18), 
+		 -> STR_104(17), STR_102(12), STR_100(12), STR_99(23), 
+		 -> STR_98(24), STR_97(24), STR_95(17), STR_93(12), 
+		 -> STR_91(17), STR_89(12), STR_87(28), STR_85(27), 
+		 -> STR_83(8), STR_81(21), STR_79(13), STR_77(21), 
+		 -> STR_75(13), STR_73(21), STR_71(13), STR_69(37), 
+		 -> STR_67(10), STR_65(26), STR_63(26), STR_61(37), 
+		 -> STR_59(21), STR_57(27), STR_56(24), STR_55(25), 
+		 -> STR_54(12), STR_52(18), STR_50(11), STR_48(23), 
+		 -> STR_46(24), STR_44(4), STR_41(4), STR_38(23), 
+		 -> STR_36(3), STR_34(2), STR_32(2), STR_30(23), 
+		 -> STR_28(4), STR_25(23), STR_23(3), STR_21(2), 
+		 -> STR_19(2), STR_17(33), STR_15(4), STR_12(23), 
+		 -> STR_10(3), STR_8(2), STR_6(2), STR_4(32), 
+		 -> STR_2(4), ROM(8192), 
+ Auto vars:     Size  Location     Type
+  sp              1   20[BANK0 ] PTR unsigned char 
+		 -> g_debug(64), 
+  idx             1   11[BANK0 ] unsigned char 
+  tmpval          4    0        struct .
+  val             2   17[BANK0 ] unsigned int 
+  ccnt            2   12[BANK0 ] int 
+  cp              2    0        PTR const unsigned char 
+  len             2    0        unsigned int 
+  c               1   19[BANK0 ] char 
+  flag            1   16[BANK0 ] unsigned char 
+  prec            1   15[BANK0 ] char 
+  ap              1   14[BANK0 ] PTR void [1]
+		 -> ?_sprintf(2), 
+ Return value:  Size  Location     Type
+                  2    0[BANK0 ] int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       8       0       0       0
+      Locals:         0      10       0       0       0
+      Temps:          0       3       0       0       0
+      Totals:         0      21       0       0       0
+Total ram usage:       21 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___lwdiv
+		___lwmod
+ This function is called by:
+		_dbg_print_MATRIX4x4
+		_dbg_print_MATRIX16x8
+		_dbg_print_Screen
+		_dbg_print_cur_MATRIX4x4
+		_eeprom_write_int
+		_eeprom_read_int
+		_lg_is_row_full
+		_lg_delete_matrix
+		_lg_get_num_removed_rows
+		_lg_hit_land
+		_lg_is_valid
+		_lg_is_left_boundary
+		_lg_is_right_boundary
+		_lg_fall_off
+		_lg_get_num_of_orphan
+		_lg_get_weight
+		_lg_left_most
+		_lg_right_most
+		_lg_get_height
+		_lg_get_height_after_merge
+		_lg_get_holes_after_merge
+		_lg_find_best_solution
+		_main
+		_dbg_print_MATRIX_MATRIX7219
+		_dbg_print_all_MATRIX4x4
+ This function uses a non-reentrant model
+
+
+ *************** function ___lwmod *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c"
+ Parameters:    Size  Location     Type
+  divisor         2    8[COMMON] unsigned int 
+  dividend        2   10[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  counter         1   13[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  2    8[COMMON] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         6       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_sprintf
+ This function uses a non-reentrant model
+
+
+ *************** function ___lwdiv *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c"
+ Parameters:    Size  Location     Type
+  divisor         2    0[COMMON] unsigned int 
+  dividend        2    2[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  quotient        2    5[COMMON] unsigned int 
+  counter         1    7[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         8       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_sprintf
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_write *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eewrite.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+  value           1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         3       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_eeprom_write_int
+ This function uses a non-reentrant model
+
+
+ *************** function _USARTWriteString *****************
+ Defined at:
+		line 73 in file "../usart_pic16.c"
+ Parameters:    Size  Location     Type
+  str             2    1[COMMON] PTR const unsigned char 
+		 -> STR_155(31), STR_153(31), STR_151(31), STR_149(31), 
+		 -> STR_147(31), STR_145(31), STR_143(31), STR_141(31), 
+		 -> STR_138(31), STR_136(31), STR_134(31), STR_132(31), 
+		 -> STR_127(31), STR_125(31), STR_123(31), STR_121(31), 
+		 -> STR_119(31), STR_117(31), STR_115(31), STR_113(31), 
+		 -> STR_111(31), STR_109(31), STR_107(31), STR_105(31), 
+		 -> STR_103(31), STR_101(31), STR_96(31), STR_94(31), 
+		 -> STR_92(31), STR_90(31), STR_88(31), STR_86(31), 
+		 -> STR_84(31), STR_82(31), STR_80(31), STR_78(31), 
+		 -> STR_76(31), STR_74(31), STR_72(31), STR_70(31), 
+		 -> STR_68(31), STR_66(31), STR_64(31), STR_62(31), 
+		 -> STR_60(31), STR_58(31), STR_53(31), STR_51(31), 
+		 -> STR_49(31), STR_47(31), STR_45(31), STR_43(31), 
+		 -> STR_42(31), STR_40(31), STR_39(31), STR_37(31), 
+		 -> STR_35(31), STR_33(31), STR_31(31), STR_29(31), 
+		 -> STR_27(31), STR_26(31), STR_24(31), STR_22(31), 
+		 -> STR_20(31), STR_18(31), STR_16(31), STR_14(31), 
+		 -> STR_13(31), STR_11(31), STR_9(31), STR_7(31), 
+		 -> STR_5(31), STR_3(31), STR_1(31), g_debug(64), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_USARTWriteChar
+ This function is called by:
+		_dbg_print_MATRIX4x4
+		_dbg_print_MATRIX16x8
+		_dbg_print_Screen
+		_dbg_print_cur_MATRIX4x4
+		_eeprom_write_int
+		_eeprom_read_int
+		_lg_is_row_full
+		_lg_delete_matrix
+		_lg_get_num_removed_rows
+		_lg_hit_land
+		_lg_is_valid
+		_lg_is_left_boundary
+		_lg_is_right_boundary
+		_lg_fall_off
+		_lg_get_num_of_orphan
+		_lg_get_weight
+		_lg_left_most
+		_lg_right_most
+		_lg_get_height
+		_lg_get_height_after_merge
+		_lg_get_holes_after_merge
+		_lg_find_best_solution
+		_main
+		_dbg_print_MATRIX_MATRIX7219
+		_dbg_print_all_MATRIX4x4
+		_USARTWriteLine
+ This function uses a non-reentrant model
+
+
+ *************** function _USARTWriteChar *****************
+ Defined at:
+		line 67 in file "../usart_pic16.c"
+ Parameters:    Size  Location     Type
+  ch              1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  ch              1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_USARTWriteString
+		_USARTWriteLine
+		_USARTWriteInt
+		_USARTGotoNewLine
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+../main.c
+		_main          		CODE           	0D10	0000	365
+		_main_init     		CODE           	1A9D	0000	37
+
+../main.c estimated size: 402
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memset.c
+		_memset        		CODE           	0CF4	0000	29
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memset.c estimated size: 29
+
+../bit_operator.h
+		_getbit        		CODE           	15B7	0000	148
+		_setbit        		CODE           	122D	0000	121
+		_reverse       		CODE           	1C6B	0000	48
+
+../bit_operator.h estimated size: 317
+
+../matrix_matrix7219.h
+		_set_matrix7219_bit		CODE           	1B8A	0000	44
+		_set_matrix_matrix7219_bit		CODE           	1B0E	0000	42
+		_get_matrix7219		CODE           	1DAD	0000	64
+
+../matrix_matrix7219.h estimated size: 150
+
+../debug_uart.h
+		_dbg_init      		CODE           	197F	0000	9
+
+../debug_uart.h estimated size: 9
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+		_sprintf       		CODE           	0E7C	0000	389
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c estimated size: 389
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeread.c
+		_eeprom_read   		CODE           	1A18	0000	28
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeread.c estimated size: 28
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c
+		_srand         		CODE           	198F	0000	10
+		_rand          		CODE           	1EFD	0000	86
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\rand.c estimated size: 96
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
+		___wmul        		CODE           	1A56	0000	36
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c estimated size: 36
+
+../hal.h
+		_hal_print_Screen		CODE           	1965	0000	6
+
+../hal.h estimated size: 6
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c
+		___lwdiv       		CODE           	1D32	0000	61
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c estimated size: 61
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
+		___awdiv       		CODE           	1FA7	0000	90
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c estimated size: 90
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memcpy.c
+		_memcpy        		CODE           	1AE7	0000	40
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\memcpy.c estimated size: 40
+
+../debug.h
+		_dbg_print_MATRIX16x8		CODE           	0107	0000	398
+		_dbg_print_Screen		CODE           	12A5	0000	123
+		_dbg_print_cur_MATRIX4x4		CODE           	164A	0000	158
+		_dbg_print_MATRIX4x4		CODE           	0294	0000	528
+
+../debug.h estimated size: 1207
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eewrite.c
+		_eeprom_write  		CODE           	1AC1	0000	39
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eewrite.c estimated size: 39
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c
+		___lmul        		CODE           	1D6E	0000	64
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c estimated size: 64
+
+shared
+		__stringtab    		STRCODE        	0800	0000	19
+		_dpowers       		STRCODE        	0812	0000	11
+		__initialization		CODE           	07CD	0000	48
+		_hexpowers     		STRCODE        	081C	0000	9
+		_g_matrix4x4   		STRCODE        	0824	0000	97
+
+shared estimated size: 184
+
+../usart_pic16.c
+		_USARTWriteString		CODE           	1A33	0000	36
+		_USARTWriteChar		CODE           	196F	0000	9
+		_USARTInit     		CODE           	1E2C	0000	65
+
+../usart_pic16.c estimated size: 110
+
+../bit_matrix.h
+		_get_matrix_bit		CODE           	1998	0000	16
+		_set_matrix_bit		CODE           	19ED	0000	20
+
+../bit_matrix.h estimated size: 36
+
+../eeprom_operator.h
+		_eeprom_write_int		CODE           	1A79	0000	37
+		_eeprom_read_int		CODE           	1C9A	0000	48
+
+../eeprom_operator.h estimated size: 85
+
+../hal_max7219.h
+		_hal_print_MATRIX_MATRIX7219		CODE           	10AA	0000	94
+		_hal_MATRIX16x8_to_MATRIX_MATRIX7219		CODE           	1DEC	0000	65
+		_hal_print_MATRIX16x8		CODE           	19C9	0000	19
+
+../hal_max7219.h estimated size: 178
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c
+		___lwmod       		CODE           	1CC9	0000	51
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c estimated size: 51
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+		___awmod       		CODE           	1002	0000	78
+
+C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c estimated size: 78
+
+../max7219.h
+		_Write_Matrix  		CODE           	1107	0000	95
+		_SPI1_write    		CODE           	1B60	0000	43
+		_max7219_init1 		CODE           	1529	0000	143
+
+../max7219.h estimated size: 281
+
+../logic.h
+		_lg_is_row_empty		CODE           	1977	0000	9
+		_lg_clear      		CODE           	1E6C	0000	71
+		_lg_is_right_boundary		CODE           	1F52	0000	86
+		_lg_is_left_boundary		CODE           	0005	0000	82
+		_lg_left_most  		CODE           	1C0F	0000	47
+		_lg_get_height 		CODE           	1BB5	0000	45
+		_lg_get_weight 		CODE           	141A	0000	133
+		_lg_is_valid   		CODE           	0056	0000	178
+		_lg_get_num_of_orphan		CODE           	11C6	0000	104
+		_lg_merge      		CODE           	139B	0000	128
+		_lg_merge1     		CODE           	104F	0000	92
+		_lg_delete_matrix		CODE           	1165	0000	98
+		_lg_fall_off   		CODE           	149E	0000	140
+		_lg_get_num_removed_rows		CODE           	1BE1	0000	47
+		_lg_get_height_after_merge		CODE           	1EB2	0000	76
+		_lg_right_most 		CODE           	1C3D	0000	47
+		_lg_get_holes_after_merge		CODE           	16E7	0000	282
+		_lg_clear_matrix		CODE           	19A7	0000	18
+		_lg_char_info_index_rand		CODE           	1A00	0000	25
+		_lg_is_row_full		CODE           	1B37	0000	42
+		_lg_hit_land   		CODE           	131F	0000	125
+		_lg_delete_matrix_row		CODE           	1CFB	0000	56
+		_lg_find_best_solution		CODE           	04A3	0000	811
+
+../logic.h estimated size: 2742
+

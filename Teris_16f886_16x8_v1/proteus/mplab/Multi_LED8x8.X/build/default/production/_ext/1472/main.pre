@@ -1,0 +1,3580 @@
+
+# 1 "../main.c"
+
+
+# 8
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = ON
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = ON
+#pragma config CPD = ON
+#pragma config BOREN = ON
+#pragma config IESO = ON
+#pragma config FCMEN = ON
+#pragma config LVP = ON
+
+
+#pragma config BOR4V = BOR21V
+#pragma config WRT = OFF
+
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\htc.h"
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic16f886.h"
+extern volatile unsigned char INDF @ 0x000;
+
+asm("INDF equ 00h");
+
+
+
+extern volatile unsigned char TMR0 @ 0x001;
+
+asm("TMR0 equ 01h");
+
+
+
+extern volatile unsigned char PCL @ 0x002;
+
+asm("PCL equ 02h");
+
+
+
+extern volatile unsigned char STATUS @ 0x003;
+
+asm("STATUS equ 03h");
+
+
+typedef union {
+struct {
+unsigned C :1;
+unsigned DC :1;
+unsigned Z :1;
+unsigned nPD :1;
+unsigned nTO :1;
+unsigned RP :2;
+unsigned IRP :1;
+};
+struct {
+unsigned :5;
+unsigned RP0 :1;
+unsigned RP1 :1;
+};
+struct {
+unsigned CARRY :1;
+};
+struct {
+unsigned :2;
+unsigned ZERO :1;
+};
+} STATUSbits_t;
+extern volatile STATUSbits_t STATUSbits @ 0x003;
+
+# 154
+extern volatile unsigned char FSR @ 0x004;
+
+asm("FSR equ 04h");
+
+
+
+extern volatile unsigned char PORTA @ 0x005;
+
+asm("PORTA equ 05h");
+
+
+typedef union {
+struct {
+unsigned RA0 :1;
+unsigned RA1 :1;
+unsigned RA2 :1;
+unsigned RA3 :1;
+unsigned RA4 :1;
+unsigned RA5 :1;
+unsigned RA6 :1;
+unsigned RA7 :1;
+};
+} PORTAbits_t;
+extern volatile PORTAbits_t PORTAbits @ 0x005;
+
+# 221
+extern volatile unsigned char PORTB @ 0x006;
+
+asm("PORTB equ 06h");
+
+
+typedef union {
+struct {
+unsigned RB0 :1;
+unsigned RB1 :1;
+unsigned RB2 :1;
+unsigned RB3 :1;
+unsigned RB4 :1;
+unsigned RB5 :1;
+unsigned RB6 :1;
+unsigned RB7 :1;
+};
+} PORTBbits_t;
+extern volatile PORTBbits_t PORTBbits @ 0x006;
+
+# 282
+extern volatile unsigned char PORTC @ 0x007;
+
+asm("PORTC equ 07h");
+
+
+typedef union {
+struct {
+unsigned RC0 :1;
+unsigned RC1 :1;
+unsigned RC2 :1;
+unsigned RC3 :1;
+unsigned RC4 :1;
+unsigned RC5 :1;
+unsigned RC6 :1;
+unsigned RC7 :1;
+};
+} PORTCbits_t;
+extern volatile PORTCbits_t PORTCbits @ 0x007;
+
+# 343
+extern volatile unsigned char PORTE @ 0x009;
+
+asm("PORTE equ 09h");
+
+
+typedef union {
+struct {
+unsigned :3;
+unsigned RE3 :1;
+};
+} PORTEbits_t;
+extern volatile PORTEbits_t PORTEbits @ 0x009;
+
+# 363
+extern volatile unsigned char PCLATH @ 0x00A;
+
+asm("PCLATH equ 0Ah");
+
+
+
+extern volatile unsigned char INTCON @ 0x00B;
+
+asm("INTCON equ 0Bh");
+
+
+typedef union {
+struct {
+unsigned RBIF :1;
+unsigned INTF :1;
+unsigned T0IF :1;
+unsigned RBIE :1;
+unsigned INTE :1;
+unsigned T0IE :1;
+unsigned PEIE :1;
+unsigned GIE :1;
+};
+struct {
+unsigned :2;
+unsigned TMR0IF :1;
+unsigned :2;
+unsigned TMR0IE :1;
+};
+} INTCONbits_t;
+extern volatile INTCONbits_t INTCONbits @ 0x00B;
+
+# 446
+extern volatile unsigned char PIR1 @ 0x00C;
+
+asm("PIR1 equ 0Ch");
+
+
+typedef union {
+struct {
+unsigned TMR1IF :1;
+unsigned TMR2IF :1;
+unsigned CCP1IF :1;
+unsigned SSPIF :1;
+unsigned TXIF :1;
+unsigned RCIF :1;
+unsigned ADIF :1;
+};
+} PIR1bits_t;
+extern volatile PIR1bits_t PIR1bits @ 0x00C;
+
+# 501
+extern volatile unsigned char PIR2 @ 0x00D;
+
+asm("PIR2 equ 0Dh");
+
+
+typedef union {
+struct {
+unsigned CCP2IF :1;
+unsigned :1;
+unsigned ULPWUIF :1;
+unsigned BCLIF :1;
+unsigned EEIF :1;
+unsigned C1IF :1;
+unsigned C2IF :1;
+unsigned OSFIF :1;
+};
+} PIR2bits_t;
+extern volatile PIR2bits_t PIR2bits @ 0x00D;
+
+# 557
+extern volatile unsigned short TMR1 @ 0x00E;
+
+asm("TMR1 equ 0Eh");
+
+
+
+extern volatile unsigned char TMR1L @ 0x00E;
+
+asm("TMR1L equ 0Eh");
+
+
+
+extern volatile unsigned char TMR1H @ 0x00F;
+
+asm("TMR1H equ 0Fh");
+
+
+
+extern volatile unsigned char T1CON @ 0x010;
+
+asm("T1CON equ 010h");
+
+
+typedef union {
+struct {
+unsigned TMR1ON :1;
+unsigned TMR1CS :1;
+unsigned nT1SYNC :1;
+unsigned T1OSCEN :1;
+unsigned T1CKPS :2;
+unsigned TMR1GE :1;
+unsigned T1GINV :1;
+};
+struct {
+unsigned :2;
+unsigned T1INSYNC :1;
+unsigned :1;
+unsigned T1CKPS0 :1;
+unsigned T1CKPS1 :1;
+unsigned :1;
+unsigned T1GIV :1;
+};
+struct {
+unsigned :2;
+unsigned T1SYNC :1;
+};
+} T1CONbits_t;
+extern volatile T1CONbits_t T1CONbits @ 0x010;
+
+# 668
+extern volatile unsigned char TMR2 @ 0x011;
+
+asm("TMR2 equ 011h");
+
+
+
+extern volatile unsigned char T2CON @ 0x012;
+
+asm("T2CON equ 012h");
+
+
+typedef union {
+struct {
+unsigned T2CKPS :2;
+unsigned TMR2ON :1;
+unsigned TOUTPS :4;
+};
+struct {
+unsigned T2CKPS0 :1;
+unsigned T2CKPS1 :1;
+unsigned :1;
+unsigned TOUTPS0 :1;
+unsigned TOUTPS1 :1;
+unsigned TOUTPS2 :1;
+unsigned TOUTPS3 :1;
+};
+} T2CONbits_t;
+extern volatile T2CONbits_t T2CONbits @ 0x012;
+
+# 744
+extern volatile unsigned char SSPBUF @ 0x013;
+
+asm("SSPBUF equ 013h");
+
+
+
+extern volatile unsigned char SSPCON @ 0x014;
+
+asm("SSPCON equ 014h");
+
+
+typedef union {
+struct {
+unsigned SSPM :4;
+unsigned CKP :1;
+unsigned SSPEN :1;
+unsigned SSPOV :1;
+unsigned WCOL :1;
+};
+struct {
+unsigned SSPM0 :1;
+unsigned SSPM1 :1;
+unsigned SSPM2 :1;
+unsigned SSPM3 :1;
+};
+} SSPCONbits_t;
+extern volatile SSPCONbits_t SSPCONbits @ 0x014;
+
+# 819
+extern volatile unsigned short CCPR1 @ 0x015;
+
+asm("CCPR1 equ 015h");
+
+
+
+extern volatile unsigned char CCPR1L @ 0x015;
+
+asm("CCPR1L equ 015h");
+
+
+
+extern volatile unsigned char CCPR1H @ 0x016;
+
+asm("CCPR1H equ 016h");
+
+
+
+extern volatile unsigned char CCP1CON @ 0x017;
+
+asm("CCP1CON equ 017h");
+
+
+typedef union {
+struct {
+unsigned CCP1M :4;
+unsigned DC1B :2;
+unsigned P1M :2;
+};
+struct {
+unsigned CCP1M0 :1;
+unsigned CCP1M1 :1;
+unsigned CCP1M2 :1;
+unsigned CCP1M3 :1;
+unsigned DC1B0 :1;
+unsigned DC1B1 :1;
+unsigned P1M0 :1;
+unsigned P1M1 :1;
+};
+struct {
+unsigned :4;
+unsigned CCP1Y :1;
+unsigned CCP1X :1;
+};
+} CCP1CONbits_t;
+extern volatile CCP1CONbits_t CCP1CONbits @ 0x017;
+
+# 933
+extern volatile unsigned char RCSTA @ 0x018;
+
+asm("RCSTA equ 018h");
+
+
+typedef union {
+struct {
+unsigned RX9D :1;
+unsigned OERR :1;
+unsigned FERR :1;
+unsigned ADDEN :1;
+unsigned CREN :1;
+unsigned SREN :1;
+unsigned RX9 :1;
+unsigned SPEN :1;
+};
+struct {
+unsigned RCD8 :1;
+unsigned :5;
+unsigned RC9 :1;
+};
+struct {
+unsigned :6;
+unsigned nRC8 :1;
+};
+struct {
+unsigned :6;
+unsigned RC8_9 :1;
+};
+} RCSTAbits_t;
+extern volatile RCSTAbits_t RCSTAbits @ 0x018;
+
+# 1027
+extern volatile unsigned char TXREG @ 0x019;
+
+asm("TXREG equ 019h");
+
+
+
+extern volatile unsigned char RCREG @ 0x01A;
+
+asm("RCREG equ 01Ah");
+
+
+
+extern volatile unsigned short CCPR2 @ 0x01B;
+
+asm("CCPR2 equ 01Bh");
+
+
+
+extern volatile unsigned char CCPR2L @ 0x01B;
+
+asm("CCPR2L equ 01Bh");
+
+
+
+extern volatile unsigned char CCPR2H @ 0x01C;
+
+asm("CCPR2H equ 01Ch");
+
+
+
+extern volatile unsigned char CCP2CON @ 0x01D;
+
+asm("CCP2CON equ 01Dh");
+
+
+typedef union {
+struct {
+unsigned CCP2M :4;
+unsigned DC2B0 :1;
+unsigned DC2B1 :1;
+};
+struct {
+unsigned CCP2M0 :1;
+unsigned CCP2M1 :1;
+unsigned CCP2M2 :1;
+unsigned CCP2M3 :1;
+unsigned CCP2Y :1;
+unsigned CCP2X :1;
+};
+} CCP2CONbits_t;
+extern volatile CCP2CONbits_t CCP2CONbits @ 0x01D;
+
+# 1126
+extern volatile unsigned char ADRESH @ 0x01E;
+
+asm("ADRESH equ 01Eh");
+
+
+
+extern volatile unsigned char ADCON0 @ 0x01F;
+
+asm("ADCON0 equ 01Fh");
+
+
+typedef union {
+struct {
+unsigned ADON :1;
+unsigned GO_nDONE :1;
+unsigned CHS :4;
+unsigned ADCS :2;
+};
+struct {
+unsigned :1;
+unsigned GO :1;
+unsigned CHS0 :1;
+unsigned CHS1 :1;
+unsigned CHS2 :1;
+unsigned CHS3 :1;
+unsigned ADCS0 :1;
+unsigned ADCS1 :1;
+};
+struct {
+unsigned :1;
+unsigned nDONE :1;
+};
+struct {
+unsigned :1;
+unsigned GO_DONE :1;
+};
+} ADCON0bits_t;
+extern volatile ADCON0bits_t ADCON0bits @ 0x01F;
+
+# 1232
+extern volatile unsigned char OPTION_REG @ 0x081;
+
+asm("OPTION_REG equ 081h");
+
+
+typedef union {
+struct {
+unsigned PS :3;
+unsigned PSA :1;
+unsigned T0SE :1;
+unsigned T0CS :1;
+unsigned INTEDG :1;
+unsigned nRBPU :1;
+};
+struct {
+unsigned PS0 :1;
+unsigned PS1 :1;
+unsigned PS2 :1;
+};
+} OPTION_REGbits_t;
+extern volatile OPTION_REGbits_t OPTION_REGbits @ 0x081;
+
+# 1301
+extern volatile unsigned char TRISA @ 0x085;
+
+asm("TRISA equ 085h");
+
+
+typedef union {
+struct {
+unsigned TRISA0 :1;
+unsigned TRISA1 :1;
+unsigned TRISA2 :1;
+unsigned TRISA3 :1;
+unsigned TRISA4 :1;
+unsigned TRISA5 :1;
+unsigned TRISA6 :1;
+unsigned TRISA7 :1;
+};
+} TRISAbits_t;
+extern volatile TRISAbits_t TRISAbits @ 0x085;
+
+# 1362
+extern volatile unsigned char TRISB @ 0x086;
+
+asm("TRISB equ 086h");
+
+
+typedef union {
+struct {
+unsigned TRISB0 :1;
+unsigned TRISB1 :1;
+unsigned TRISB2 :1;
+unsigned TRISB3 :1;
+unsigned TRISB4 :1;
+unsigned TRISB5 :1;
+unsigned TRISB6 :1;
+unsigned TRISB7 :1;
+};
+} TRISBbits_t;
+extern volatile TRISBbits_t TRISBbits @ 0x086;
+
+# 1423
+extern volatile unsigned char TRISC @ 0x087;
+
+asm("TRISC equ 087h");
+
+
+typedef union {
+struct {
+unsigned TRISC0 :1;
+unsigned TRISC1 :1;
+unsigned TRISC2 :1;
+unsigned TRISC3 :1;
+unsigned TRISC4 :1;
+unsigned TRISC5 :1;
+unsigned TRISC6 :1;
+unsigned TRISC7 :1;
+};
+} TRISCbits_t;
+extern volatile TRISCbits_t TRISCbits @ 0x087;
+
+# 1484
+extern volatile unsigned char TRISE @ 0x089;
+
+asm("TRISE equ 089h");
+
+
+typedef union {
+struct {
+unsigned :3;
+unsigned TRISE3 :1;
+};
+} TRISEbits_t;
+extern volatile TRISEbits_t TRISEbits @ 0x089;
+
+# 1504
+extern volatile unsigned char PIE1 @ 0x08C;
+
+asm("PIE1 equ 08Ch");
+
+
+typedef union {
+struct {
+unsigned TMR1IE :1;
+unsigned TMR2IE :1;
+unsigned CCP1IE :1;
+unsigned SSPIE :1;
+unsigned TXIE :1;
+unsigned RCIE :1;
+unsigned ADIE :1;
+};
+} PIE1bits_t;
+extern volatile PIE1bits_t PIE1bits @ 0x08C;
+
+# 1559
+extern volatile unsigned char PIE2 @ 0x08D;
+
+asm("PIE2 equ 08Dh");
+
+
+typedef union {
+struct {
+unsigned CCP2IE :1;
+unsigned :1;
+unsigned ULPWUIE :1;
+unsigned BCLIE :1;
+unsigned EEIE :1;
+unsigned C1IE :1;
+unsigned C2IE :1;
+unsigned OSFIE :1;
+};
+} PIE2bits_t;
+extern volatile PIE2bits_t PIE2bits @ 0x08D;
+
+# 1615
+extern volatile unsigned char PCON @ 0x08E;
+
+asm("PCON equ 08Eh");
+
+
+typedef union {
+struct {
+unsigned nBOR :1;
+unsigned nPOR :1;
+unsigned :2;
+unsigned SBOREN :1;
+unsigned ULPWUE :1;
+};
+struct {
+unsigned nBO :1;
+};
+} PCONbits_t;
+extern volatile PCONbits_t PCONbits @ 0x08E;
+
+# 1661
+extern volatile unsigned char OSCCON @ 0x08F;
+
+asm("OSCCON equ 08Fh");
+
+
+typedef union {
+struct {
+unsigned SCS :1;
+unsigned LTS :1;
+unsigned HTS :1;
+unsigned OSTS :1;
+unsigned IRCF :3;
+};
+struct {
+unsigned :4;
+unsigned IRCF0 :1;
+unsigned IRCF1 :1;
+unsigned IRCF2 :1;
+};
+} OSCCONbits_t;
+extern volatile OSCCONbits_t OSCCONbits @ 0x08F;
+
+# 1725
+extern volatile unsigned char OSCTUNE @ 0x090;
+
+asm("OSCTUNE equ 090h");
+
+
+typedef union {
+struct {
+unsigned TUN :5;
+};
+struct {
+unsigned TUN0 :1;
+unsigned TUN1 :1;
+unsigned TUN2 :1;
+unsigned TUN3 :1;
+unsigned TUN4 :1;
+};
+} OSCTUNEbits_t;
+extern volatile OSCTUNEbits_t OSCTUNEbits @ 0x090;
+
+# 1776
+extern volatile unsigned char SSPCON2 @ 0x091;
+
+asm("SSPCON2 equ 091h");
+
+
+typedef union {
+struct {
+unsigned SEN :1;
+unsigned RSEN :1;
+unsigned PEN :1;
+unsigned RCEN :1;
+unsigned ACKEN :1;
+unsigned ACKDT :1;
+unsigned ACKSTAT :1;
+unsigned GCEN :1;
+};
+} SSPCON2bits_t;
+extern volatile SSPCON2bits_t SSPCON2bits @ 0x091;
+
+# 1837
+extern volatile unsigned char PR2 @ 0x092;
+
+asm("PR2 equ 092h");
+
+
+
+extern volatile unsigned char SSPADD @ 0x093;
+
+asm("SSPADD equ 093h");
+
+
+
+extern volatile unsigned char SSPMSK @ 0x093;
+
+asm("SSPMSK equ 093h");
+
+
+extern volatile unsigned char MSK @ 0x093;
+
+asm("MSK equ 093h");
+
+
+typedef union {
+struct {
+unsigned MSK0 :1;
+unsigned MSK1 :1;
+unsigned MSK2 :1;
+unsigned MSK3 :1;
+unsigned MSK4 :1;
+unsigned MSK5 :1;
+unsigned MSK6 :1;
+unsigned MSK7 :1;
+};
+} SSPMSKbits_t;
+extern volatile SSPMSKbits_t SSPMSKbits @ 0x093;
+
+# 1914
+typedef union {
+struct {
+unsigned MSK0 :1;
+unsigned MSK1 :1;
+unsigned MSK2 :1;
+unsigned MSK3 :1;
+unsigned MSK4 :1;
+unsigned MSK5 :1;
+unsigned MSK6 :1;
+unsigned MSK7 :1;
+};
+} MSKbits_t;
+extern volatile MSKbits_t MSKbits @ 0x093;
+
+# 1970
+extern volatile unsigned char SSPSTAT @ 0x094;
+
+asm("SSPSTAT equ 094h");
+
+
+typedef union {
+struct {
+unsigned BF :1;
+unsigned UA :1;
+unsigned R_nW :1;
+unsigned S :1;
+unsigned P :1;
+unsigned D_nA :1;
+unsigned CKE :1;
+unsigned SMP :1;
+};
+struct {
+unsigned :2;
+unsigned R :1;
+unsigned :2;
+unsigned D :1;
+};
+struct {
+unsigned :2;
+unsigned I2C_READ :1;
+unsigned I2C_START :1;
+unsigned I2C_STOP :1;
+unsigned I2C_DATA :1;
+};
+struct {
+unsigned :2;
+unsigned nW :1;
+unsigned :2;
+unsigned nA :1;
+};
+struct {
+unsigned :2;
+unsigned nWRITE :1;
+unsigned :2;
+unsigned nADDRESS :1;
+};
+struct {
+unsigned :2;
+unsigned R_W :1;
+unsigned :2;
+unsigned D_A :1;
+};
+struct {
+unsigned :2;
+unsigned READ_WRITE :1;
+unsigned :2;
+unsigned DATA_ADDRESS :1;
+};
+} SSPSTATbits_t;
+extern volatile SSPSTATbits_t SSPSTATbits @ 0x094;
+
+# 2138
+extern volatile unsigned char WPUB @ 0x095;
+
+asm("WPUB equ 095h");
+
+
+typedef union {
+struct {
+unsigned WPUB :8;
+};
+struct {
+unsigned WPUB0 :1;
+unsigned WPUB1 :1;
+unsigned WPUB2 :1;
+unsigned WPUB3 :1;
+unsigned WPUB4 :1;
+unsigned WPUB5 :1;
+unsigned WPUB6 :1;
+unsigned WPUB7 :1;
+};
+} WPUBbits_t;
+extern volatile WPUBbits_t WPUBbits @ 0x095;
+
+# 2207
+extern volatile unsigned char IOCB @ 0x096;
+
+asm("IOCB equ 096h");
+
+
+typedef union {
+struct {
+unsigned IOCB :8;
+};
+struct {
+unsigned IOCB0 :1;
+unsigned IOCB1 :1;
+unsigned IOCB2 :1;
+unsigned IOCB3 :1;
+unsigned IOCB4 :1;
+unsigned IOCB5 :1;
+unsigned IOCB6 :1;
+unsigned IOCB7 :1;
+};
+} IOCBbits_t;
+extern volatile IOCBbits_t IOCBbits @ 0x096;
+
+# 2276
+extern volatile unsigned char VRCON @ 0x097;
+
+asm("VRCON equ 097h");
+
+
+typedef union {
+struct {
+unsigned VR :4;
+unsigned VRSS :1;
+unsigned VRR :1;
+unsigned VROE :1;
+unsigned VREN :1;
+};
+struct {
+unsigned VR0 :1;
+unsigned VR1 :1;
+unsigned VR2 :1;
+unsigned VR3 :1;
+};
+} VRCONbits_t;
+extern volatile VRCONbits_t VRCONbits @ 0x097;
+
+# 2345
+extern volatile unsigned char TXSTA @ 0x098;
+
+asm("TXSTA equ 098h");
+
+
+typedef union {
+struct {
+unsigned TX9D :1;
+unsigned TRMT :1;
+unsigned BRGH :1;
+unsigned SENDB :1;
+unsigned SYNC :1;
+unsigned TXEN :1;
+unsigned TX9 :1;
+unsigned CSRC :1;
+};
+struct {
+unsigned TXD8 :1;
+unsigned :5;
+unsigned nTX8 :1;
+};
+struct {
+unsigned :6;
+unsigned TX8_9 :1;
+};
+} TXSTAbits_t;
+extern volatile TXSTAbits_t TXSTAbits @ 0x098;
+
+# 2430
+extern volatile unsigned char SPBRG @ 0x099;
+
+asm("SPBRG equ 099h");
+
+
+typedef union {
+struct {
+unsigned BRG0 :1;
+unsigned BRG1 :1;
+unsigned BRG2 :1;
+unsigned BRG3 :1;
+unsigned BRG4 :1;
+unsigned BRG5 :1;
+unsigned BRG6 :1;
+unsigned BRG7 :1;
+};
+} SPBRGbits_t;
+extern volatile SPBRGbits_t SPBRGbits @ 0x099;
+
+# 2491
+extern volatile unsigned char SPBRGH @ 0x09A;
+
+asm("SPBRGH equ 09Ah");
+
+
+typedef union {
+struct {
+unsigned SPBRGH :8;
+};
+struct {
+unsigned BRG8 :1;
+unsigned BRG9 :1;
+unsigned BRG10 :1;
+unsigned BRG11 :1;
+unsigned BRG12 :1;
+unsigned BRG13 :1;
+unsigned BRG14 :1;
+unsigned BRG15 :1;
+};
+} SPBRGHbits_t;
+extern volatile SPBRGHbits_t SPBRGHbits @ 0x09A;
+
+# 2560
+extern volatile unsigned char PWM1CON @ 0x09B;
+
+asm("PWM1CON equ 09Bh");
+
+
+typedef union {
+struct {
+unsigned PDC :7;
+unsigned PRSEN :1;
+};
+struct {
+unsigned PDC0 :1;
+unsigned PDC1 :1;
+unsigned PDC2 :1;
+unsigned PDC3 :1;
+unsigned PDC4 :1;
+unsigned PDC5 :1;
+unsigned PDC6 :1;
+};
+} PWM1CONbits_t;
+extern volatile PWM1CONbits_t PWM1CONbits @ 0x09B;
+
+# 2629
+extern volatile unsigned char ECCPAS @ 0x09C;
+
+asm("ECCPAS equ 09Ch");
+
+
+typedef union {
+struct {
+unsigned PSSBD :2;
+unsigned PSSAC :2;
+unsigned ECCPAS :3;
+unsigned ECCPASE :1;
+};
+struct {
+unsigned PSSBD0 :1;
+unsigned PSSBD1 :1;
+unsigned PSSAC0 :1;
+unsigned PSSAC1 :1;
+unsigned ECCPAS0 :1;
+unsigned ECCPAS1 :1;
+unsigned ECCPAS2 :1;
+};
+} ECCPASbits_t;
+extern volatile ECCPASbits_t ECCPASbits @ 0x09C;
+
+# 2710
+extern volatile unsigned char PSTRCON @ 0x09D;
+
+asm("PSTRCON equ 09Dh");
+
+
+typedef union {
+struct {
+unsigned STRA :1;
+unsigned STRB :1;
+unsigned STRC :1;
+unsigned STRD :1;
+unsigned STRSYNC :1;
+};
+} PSTRCONbits_t;
+extern volatile PSTRCONbits_t PSTRCONbits @ 0x09D;
+
+# 2753
+extern volatile unsigned char ADRESL @ 0x09E;
+
+asm("ADRESL equ 09Eh");
+
+
+
+extern volatile unsigned char ADCON1 @ 0x09F;
+
+asm("ADCON1 equ 09Fh");
+
+
+typedef union {
+struct {
+unsigned :4;
+unsigned VCFG0 :1;
+unsigned VCFG1 :1;
+unsigned :1;
+unsigned ADFM :1;
+};
+} ADCON1bits_t;
+extern volatile ADCON1bits_t ADCON1bits @ 0x09F;
+
+# 2792
+extern volatile unsigned char WDTCON @ 0x105;
+
+asm("WDTCON equ 0105h");
+
+
+typedef union {
+struct {
+unsigned SWDTEN :1;
+unsigned WDTPS :4;
+};
+struct {
+unsigned :1;
+unsigned WDTPS0 :1;
+unsigned WDTPS1 :1;
+unsigned WDTPS2 :1;
+unsigned WDTPS3 :1;
+};
+} WDTCONbits_t;
+extern volatile WDTCONbits_t WDTCONbits @ 0x105;
+
+# 2844
+extern volatile unsigned char CM1CON0 @ 0x107;
+
+asm("CM1CON0 equ 0107h");
+
+
+typedef union {
+struct {
+unsigned C1CH :2;
+unsigned C1R :1;
+unsigned :1;
+unsigned C1POL :1;
+unsigned C1OE :1;
+unsigned C1OUT :1;
+unsigned C1ON :1;
+};
+struct {
+unsigned C1CH0 :1;
+unsigned C1CH1 :1;
+};
+} CM1CON0bits_t;
+extern volatile CM1CON0bits_t CM1CON0bits @ 0x107;
+
+# 2908
+extern volatile unsigned char CM2CON0 @ 0x108;
+
+asm("CM2CON0 equ 0108h");
+
+
+typedef union {
+struct {
+unsigned C2CH :2;
+unsigned C2R :1;
+unsigned :1;
+unsigned C2POL :1;
+unsigned C2OE :1;
+unsigned C2OUT :1;
+unsigned C2ON :1;
+};
+struct {
+unsigned C2CH0 :1;
+unsigned C2CH1 :1;
+};
+} CM2CON0bits_t;
+extern volatile CM2CON0bits_t CM2CON0bits @ 0x108;
+
+# 2972
+extern volatile unsigned char CM2CON1 @ 0x109;
+
+asm("CM2CON1 equ 0109h");
+
+
+typedef union {
+struct {
+unsigned C2SYNC :1;
+unsigned T1GSS :1;
+unsigned :2;
+unsigned C2RSEL :1;
+unsigned C1RSEL :1;
+unsigned MC2OUT :1;
+unsigned MC1OUT :1;
+};
+} CM2CON1bits_t;
+extern volatile CM2CON1bits_t CM2CON1bits @ 0x109;
+
+# 3022
+extern volatile unsigned char EEDATA @ 0x10C;
+
+asm("EEDATA equ 010Ch");
+
+
+extern volatile unsigned char EEDAT @ 0x10C;
+
+asm("EEDAT equ 010Ch");
+
+
+
+extern volatile unsigned char EEADR @ 0x10D;
+
+asm("EEADR equ 010Dh");
+
+
+
+extern volatile unsigned char EEDATH @ 0x10E;
+
+asm("EEDATH equ 010Eh");
+
+
+
+extern volatile unsigned char EEADRH @ 0x10F;
+
+asm("EEADRH equ 010Fh");
+
+
+
+extern volatile unsigned char SRCON @ 0x185;
+
+asm("SRCON equ 0185h");
+
+
+typedef union {
+struct {
+unsigned FVREN :1;
+unsigned :1;
+unsigned PULSR :1;
+unsigned PULSS :1;
+unsigned C2REN :1;
+unsigned C1SEN :1;
+unsigned SR0 :1;
+unsigned SR1 :1;
+};
+} SRCONbits_t;
+extern volatile SRCONbits_t SRCONbits @ 0x185;
+
+# 3107
+extern volatile unsigned char BAUDCTL @ 0x187;
+
+asm("BAUDCTL equ 0187h");
+
+
+typedef union {
+struct {
+unsigned ABDEN :1;
+unsigned WUE :1;
+unsigned :1;
+unsigned BRG16 :1;
+unsigned SCKP :1;
+unsigned :1;
+unsigned RCIDL :1;
+unsigned ABDOVF :1;
+};
+} BAUDCTLbits_t;
+extern volatile BAUDCTLbits_t BAUDCTLbits @ 0x187;
+
+# 3158
+extern volatile unsigned char ANSEL @ 0x188;
+
+asm("ANSEL equ 0188h");
+
+
+typedef union {
+struct {
+unsigned ANS0 :1;
+unsigned ANS1 :1;
+unsigned ANS2 :1;
+unsigned ANS3 :1;
+unsigned ANS4 :1;
+};
+} ANSELbits_t;
+extern volatile ANSELbits_t ANSELbits @ 0x188;
+
+# 3201
+extern volatile unsigned char ANSELH @ 0x189;
+
+asm("ANSELH equ 0189h");
+
+
+typedef union {
+struct {
+unsigned ANS8 :1;
+unsigned ANS9 :1;
+unsigned ANS10 :1;
+unsigned ANS11 :1;
+unsigned ANS12 :1;
+unsigned ANS13 :1;
+};
+} ANSELHbits_t;
+extern volatile ANSELHbits_t ANSELHbits @ 0x189;
+
+# 3250
+extern volatile unsigned char EECON1 @ 0x18C;
+
+asm("EECON1 equ 018Ch");
+
+
+typedef union {
+struct {
+unsigned RD :1;
+unsigned WR :1;
+unsigned WREN :1;
+unsigned WRERR :1;
+unsigned :3;
+unsigned EEPGD :1;
+};
+} EECON1bits_t;
+extern volatile EECON1bits_t EECON1bits @ 0x18C;
+
+# 3294
+extern volatile unsigned char EECON2 @ 0x18D;
+
+asm("EECON2 equ 018Dh");
+
+# 3306
+extern volatile __bit ABDEN @ (((unsigned) &BAUDCTL)*8) + 0;
+
+extern volatile __bit ABDOVF @ (((unsigned) &BAUDCTL)*8) + 7;
+
+extern volatile __bit ACKDT @ (((unsigned) &SSPCON2)*8) + 5;
+
+extern volatile __bit ACKEN @ (((unsigned) &SSPCON2)*8) + 4;
+
+extern volatile __bit ACKSTAT @ (((unsigned) &SSPCON2)*8) + 6;
+
+extern volatile __bit ADCS0 @ (((unsigned) &ADCON0)*8) + 6;
+
+extern volatile __bit ADCS1 @ (((unsigned) &ADCON0)*8) + 7;
+
+extern volatile __bit ADDEN @ (((unsigned) &RCSTA)*8) + 3;
+
+extern volatile __bit ADFM @ (((unsigned) &ADCON1)*8) + 7;
+
+extern volatile __bit ADIE @ (((unsigned) &PIE1)*8) + 6;
+
+extern volatile __bit ADIF @ (((unsigned) &PIR1)*8) + 6;
+
+extern volatile __bit ADON @ (((unsigned) &ADCON0)*8) + 0;
+
+extern volatile __bit ANS0 @ (((unsigned) &ANSEL)*8) + 0;
+
+extern volatile __bit ANS1 @ (((unsigned) &ANSEL)*8) + 1;
+
+extern volatile __bit ANS10 @ (((unsigned) &ANSELH)*8) + 2;
+
+extern volatile __bit ANS11 @ (((unsigned) &ANSELH)*8) + 3;
+
+extern volatile __bit ANS12 @ (((unsigned) &ANSELH)*8) + 4;
+
+extern volatile __bit ANS13 @ (((unsigned) &ANSELH)*8) + 5;
+
+extern volatile __bit ANS2 @ (((unsigned) &ANSEL)*8) + 2;
+
+extern volatile __bit ANS3 @ (((unsigned) &ANSEL)*8) + 3;
+
+extern volatile __bit ANS4 @ (((unsigned) &ANSEL)*8) + 4;
+
+extern volatile __bit ANS8 @ (((unsigned) &ANSELH)*8) + 0;
+
+extern volatile __bit ANS9 @ (((unsigned) &ANSELH)*8) + 1;
+
+extern volatile __bit BCLIE @ (((unsigned) &PIE2)*8) + 3;
+
+extern volatile __bit BCLIF @ (((unsigned) &PIR2)*8) + 3;
+
+extern volatile __bit BF @ (((unsigned) &SSPSTAT)*8) + 0;
+
+extern volatile __bit BRG0 @ (((unsigned) &SPBRG)*8) + 0;
+
+extern volatile __bit BRG1 @ (((unsigned) &SPBRG)*8) + 1;
+
+extern volatile __bit BRG10 @ (((unsigned) &SPBRGH)*8) + 2;
+
+extern volatile __bit BRG11 @ (((unsigned) &SPBRGH)*8) + 3;
+
+extern volatile __bit BRG12 @ (((unsigned) &SPBRGH)*8) + 4;
+
+extern volatile __bit BRG13 @ (((unsigned) &SPBRGH)*8) + 5;
+
+extern volatile __bit BRG14 @ (((unsigned) &SPBRGH)*8) + 6;
+
+extern volatile __bit BRG15 @ (((unsigned) &SPBRGH)*8) + 7;
+
+extern volatile __bit BRG16 @ (((unsigned) &BAUDCTL)*8) + 3;
+
+extern volatile __bit BRG2 @ (((unsigned) &SPBRG)*8) + 2;
+
+extern volatile __bit BRG3 @ (((unsigned) &SPBRG)*8) + 3;
+
+extern volatile __bit BRG4 @ (((unsigned) &SPBRG)*8) + 4;
+
+extern volatile __bit BRG5 @ (((unsigned) &SPBRG)*8) + 5;
+
+extern volatile __bit BRG6 @ (((unsigned) &SPBRG)*8) + 6;
+
+extern volatile __bit BRG7 @ (((unsigned) &SPBRG)*8) + 7;
+
+extern volatile __bit BRG8 @ (((unsigned) &SPBRGH)*8) + 0;
+
+extern volatile __bit BRG9 @ (((unsigned) &SPBRGH)*8) + 1;
+
+extern volatile __bit BRGH @ (((unsigned) &TXSTA)*8) + 2;
+
+extern volatile __bit C1CH0 @ (((unsigned) &CM1CON0)*8) + 0;
+
+extern volatile __bit C1CH1 @ (((unsigned) &CM1CON0)*8) + 1;
+
+extern volatile __bit C1IE @ (((unsigned) &PIE2)*8) + 5;
+
+extern volatile __bit C1IF @ (((unsigned) &PIR2)*8) + 5;
+
+extern volatile __bit C1OE @ (((unsigned) &CM1CON0)*8) + 5;
+
+extern volatile __bit C1ON @ (((unsigned) &CM1CON0)*8) + 7;
+
+extern volatile __bit C1OUT @ (((unsigned) &CM1CON0)*8) + 6;
+
+extern volatile __bit C1POL @ (((unsigned) &CM1CON0)*8) + 4;
+
+extern volatile __bit C1R @ (((unsigned) &CM1CON0)*8) + 2;
+
+extern volatile __bit C1RSEL @ (((unsigned) &CM2CON1)*8) + 5;
+
+extern volatile __bit C1SEN @ (((unsigned) &SRCON)*8) + 5;
+
+extern volatile __bit C2CH0 @ (((unsigned) &CM2CON0)*8) + 0;
+
+extern volatile __bit C2CH1 @ (((unsigned) &CM2CON0)*8) + 1;
+
+extern volatile __bit C2IE @ (((unsigned) &PIE2)*8) + 6;
+
+extern volatile __bit C2IF @ (((unsigned) &PIR2)*8) + 6;
+
+extern volatile __bit C2OE @ (((unsigned) &CM2CON0)*8) + 5;
+
+extern volatile __bit C2ON @ (((unsigned) &CM2CON0)*8) + 7;
+
+extern volatile __bit C2OUT @ (((unsigned) &CM2CON0)*8) + 6;
+
+extern volatile __bit C2POL @ (((unsigned) &CM2CON0)*8) + 4;
+
+extern volatile __bit C2R @ (((unsigned) &CM2CON0)*8) + 2;
+
+extern volatile __bit C2REN @ (((unsigned) &SRCON)*8) + 4;
+
+extern volatile __bit C2RSEL @ (((unsigned) &CM2CON1)*8) + 4;
+
+extern volatile __bit C2SYNC @ (((unsigned) &CM2CON1)*8) + 0;
+
+extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+
+extern volatile __bit CCP1IE @ (((unsigned) &PIE1)*8) + 2;
+
+extern volatile __bit CCP1IF @ (((unsigned) &PIR1)*8) + 2;
+
+extern volatile __bit CCP1M0 @ (((unsigned) &CCP1CON)*8) + 0;
+
+extern volatile __bit CCP1M1 @ (((unsigned) &CCP1CON)*8) + 1;
+
+extern volatile __bit CCP1M2 @ (((unsigned) &CCP1CON)*8) + 2;
+
+extern volatile __bit CCP1M3 @ (((unsigned) &CCP1CON)*8) + 3;
+
+extern volatile __bit CCP1X @ (((unsigned) &CCP1CON)*8) + 5;
+
+extern volatile __bit CCP1Y @ (((unsigned) &CCP1CON)*8) + 4;
+
+extern volatile __bit CCP2IE @ (((unsigned) &PIE2)*8) + 0;
+
+extern volatile __bit CCP2IF @ (((unsigned) &PIR2)*8) + 0;
+
+extern volatile __bit CCP2M0 @ (((unsigned) &CCP2CON)*8) + 0;
+
+extern volatile __bit CCP2M1 @ (((unsigned) &CCP2CON)*8) + 1;
+
+extern volatile __bit CCP2M2 @ (((unsigned) &CCP2CON)*8) + 2;
+
+extern volatile __bit CCP2M3 @ (((unsigned) &CCP2CON)*8) + 3;
+
+extern volatile __bit CCP2X @ (((unsigned) &CCP2CON)*8) + 5;
+
+extern volatile __bit CCP2Y @ (((unsigned) &CCP2CON)*8) + 4;
+
+extern volatile __bit CHS0 @ (((unsigned) &ADCON0)*8) + 2;
+
+extern volatile __bit CHS1 @ (((unsigned) &ADCON0)*8) + 3;
+
+extern volatile __bit CHS2 @ (((unsigned) &ADCON0)*8) + 4;
+
+extern volatile __bit CHS3 @ (((unsigned) &ADCON0)*8) + 5;
+
+extern volatile __bit CKE @ (((unsigned) &SSPSTAT)*8) + 6;
+
+extern volatile __bit CKP @ (((unsigned) &SSPCON)*8) + 4;
+
+extern volatile __bit CREN @ (((unsigned) &RCSTA)*8) + 4;
+
+extern volatile __bit CSRC @ (((unsigned) &TXSTA)*8) + 7;
+
+extern volatile __bit DATA_ADDRESS @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+
+extern volatile __bit DC1B0 @ (((unsigned) &CCP1CON)*8) + 4;
+
+extern volatile __bit DC1B1 @ (((unsigned) &CCP1CON)*8) + 5;
+
+extern volatile __bit DC2B0 @ (((unsigned) &CCP2CON)*8) + 4;
+
+extern volatile __bit DC2B1 @ (((unsigned) &CCP2CON)*8) + 5;
+
+extern volatile __bit D_A @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit D_nA @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit ECCPAS0 @ (((unsigned) &ECCPAS)*8) + 4;
+
+extern volatile __bit ECCPAS1 @ (((unsigned) &ECCPAS)*8) + 5;
+
+extern volatile __bit ECCPAS2 @ (((unsigned) &ECCPAS)*8) + 6;
+
+extern volatile __bit ECCPASE @ (((unsigned) &ECCPAS)*8) + 7;
+
+extern volatile __bit EEIE @ (((unsigned) &PIE2)*8) + 4;
+
+extern volatile __bit EEIF @ (((unsigned) &PIR2)*8) + 4;
+
+extern volatile __bit EEPGD @ (((unsigned) &EECON1)*8) + 7;
+
+extern volatile __bit FERR @ (((unsigned) &RCSTA)*8) + 2;
+
+extern volatile __bit FVREN @ (((unsigned) &SRCON)*8) + 0;
+
+extern volatile __bit GCEN @ (((unsigned) &SSPCON2)*8) + 7;
+
+extern volatile __bit GIE @ (((unsigned) &INTCON)*8) + 7;
+
+extern volatile __bit GO @ (((unsigned) &ADCON0)*8) + 1;
+
+extern volatile __bit GO_DONE @ (((unsigned) &ADCON0)*8) + 1;
+
+extern volatile __bit GO_nDONE @ (((unsigned) &ADCON0)*8) + 1;
+
+extern volatile __bit HTS @ (((unsigned) &OSCCON)*8) + 2;
+
+extern volatile __bit I2C_DATA @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit I2C_READ @ (((unsigned) &SSPSTAT)*8) + 2;
+
+extern volatile __bit I2C_START @ (((unsigned) &SSPSTAT)*8) + 3;
+
+extern volatile __bit I2C_STOP @ (((unsigned) &SSPSTAT)*8) + 4;
+
+extern volatile __bit INTE @ (((unsigned) &INTCON)*8) + 4;
+
+extern volatile __bit INTEDG @ (((unsigned) &OPTION_REG)*8) + 6;
+
+extern volatile __bit INTF @ (((unsigned) &INTCON)*8) + 1;
+
+extern volatile __bit IOCB0 @ (((unsigned) &IOCB)*8) + 0;
+
+extern volatile __bit IOCB1 @ (((unsigned) &IOCB)*8) + 1;
+
+extern volatile __bit IOCB2 @ (((unsigned) &IOCB)*8) + 2;
+
+extern volatile __bit IOCB3 @ (((unsigned) &IOCB)*8) + 3;
+
+extern volatile __bit IOCB4 @ (((unsigned) &IOCB)*8) + 4;
+
+extern volatile __bit IOCB5 @ (((unsigned) &IOCB)*8) + 5;
+
+extern volatile __bit IOCB6 @ (((unsigned) &IOCB)*8) + 6;
+
+extern volatile __bit IOCB7 @ (((unsigned) &IOCB)*8) + 7;
+
+extern volatile __bit IRCF0 @ (((unsigned) &OSCCON)*8) + 4;
+
+extern volatile __bit IRCF1 @ (((unsigned) &OSCCON)*8) + 5;
+
+extern volatile __bit IRCF2 @ (((unsigned) &OSCCON)*8) + 6;
+
+extern volatile __bit IRP @ (((unsigned) &STATUS)*8) + 7;
+
+extern volatile __bit LTS @ (((unsigned) &OSCCON)*8) + 1;
+
+extern volatile __bit MC1OUT @ (((unsigned) &CM2CON1)*8) + 7;
+
+extern volatile __bit MC2OUT @ (((unsigned) &CM2CON1)*8) + 6;
+
+extern volatile __bit MSK0 @ (((unsigned) &SSPMSK)*8) + 0;
+
+extern volatile __bit MSK1 @ (((unsigned) &SSPMSK)*8) + 1;
+
+extern volatile __bit MSK2 @ (((unsigned) &SSPMSK)*8) + 2;
+
+extern volatile __bit MSK3 @ (((unsigned) &SSPMSK)*8) + 3;
+
+extern volatile __bit MSK4 @ (((unsigned) &SSPMSK)*8) + 4;
+
+extern volatile __bit MSK5 @ (((unsigned) &SSPMSK)*8) + 5;
+
+extern volatile __bit MSK6 @ (((unsigned) &SSPMSK)*8) + 6;
+
+extern volatile __bit MSK7 @ (((unsigned) &SSPMSK)*8) + 7;
+
+extern volatile __bit OERR @ (((unsigned) &RCSTA)*8) + 1;
+
+extern volatile __bit OSFIE @ (((unsigned) &PIE2)*8) + 7;
+
+extern volatile __bit OSFIF @ (((unsigned) &PIR2)*8) + 7;
+
+extern volatile __bit OSTS @ (((unsigned) &OSCCON)*8) + 3;
+
+extern volatile __bit P1M0 @ (((unsigned) &CCP1CON)*8) + 6;
+
+extern volatile __bit P1M1 @ (((unsigned) &CCP1CON)*8) + 7;
+
+extern volatile __bit PDC0 @ (((unsigned) &PWM1CON)*8) + 0;
+
+extern volatile __bit PDC1 @ (((unsigned) &PWM1CON)*8) + 1;
+
+extern volatile __bit PDC2 @ (((unsigned) &PWM1CON)*8) + 2;
+
+extern volatile __bit PDC3 @ (((unsigned) &PWM1CON)*8) + 3;
+
+extern volatile __bit PDC4 @ (((unsigned) &PWM1CON)*8) + 4;
+
+extern volatile __bit PDC5 @ (((unsigned) &PWM1CON)*8) + 5;
+
+extern volatile __bit PDC6 @ (((unsigned) &PWM1CON)*8) + 6;
+
+extern volatile __bit PEIE @ (((unsigned) &INTCON)*8) + 6;
+
+extern volatile __bit PEN @ (((unsigned) &SSPCON2)*8) + 2;
+
+extern volatile __bit PRSEN @ (((unsigned) &PWM1CON)*8) + 7;
+
+extern volatile __bit PS0 @ (((unsigned) &OPTION_REG)*8) + 0;
+
+extern volatile __bit PS1 @ (((unsigned) &OPTION_REG)*8) + 1;
+
+extern volatile __bit PS2 @ (((unsigned) &OPTION_REG)*8) + 2;
+
+extern volatile __bit PSA @ (((unsigned) &OPTION_REG)*8) + 3;
+
+extern volatile __bit PSSAC0 @ (((unsigned) &ECCPAS)*8) + 2;
+
+extern volatile __bit PSSAC1 @ (((unsigned) &ECCPAS)*8) + 3;
+
+extern volatile __bit PSSBD0 @ (((unsigned) &ECCPAS)*8) + 0;
+
+extern volatile __bit PSSBD1 @ (((unsigned) &ECCPAS)*8) + 1;
+
+extern volatile __bit PULSR @ (((unsigned) &SRCON)*8) + 2;
+
+extern volatile __bit PULSS @ (((unsigned) &SRCON)*8) + 3;
+
+extern volatile __bit RA0 @ (((unsigned) &PORTA)*8) + 0;
+
+extern volatile __bit RA1 @ (((unsigned) &PORTA)*8) + 1;
+
+extern volatile __bit RA2 @ (((unsigned) &PORTA)*8) + 2;
+
+extern volatile __bit RA3 @ (((unsigned) &PORTA)*8) + 3;
+
+extern volatile __bit RA4 @ (((unsigned) &PORTA)*8) + 4;
+
+extern volatile __bit RA5 @ (((unsigned) &PORTA)*8) + 5;
+
+extern volatile __bit RA6 @ (((unsigned) &PORTA)*8) + 6;
+
+extern volatile __bit RA7 @ (((unsigned) &PORTA)*8) + 7;
+
+extern volatile __bit RB0 @ (((unsigned) &PORTB)*8) + 0;
+
+extern volatile __bit RB1 @ (((unsigned) &PORTB)*8) + 1;
+
+extern volatile __bit RB2 @ (((unsigned) &PORTB)*8) + 2;
+
+extern volatile __bit RB3 @ (((unsigned) &PORTB)*8) + 3;
+
+extern volatile __bit RB4 @ (((unsigned) &PORTB)*8) + 4;
+
+extern volatile __bit RB5 @ (((unsigned) &PORTB)*8) + 5;
+
+extern volatile __bit RB6 @ (((unsigned) &PORTB)*8) + 6;
+
+extern volatile __bit RB7 @ (((unsigned) &PORTB)*8) + 7;
+
+extern volatile __bit RBIE @ (((unsigned) &INTCON)*8) + 3;
+
+extern volatile __bit RBIF @ (((unsigned) &INTCON)*8) + 0;
+
+extern volatile __bit RC0 @ (((unsigned) &PORTC)*8) + 0;
+
+extern volatile __bit RC1 @ (((unsigned) &PORTC)*8) + 1;
+
+extern volatile __bit RC2 @ (((unsigned) &PORTC)*8) + 2;
+
+extern volatile __bit RC3 @ (((unsigned) &PORTC)*8) + 3;
+
+extern volatile __bit RC4 @ (((unsigned) &PORTC)*8) + 4;
+
+extern volatile __bit RC5 @ (((unsigned) &PORTC)*8) + 5;
+
+extern volatile __bit RC6 @ (((unsigned) &PORTC)*8) + 6;
+
+extern volatile __bit RC7 @ (((unsigned) &PORTC)*8) + 7;
+
+extern volatile __bit RC8_9 @ (((unsigned) &RCSTA)*8) + 6;
+
+extern volatile __bit RC9 @ (((unsigned) &RCSTA)*8) + 6;
+
+extern volatile __bit RCD8 @ (((unsigned) &RCSTA)*8) + 0;
+
+extern volatile __bit RCEN @ (((unsigned) &SSPCON2)*8) + 3;
+
+extern volatile __bit RCIDL @ (((unsigned) &BAUDCTL)*8) + 6;
+
+extern volatile __bit RCIE @ (((unsigned) &PIE1)*8) + 5;
+
+extern volatile __bit RCIF @ (((unsigned) &PIR1)*8) + 5;
+
+extern volatile __bit RD @ (((unsigned) &EECON1)*8) + 0;
+
+extern volatile __bit RE3 @ (((unsigned) &PORTE)*8) + 3;
+
+extern volatile __bit READ_WRITE @ (((unsigned) &SSPSTAT)*8) + 2;
+
+extern volatile __bit RP0 @ (((unsigned) &STATUS)*8) + 5;
+
+extern volatile __bit RP1 @ (((unsigned) &STATUS)*8) + 6;
+
+extern volatile __bit RSEN @ (((unsigned) &SSPCON2)*8) + 1;
+
+extern volatile __bit RX9 @ (((unsigned) &RCSTA)*8) + 6;
+
+extern volatile __bit RX9D @ (((unsigned) &RCSTA)*8) + 0;
+
+extern volatile __bit R_W @ (((unsigned) &SSPSTAT)*8) + 2;
+
+extern volatile __bit R_nW @ (((unsigned) &SSPSTAT)*8) + 2;
+
+extern volatile __bit SBOREN @ (((unsigned) &PCON)*8) + 4;
+
+extern volatile __bit SCKP @ (((unsigned) &BAUDCTL)*8) + 4;
+
+extern volatile __bit SCS @ (((unsigned) &OSCCON)*8) + 0;
+
+extern volatile __bit SEN @ (((unsigned) &SSPCON2)*8) + 0;
+
+extern volatile __bit SENDB @ (((unsigned) &TXSTA)*8) + 3;
+
+extern volatile __bit SMP @ (((unsigned) &SSPSTAT)*8) + 7;
+
+extern volatile __bit SPEN @ (((unsigned) &RCSTA)*8) + 7;
+
+extern volatile __bit SR0 @ (((unsigned) &SRCON)*8) + 6;
+
+extern volatile __bit SR1 @ (((unsigned) &SRCON)*8) + 7;
+
+extern volatile __bit SREN @ (((unsigned) &RCSTA)*8) + 5;
+
+extern volatile __bit SSPEN @ (((unsigned) &SSPCON)*8) + 5;
+
+extern volatile __bit SSPIE @ (((unsigned) &PIE1)*8) + 3;
+
+extern volatile __bit SSPIF @ (((unsigned) &PIR1)*8) + 3;
+
+extern volatile __bit SSPM0 @ (((unsigned) &SSPCON)*8) + 0;
+
+extern volatile __bit SSPM1 @ (((unsigned) &SSPCON)*8) + 1;
+
+extern volatile __bit SSPM2 @ (((unsigned) &SSPCON)*8) + 2;
+
+extern volatile __bit SSPM3 @ (((unsigned) &SSPCON)*8) + 3;
+
+extern volatile __bit SSPOV @ (((unsigned) &SSPCON)*8) + 6;
+
+extern volatile __bit STRA @ (((unsigned) &PSTRCON)*8) + 0;
+
+extern volatile __bit STRB @ (((unsigned) &PSTRCON)*8) + 1;
+
+extern volatile __bit STRC @ (((unsigned) &PSTRCON)*8) + 2;
+
+extern volatile __bit STRD @ (((unsigned) &PSTRCON)*8) + 3;
+
+extern volatile __bit STRSYNC @ (((unsigned) &PSTRCON)*8) + 4;
+
+extern volatile __bit SWDTEN @ (((unsigned) &WDTCON)*8) + 0;
+
+extern volatile __bit SYNC @ (((unsigned) &TXSTA)*8) + 4;
+
+extern volatile __bit T0CS @ (((unsigned) &OPTION_REG)*8) + 5;
+
+extern volatile __bit T0IE @ (((unsigned) &INTCON)*8) + 5;
+
+extern volatile __bit T0IF @ (((unsigned) &INTCON)*8) + 2;
+
+extern volatile __bit T0SE @ (((unsigned) &OPTION_REG)*8) + 4;
+
+extern volatile __bit T1CKPS0 @ (((unsigned) &T1CON)*8) + 4;
+
+extern volatile __bit T1CKPS1 @ (((unsigned) &T1CON)*8) + 5;
+
+extern volatile __bit T1GINV @ (((unsigned) &T1CON)*8) + 7;
+
+extern volatile __bit T1GIV @ (((unsigned) &T1CON)*8) + 7;
+
+extern volatile __bit T1GSS @ (((unsigned) &CM2CON1)*8) + 1;
+
+extern volatile __bit T1INSYNC @ (((unsigned) &T1CON)*8) + 2;
+
+extern volatile __bit T1OSCEN @ (((unsigned) &T1CON)*8) + 3;
+
+extern volatile __bit T1SYNC @ (((unsigned) &T1CON)*8) + 2;
+
+extern volatile __bit T2CKPS0 @ (((unsigned) &T2CON)*8) + 0;
+
+extern volatile __bit T2CKPS1 @ (((unsigned) &T2CON)*8) + 1;
+
+extern volatile __bit TMR0IE @ (((unsigned) &INTCON)*8) + 5;
+
+extern volatile __bit TMR0IF @ (((unsigned) &INTCON)*8) + 2;
+
+extern volatile __bit TMR1CS @ (((unsigned) &T1CON)*8) + 1;
+
+extern volatile __bit TMR1GE @ (((unsigned) &T1CON)*8) + 6;
+
+extern volatile __bit TMR1IE @ (((unsigned) &PIE1)*8) + 0;
+
+extern volatile __bit TMR1IF @ (((unsigned) &PIR1)*8) + 0;
+
+extern volatile __bit TMR1ON @ (((unsigned) &T1CON)*8) + 0;
+
+extern volatile __bit TMR2IE @ (((unsigned) &PIE1)*8) + 1;
+
+extern volatile __bit TMR2IF @ (((unsigned) &PIR1)*8) + 1;
+
+extern volatile __bit TMR2ON @ (((unsigned) &T2CON)*8) + 2;
+
+extern volatile __bit TOUTPS0 @ (((unsigned) &T2CON)*8) + 3;
+
+extern volatile __bit TOUTPS1 @ (((unsigned) &T2CON)*8) + 4;
+
+extern volatile __bit TOUTPS2 @ (((unsigned) &T2CON)*8) + 5;
+
+extern volatile __bit TOUTPS3 @ (((unsigned) &T2CON)*8) + 6;
+
+extern volatile __bit TRISA0 @ (((unsigned) &TRISA)*8) + 0;
+
+extern volatile __bit TRISA1 @ (((unsigned) &TRISA)*8) + 1;
+
+extern volatile __bit TRISA2 @ (((unsigned) &TRISA)*8) + 2;
+
+extern volatile __bit TRISA3 @ (((unsigned) &TRISA)*8) + 3;
+
+extern volatile __bit TRISA4 @ (((unsigned) &TRISA)*8) + 4;
+
+extern volatile __bit TRISA5 @ (((unsigned) &TRISA)*8) + 5;
+
+extern volatile __bit TRISA6 @ (((unsigned) &TRISA)*8) + 6;
+
+extern volatile __bit TRISA7 @ (((unsigned) &TRISA)*8) + 7;
+
+extern volatile __bit TRISB0 @ (((unsigned) &TRISB)*8) + 0;
+
+extern volatile __bit TRISB1 @ (((unsigned) &TRISB)*8) + 1;
+
+extern volatile __bit TRISB2 @ (((unsigned) &TRISB)*8) + 2;
+
+extern volatile __bit TRISB3 @ (((unsigned) &TRISB)*8) + 3;
+
+extern volatile __bit TRISB4 @ (((unsigned) &TRISB)*8) + 4;
+
+extern volatile __bit TRISB5 @ (((unsigned) &TRISB)*8) + 5;
+
+extern volatile __bit TRISB6 @ (((unsigned) &TRISB)*8) + 6;
+
+extern volatile __bit TRISB7 @ (((unsigned) &TRISB)*8) + 7;
+
+extern volatile __bit TRISC0 @ (((unsigned) &TRISC)*8) + 0;
+
+extern volatile __bit TRISC1 @ (((unsigned) &TRISC)*8) + 1;
+
+extern volatile __bit TRISC2 @ (((unsigned) &TRISC)*8) + 2;
+
+extern volatile __bit TRISC3 @ (((unsigned) &TRISC)*8) + 3;
+
+extern volatile __bit TRISC4 @ (((unsigned) &TRISC)*8) + 4;
+
+extern volatile __bit TRISC5 @ (((unsigned) &TRISC)*8) + 5;
+
+extern volatile __bit TRISC6 @ (((unsigned) &TRISC)*8) + 6;
+
+extern volatile __bit TRISC7 @ (((unsigned) &TRISC)*8) + 7;
+
+extern volatile __bit TRISE3 @ (((unsigned) &TRISE)*8) + 3;
+
+extern volatile __bit TRMT @ (((unsigned) &TXSTA)*8) + 1;
+
+extern volatile __bit TUN0 @ (((unsigned) &OSCTUNE)*8) + 0;
+
+extern volatile __bit TUN1 @ (((unsigned) &OSCTUNE)*8) + 1;
+
+extern volatile __bit TUN2 @ (((unsigned) &OSCTUNE)*8) + 2;
+
+extern volatile __bit TUN3 @ (((unsigned) &OSCTUNE)*8) + 3;
+
+extern volatile __bit TUN4 @ (((unsigned) &OSCTUNE)*8) + 4;
+
+extern volatile __bit TX8_9 @ (((unsigned) &TXSTA)*8) + 6;
+
+extern volatile __bit TX9 @ (((unsigned) &TXSTA)*8) + 6;
+
+extern volatile __bit TX9D @ (((unsigned) &TXSTA)*8) + 0;
+
+extern volatile __bit TXD8 @ (((unsigned) &TXSTA)*8) + 0;
+
+extern volatile __bit TXEN @ (((unsigned) &TXSTA)*8) + 5;
+
+extern volatile __bit TXIE @ (((unsigned) &PIE1)*8) + 4;
+
+extern volatile __bit TXIF @ (((unsigned) &PIR1)*8) + 4;
+
+extern volatile __bit UA @ (((unsigned) &SSPSTAT)*8) + 1;
+
+extern volatile __bit ULPWUE @ (((unsigned) &PCON)*8) + 5;
+
+extern volatile __bit ULPWUIE @ (((unsigned) &PIE2)*8) + 2;
+
+extern volatile __bit ULPWUIF @ (((unsigned) &PIR2)*8) + 2;
+
+extern volatile __bit VCFG0 @ (((unsigned) &ADCON1)*8) + 4;
+
+extern volatile __bit VCFG1 @ (((unsigned) &ADCON1)*8) + 5;
+
+extern volatile __bit VR0 @ (((unsigned) &VRCON)*8) + 0;
+
+extern volatile __bit VR1 @ (((unsigned) &VRCON)*8) + 1;
+
+extern volatile __bit VR2 @ (((unsigned) &VRCON)*8) + 2;
+
+extern volatile __bit VR3 @ (((unsigned) &VRCON)*8) + 3;
+
+extern volatile __bit VREN @ (((unsigned) &VRCON)*8) + 7;
+
+extern volatile __bit VROE @ (((unsigned) &VRCON)*8) + 6;
+
+extern volatile __bit VRR @ (((unsigned) &VRCON)*8) + 5;
+
+extern volatile __bit VRSS @ (((unsigned) &VRCON)*8) + 4;
+
+extern volatile __bit WCOL @ (((unsigned) &SSPCON)*8) + 7;
+
+extern volatile __bit WDTPS0 @ (((unsigned) &WDTCON)*8) + 1;
+
+extern volatile __bit WDTPS1 @ (((unsigned) &WDTCON)*8) + 2;
+
+extern volatile __bit WDTPS2 @ (((unsigned) &WDTCON)*8) + 3;
+
+extern volatile __bit WDTPS3 @ (((unsigned) &WDTCON)*8) + 4;
+
+extern volatile __bit WPUB0 @ (((unsigned) &WPUB)*8) + 0;
+
+extern volatile __bit WPUB1 @ (((unsigned) &WPUB)*8) + 1;
+
+extern volatile __bit WPUB2 @ (((unsigned) &WPUB)*8) + 2;
+
+extern volatile __bit WPUB3 @ (((unsigned) &WPUB)*8) + 3;
+
+extern volatile __bit WPUB4 @ (((unsigned) &WPUB)*8) + 4;
+
+extern volatile __bit WPUB5 @ (((unsigned) &WPUB)*8) + 5;
+
+extern volatile __bit WPUB6 @ (((unsigned) &WPUB)*8) + 6;
+
+extern volatile __bit WPUB7 @ (((unsigned) &WPUB)*8) + 7;
+
+extern volatile __bit WR @ (((unsigned) &EECON1)*8) + 1;
+
+extern volatile __bit WREN @ (((unsigned) &EECON1)*8) + 2;
+
+extern volatile __bit WRERR @ (((unsigned) &EECON1)*8) + 3;
+
+extern volatile __bit WUE @ (((unsigned) &BAUDCTL)*8) + 1;
+
+extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+
+extern volatile __bit nA @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit nADDRESS @ (((unsigned) &SSPSTAT)*8) + 5;
+
+extern volatile __bit nBO @ (((unsigned) &PCON)*8) + 0;
+
+extern volatile __bit nBOR @ (((unsigned) &PCON)*8) + 0;
+
+extern volatile __bit nDONE @ (((unsigned) &ADCON0)*8) + 1;
+
+extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
+
+extern volatile __bit nPOR @ (((unsigned) &PCON)*8) + 1;
+
+extern volatile __bit nRBPU @ (((unsigned) &OPTION_REG)*8) + 7;
+
+extern volatile __bit nRC8 @ (((unsigned) &RCSTA)*8) + 6;
+
+extern volatile __bit nT1SYNC @ (((unsigned) &T1CON)*8) + 2;
+
+extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
+
+extern volatile __bit nTX8 @ (((unsigned) &TXSTA)*8) + 6;
+
+extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
+
+extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
+
+
+# 27 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic.h"
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+# 77
+extern unsigned int flash_read(unsigned short addr);
+
+# 114 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\eeprom_routines.h"
+extern void eeprom_write(unsigned char addr, unsigned char value);
+extern unsigned char eeprom_read(unsigned char addr);
+extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
+extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
+
+
+# 151 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic.h"
+#pragma intrinsic(_delay)
+extern __nonreentrant void _delay(unsigned long);
+
+# 186
+extern unsigned char __resetbits;
+extern __bit __powerdown;
+extern __bit __timeout;
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\__size_t.h"
+typedef unsigned size_t;
+
+# 14 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 34
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdlib.h"
+typedef unsigned short wchar_t;
+
+# 15
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 53
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+# 86
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdint.h"
+typedef signed char int8_t;
+
+# 20
+typedef signed int int16_t;
+
+# 28
+typedef signed short long int int24_t;
+
+# 36
+typedef signed long int int32_t;
+
+# 43
+typedef unsigned char uint8_t;
+
+# 49
+typedef unsigned int uint16_t;
+
+# 56
+typedef unsigned short long int uint24_t;
+
+# 63
+typedef unsigned long int uint32_t;
+
+# 71
+typedef signed char int_least8_t;
+
+# 78
+typedef signed int int_least16_t;
+
+# 90
+typedef signed short long int int_least24_t;
+
+# 98
+typedef signed long int int_least32_t;
+
+# 105
+typedef unsigned char uint_least8_t;
+
+# 111
+typedef unsigned int uint_least16_t;
+
+# 121
+typedef unsigned short long int uint_least24_t;
+
+# 128
+typedef unsigned long int uint_least32_t;
+
+# 137
+typedef signed char int_fast8_t;
+
+# 144
+typedef signed int int_fast16_t;
+
+# 156
+typedef signed short long int int_fast24_t;
+
+# 164
+typedef signed long int int_fast32_t;
+
+# 171
+typedef unsigned char uint_fast8_t;
+
+# 177
+typedef unsigned int uint_fast16_t;
+
+# 187
+typedef unsigned short long int uint_fast24_t;
+
+# 194
+typedef unsigned long int uint_fast32_t;
+
+# 200
+typedef int32_t intmax_t;
+
+
+
+
+typedef uint32_t uintmax_t;
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+
+# 34 "../usart_pic16.h"
+void USARTInit(uint16_t baud_rate);
+void USARTWriteChar(char ch);
+void USARTWriteString(const char *str);
+void USARTWriteLine(const char *str);
+void USARTWriteInt(int16_t val, int8_t field_length);
+void USARTGotoNewLine();
+
+# 13 "../matrix_matrix7219.h"
+typedef struct
+{
+uint8_t data[8];
+} MATRIX7219;
+
+typedef struct
+{
+MATRIX7219 data[(16/8)][(8/8)];
+} MATRIX_MATRIX7219;
+
+MATRIX7219* get_matrix7219(const MATRIX_MATRIX7219* matrix_matrix, uint8_t matrix_row, uint8_t matrix_col)
+{
+return &matrix_matrix->data[matrix_row/8][matrix_col/8];
+}
+uint8_t get_matrix7219_bit(const MATRIX7219* matrix, uint8_t row, uint8_t col)
+{
+uint8_t mask = 0x80 >> row;
+
+if((matrix->data[col] & mask) > 0)
+{
+return 1;
+}
+else
+{
+return 0;
+}
+}
+
+uint8_t set_matrix7219_bit(MATRIX7219* matrix, uint8_t row, uint8_t col, uint8_t value)
+{
+uint8_t mask = 0x80 >> row;
+
+if(value > 0)
+{
+matrix->data[col] |= mask;
+}
+else
+{
+mask = ~mask;
+matrix->data[col] &= mask;
+}
+}
+
+uint8_t get_matrix_matrix7219_bit(const MATRIX_MATRIX7219* matrix_matrix, uint8_t matrix_row, uint8_t matrix_col)
+{
+MATRIX7219* matrix = get_matrix7219(matrix_matrix, matrix_row, matrix_col);
+
+return get_matrix7219_bit(matrix, matrix_row%8, matrix_col%8);
+}
+void set_matrix_matrix7219_bit(MATRIX_MATRIX7219* matrix_matrix, uint8_t matrix_row, uint8_t matrix_col, uint8_t value)
+{
+MATRIX7219* matrix = get_matrix7219(matrix_matrix, matrix_row, matrix_col);
+
+set_matrix7219_bit(matrix, matrix_row%8, matrix_col%8, value);
+}
+
+# 69 "../common.h"
+typedef struct
+{
+uint8_t start_index;
+uint8_t num;
+} CHARACTER_INFO;
+
+typedef struct
+{
+uint8_t row[4];
+} MATRIX4x4;
+typedef struct
+{
+uint8_t row[16];
+} MATRIX16x8;
+
+CHARACTER_INFO g_char_info[9] =
+{
+
+{0, 2},
+
+{2, 2},
+
+{4, 2},
+
+{6, 4},
+
+{10, 4},
+
+{14, 1},
+
+{15, 4},
+
+{19, 1},
+
+{20, 4},
+};
+uint8_t g_char_info_index;
+uint8_t g_char_info_sub_index;
+MATRIX4x4* g_cur_matrix4x4;
+
+
+
+const MATRIX4x4 g_matrix4x4[] =
+
+{
+
+{0x2,
+0x2,
+0x2,
+0x2},
+
+{0x0,
+0xF,
+0x0,
+0x0},
+
+
+{0x6,
+0x3,
+0x0,
+0x0},
+
+{0x2,
+0x6,
+0x4,
+0x0},
+
+
+{0x3,
+0x6,
+0x0,
+0x0},
+
+{0x2,
+0x3,
+0x1,
+0x0},
+
+
+{0x0,
+0x7,
+0x4,
+0x0},
+
+{0x6,
+0x2,
+0x2,
+0x0},
+
+{0x1,
+0x7,
+0x0,
+0x0},
+
+{0x2,
+0x2,
+0x3,
+0x0},
+
+
+{0x0,
+0x7,
+0x1,
+0x0},
+
+{0x3,
+0x2,
+0x2,
+0x0},
+
+{0x4,
+0x7,
+0x0,
+0x0},
+
+{0x2,
+0x2,
+0x6,
+0x0},
+
+
+{0x3,
+0x3,
+0x0,
+0x0},
+
+
+{0x0,
+0x6,
+0x2,
+0x0},
+
+{0x0,
+0x3,
+0x2,
+0x0},
+
+{0x2,
+0x3,
+0x0,
+0x0},
+
+{0x2,
+0x6,
+0x0,
+0x0},
+
+
+{0x2,
+0x7,
+0x2,
+0x0},
+
+
+{0x7,
+0x2,
+0x2,
+0x0},
+
+{0x4,
+0x7,
+0x4,
+0x0},
+
+{0x2,
+0x2,
+0x7,
+0x0},
+
+{0x1,
+0x7,
+0x1,
+0x0},
+};
+MATRIX16x8 g_matrix16x8 =
+{
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+0x0,
+};
+int8_t cur_x = 2;
+int8_t cur_y = 0;
+
+
+
+unsigned Seed;
+
+# 4 "../bit_operator.h"
+typedef struct
+{
+uint8_t b0:1, b1:1, b2:1, b3:1, b4:1, b5:1, b6:1, b7:1;
+} t_byte;
+void setbit(uint8_t *byte, uint8_t at, uint8_t value)
+{
+t_byte *temp = (t_byte *)byte;
+switch(at)
+{
+case 0:
+temp->b0 = value;
+break;
+case 1:
+temp->b1 = value;
+break;
+case 2:
+temp->b2 = value;
+break;
+case 3:
+temp->b3 = value;
+break;
+case 4:
+temp->b4 = value;
+break;
+case 5:
+temp->b5 = value;
+break;
+case 6:
+temp->b6 = value;
+break;
+case 7:
+temp->b7 = value;
+break;
+}
+}
+uint8_t getbit(const uint8_t *byte, uint8_t at)
+{
+t_byte *temp = (t_byte *)byte;
+switch(at)
+{
+case 0:
+return (uint8_t)temp->b0;
+break;
+case 1:
+return (uint8_t)temp->b1;
+break;
+case 2:
+return (uint8_t)temp->b2;
+break;
+case 3:
+return (uint8_t)temp->b3;
+break;
+case 4:
+return (uint8_t)temp->b4;
+break;
+case 5:
+return (uint8_t)temp->b5;
+break;
+case 6:
+return (uint8_t)temp->b6;
+break;
+case 7:
+return (uint8_t)temp->b7;
+break;
+}
+}
+uint8_t reverse(uint8_t byte)
+{
+t_byte *temp = (t_byte *)&byte;
+t_byte res;
+
+res.b0 = temp->b7;
+res.b1 = temp->b6;
+res.b2 = temp->b5;
+res.b3 = temp->b4;
+res.b4 = temp->b3;
+res.b5 = temp->b2;
+res.b6 = temp->b1;
+res.b7 = temp->b0;
+
+return *((uint8_t *)&res);
+}
+
+# 4 "../bit_matrix.h"
+void set_matrix_bit(uint8_t *byte, uint8_t row, uint8_t col, uint8_t value)
+{
+setbit(&byte[row], col, value);
+}
+uint8_t get_matrix_bit(const uint8_t *byte, uint8_t row, uint8_t col)
+{
+return getbit(&byte[row], col);
+}
+
+# 21 "../max7219.h"
+typedef struct
+{
+uint8_t data[(16/8)][(8/8)];
+} DRV_MATRIX_MATRIX7219;
+
+void SPI1_write(uint8_t data)
+{
+uint8_t mask = 0b10000000;
+for(uint8_t i = 0; i < 8; i++)
+{
+if((data & mask) > 0)
+{
+RA3 = 1;
+
+}
+else
+{
+RA3 = 0;
+
+}
+mask >>= 1;
+RA1 = 1;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+RA1 = 0;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+
+}
+}
+
+# 58
+void Write_Matrix(const DRV_MATRIX_MATRIX7219* matrix, uint8_t option, uint8_t column)
+{
+RA2 = 0;
+
+uint8_t at;
+uint8_t value;
+for(uint8_t row = 0; row < (16/8); row++)
+{
+for(uint8_t col = 0; col < (8/8); col++)
+{
+at = column;
+value = matrix->data[(16/8) - 1 - row][(8/8) - 1 - col];
+if(option == 1)
+{
+if(((16/8) - 1 - row)%2 == 1)
+{
+at = 8 - 1 - column;
+value = reverse(value);
+}
+at++;
+}
+SPI1_write(at);
+SPI1_write(value);
+}
+}
+RA2 = 1;
+}
+
+
+void max7219_init1()
+{
+(TRISAbits.TRISA3 = 0);
+(TRISAbits.TRISA2 = 0);
+(TRISAbits.TRISA1 = 0);
+
+ANSELbits.ANS1 = 0;
+ANSELbits.ANS2 = 0;
+ANSELbits.ANS3 = 0;
+RA2 = 1;
+RA1 = 0;
+
+MATRIX_MATRIX7219 matrix;
+
+memset(&matrix, 0x00, sizeof(MATRIX_MATRIX7219));
+Write_Matrix(&matrix, 0, 0x09);
+
+memset(&matrix, 0x0F, sizeof(MATRIX_MATRIX7219));
+Write_Matrix(&matrix, 0, 0x0A);
+
+memset(&matrix, 0x07, sizeof(MATRIX_MATRIX7219));
+Write_Matrix(&matrix, 0, 0x0B);
+
+memset(&matrix, 0x01, sizeof(MATRIX_MATRIX7219));
+Write_Matrix(&matrix, 0, 0x0C);
+
+memset(&matrix, 0xFF, sizeof(MATRIX_MATRIX7219));
+Write_Matrix(&matrix, 0, 0x00);
+}
+
+# 6 "../debug_uart.h"
+char g_debug[64];
+
+# 116
+void dbg_init()
+{
+USARTInit(9600);
+}
+void dbg_close()
+{
+}
+
+# 11 "../debug.h"
+void dbg_print_MATRIX4x4(uint8_t enable, const char* lable, int8_t x, int8_t y, const MATRIX4x4* matrix)
+{
+if((1) && (enable))
+{
+if(lable != (0))
+{
+do { if(1) { int n = sprintf(g_debug, lable); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, ":""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, "<<<<<<<<<<<<<<<<<<<<MATRIX4x4""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+for(int8_t row = 0; row < 16; row++)
+{
+for(int8_t col = 0; col < 8; col++)
+{
+if((row - y >= 0) && (row - y < 4)
+&& (col - x >= 0) && (col - x < 4)
+&& (get_matrix_bit(matrix->row, row - y, col - x) == 1))
+{
+do { if(1) { int n = sprintf(g_debug, "*"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+else
+{
+do { if(1) { int n = sprintf(g_debug, "_"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+}
+do { if(1) { int n = sprintf(g_debug, """\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, ">>>>>>>>>>>>>>>>>>>>""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+}
+}
+
+# 48
+void dbg_print_MATRIX16x8(uint8_t enable, const char* lable, const MATRIX16x8* matrix)
+{
+if((1) && (enable))
+{
+if(lable != (0))
+{
+do { if(1) { int n = sprintf(g_debug, lable); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, ":""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, "<<<<<<<<<<<<<<<<<<<<MATRIX16x8""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+for(uint8_t row = 0; row < 16; row++)
+{
+for(uint8_t col = 0; col < 8; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix->row, row, col) == 1)
+{
+do { if(1) { int n = sprintf(g_debug, "*"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+else
+{
+do { if(1) { int n = sprintf(g_debug, "_"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+}
+do { if(1) { int n = sprintf(g_debug, """\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, ">>>>>>>>>>>>>>>>>>>>""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+}
+
+# 82
+void dbg_print_MATRIX_MATRIX7219(uint8_t enable, const char* lable, const MATRIX_MATRIX7219* matrix)
+{
+if((1) && (enable))
+{
+if(lable != (0))
+{
+do { if(1) { int n = sprintf(g_debug, lable); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, ":""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, "<<<<<<<<<<<<<<<<<<<<""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+for(uint8_t matrix_row = 0; matrix_row < 16; matrix_row++)
+{
+for(uint8_t matrix_col = 0; matrix_col < 8; matrix_col++)
+{
+if(get_matrix_matrix_bit(matrix, matrix_row, matrix_col) > 0)
+{
+do { if(1) { int n = sprintf(g_debug, "*"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+else
+{
+do { if(1) { int n = sprintf(g_debug, "_"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+}
+
+do { if(1) { int n = sprintf(g_debug, """\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+do { if(1) { int n = sprintf(g_debug, ">>>>>>>>>>>>>>>>>>>>""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+}
+
+# 118
+void dbg_print_Screen(uint8_t enable, const char* lable)
+{
+if((1) && (enable))
+{
+if(lable != (0))
+{
+do { if(1) { int n = sprintf(g_debug, lable); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, ":""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+dbg_print_MATRIX16x8(1, (0), &g_matrix16x8);
+
+}
+}
+
+# 137
+void dbg_print_cur_MATRIX4x4(uint8_t enable, const char* lable, int8_t x, int8_t y)
+{
+if((1) && (enable))
+{
+if(lable != (0))
+{
+do { if(1) { int n = sprintf(g_debug, lable); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, ":""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+MATRIX4x4* matrix = &g_matrix4x4[g_char_info[g_char_info_index].start_index + g_char_info_sub_index];
+dbg_print_MATRIX4x4(1, (0), x, y, matrix);
+}
+}
+
+# 2 "../eeprom_operator.h"
+void eeprom_write_int(uint8_t at, uint16_t value)
+{
+uint8_t temp;
+temp = value >> 8;
+eeprom_write(at, temp);
+
+temp = value & 0xFF;
+eeprom_write(at + 1, temp);
+do { if(0) { int n = sprintf(g_debug, "eeprom_write_int = %d""\r\n", value); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+uint16_t eeprom_read_int(uint8_t at)
+{
+uint16_t value = 0;
+value = eeprom_read(at) << 8;
+value += eeprom_read(at + 1);
+do { if(0) { int n = sprintf(g_debug, "eeprom_read_int = %d""\r\n", value); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return value;
+}
+
+# 6 "../hal_max7219.h"
+void hal_MATRIX16x8_to_MATRIX_MATRIX7219(const MATRIX16x8* matrix16x8, MATRIX_MATRIX7219* matrix7219)
+{
+for(uint8_t col = 0; col < 8; col++)
+{
+for(uint8_t row = 0; row < 16; row++)
+{
+set_matrix_matrix7219_bit(matrix7219, row, col, get_matrix_bit(matrix16x8->row, row, col));
+}
+}
+}
+void hal_print_MATRIX_MATRIX7219(const MATRIX_MATRIX7219* matrix7219)
+{
+DRV_MATRIX_MATRIX7219 matrix;
+
+uint8_t col;
+
+for (col = 0; col < 8; col++)
+{
+for(uint8_t matrix_row = 0; matrix_row < (16/8); matrix_row++)
+{
+for(uint8_t matrix_col = 0; matrix_col < (8/8); matrix_col++)
+{
+matrix.data[matrix_row][matrix_col] = matrix7219->data[matrix_row][matrix_col].data[col];
+}
+}
+Write_Matrix(&matrix, 1, col);
+}
+}
+void hal_print_MATRIX16x8(const MATRIX16x8* matrix88)
+{
+MATRIX_MATRIX7219 matrix7219;
+hal_MATRIX16x8_to_MATRIX_MATRIX7219(matrix88, &matrix7219);
+hal_print_MATRIX_MATRIX7219(&matrix7219);
+}
+
+# 10 "../hal.h"
+void hal_print_Screen()
+{
+hal_print_MATRIX16x8(&g_matrix16x8);
+}
+
+# 4 "../logic.h"
+enum
+{
+ALIGN_OK,
+ALIGN_LEFT_OVER_BOUNDARY,
+ALIGN_RIGHT_OVER_BOUNDARY
+};
+MATRIX4x4* lg_get_MATRIX4x4(uint8_t index, uint8_t sub_index)
+{
+return &g_matrix4x4[g_char_info[index].start_index + sub_index];
+}
+void lg_clear_matrix(void)
+{
+memset(&g_matrix16x8, 0, sizeof(MATRIX16x8));
+hal_print_Screen();
+}
+uint8_t lg_is_row_full(const MATRIX16x8* matrix, uint8_t row)
+{
+if(matrix->row[row] == (uint8_t)0xFF)
+{
+do { if(0) { int n = sprintf(g_debug, "row = %X""\r\n", matrix->row[row]); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "row(%d) is full""\r\n", row); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+dbg_print_MATRIX16x8(0, "Row is full", matrix);
+return 1;
+}
+return 0;
+}
+void lg_delete_matrix_row(MATRIX16x8* matrix, uint8_t row)
+{
+for(int8_t i = 16 - 1; i >= 0; i--)
+{
+if(i <= row)
+{
+if(i > 0)
+{
+matrix->row[i] = matrix->row[i - 1];
+}
+else
+{
+matrix->row[i] = (uint8_t)0x0;
+}
+}
+}
+}
+uint8_t lg_delete_matrix(MATRIX16x8* matrix)
+{
+uint8_t count = 0;
+int8_t row = 16 - 1;
+while(row >= 0)
+{
+
+Seed++;
+
+if(lg_is_row_full(matrix, row) == 1)
+{
+dbg_print_MATRIX16x8(0, "Before delete MATRIX16x8", &g_matrix16x8);
+lg_delete_matrix_row(matrix, row);
+dbg_print_MATRIX16x8(0, "After delete MATRIX16x8", &g_matrix16x8);
+count++;
+}
+else
+{
+row--;
+}
+}
+do { if(0) { int n = sprintf(g_debug, "delete_matrix count = %d""\r\n", count); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return count;
+}
+uint8_t lg_get_num_removed_rows(MATRIX16x8* matrix)
+{
+uint8_t count = 0;
+for(int8_t row = 0; row < 16; row++)
+{
+if(lg_is_row_full(matrix, row) == 1)
+{
+count++;
+}
+}
+do { if(0) { int n = sprintf(g_debug, "num full rows = %d""\r\n", count); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return count;
+}
+
+uint8_t lg_is_row_empty(const MATRIX16x8* matrix, uint8_t row)
+{
+if(matrix->row == 0x0)
+{
+return 1;
+}
+return 0;
+}
+uint8_t lg_hit_land(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+do { if(0) { int n = sprintf(g_debug, "==============hit_land============""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+for(int8_t row = 4 - 1; row >= 0; row--)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+if((y + row) >= (16 - 1))
+{
+do { if(0) { int n = sprintf(g_debug, "hit1 row = %d, col = %d""\r\n", row, col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 1;
+}
+
+if(get_matrix_bit((uint8_t*)matrix16x8->row, y + row + 1, x + col) == 1)
+{
+do { if(0) { int n = sprintf(g_debug, "hit2 row = %d, col = %d""\r\n", row, col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 1;
+}
+}
+}
+}
+do { if(0) { int n = sprintf(g_debug, "not hit""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 0;
+}
+uint8_t lg_is_valid(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+do { if(0) { int n = sprintf(g_debug, "==============is_valid============""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+for(int8_t row = 4 - 1; row >= 0; row--)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+if(get_matrix_bit((uint8_t*)matrix16x8->row, y + row, x + col) == 1)
+{
+do { if(0) { int n = sprintf(g_debug, "not valid1""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "row = %d, col = %d""\r\n", row, col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 0;
+}
+
+if(( x + col < 0) || (x + col >= 8))
+{
+do { if(0) { int n = sprintf(g_debug, "not valid2""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "row = %d, col = %d""\r\n", row, col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 0;
+}
+if((y + row) > (16 - 1))
+{
+do { if(0) { int n = sprintf(g_debug, "not valid3""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "row = %d, col = %d""\r\n", row, col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 0;
+}
+}
+}
+}
+do { if(0) { int n = sprintf(g_debug, "valid""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return 1;
+}
+uint8_t lg_is_left_boundary(int8_t x, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+for(int8_t row = 4 - 1; row >= 0; row--)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+if( x + col < 0)
+{
+do { if(0) { int n = sprintf(g_debug, "ALIGN_LEFT_OVER_BOUNDARY""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return ALIGN_LEFT_OVER_BOUNDARY;
+}
+}
+}
+}
+return ALIGN_OK;
+}
+uint8_t lg_is_right_boundary(int8_t x, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+for(int8_t row = 4 - 1; row >= 0; row--)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+if(x + col > 8 - 1)
+{
+do { if(0) { int n = sprintf(g_debug, "ALIGN_RIGHT_OVER_BOUNDARY""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return ALIGN_RIGHT_OVER_BOUNDARY;
+}
+}
+}
+}
+return ALIGN_OK;
+}
+uint8_t lg_fall_off(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+while(1)
+{
+for(int8_t row = 4 - 1; row >= 0; row--)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+
+Seed++;
+
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+if(get_matrix_bit((uint8_t*)matrix16x8->row, y + row + 1, x + col) == 1)
+{
+do { if(0) { int n = sprintf(g_debug, "fall_off1""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "x = %d, y = %d""\r\n", x, y); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return y;
+}
+if((y + row) >= (16 - 1))
+{
+do { if(0) { int n = sprintf(g_debug, "fall_off2""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "x = %d, y = %d""\r\n", x, y); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return y;
+}
+}
+}
+}
+y++;
+}
+}
+void lg_clear(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, MATRIX16x8* matrix16x8)
+{
+for(uint8_t row = 0; row < 4; row++)
+{
+for(uint8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+set_matrix_bit((uint8_t*)matrix16x8->row, y + row, x + col, 0);
+}
+}
+}
+}
+void lg_merge(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, MATRIX16x8* matrix16x8)
+{
+dbg_print_MATRIX4x4(0, "Before merge MATRIX16x8", x, y, matrix4x4);
+dbg_print_MATRIX16x8(0, "Before merge MATRIX16x8", matrix16x8);
+
+for(uint8_t row = 0; row < 4; row++)
+{
+for(uint8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+set_matrix_bit((uint8_t*)matrix16x8->row, y + row, x + col, 1);
+}
+}
+}
+dbg_print_MATRIX16x8(0, "After merge MATRIX16x8", matrix16x8);
+}
+void lg_merge1(int8_t x, int8_t y, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8_in, MATRIX16x8* matrix16x8_out)
+{
+
+size_t len;
+
+# 258
+len = sizeof(MATRIX16x8);
+memcpy(matrix16x8_out, matrix16x8_in, len);
+
+for(uint8_t row = 0; row < 4; row++)
+{
+for(uint8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix4x4->row, row, col) == 1)
+{
+set_matrix_bit((uint8_t*)matrix16x8_out->row, y + row, x + col, 1);
+}
+}
+}
+}
+uint16_t lg_get_num_of_orphan(const MATRIX16x8* matrix)
+{
+uint16_t risk = 0;
+uint8_t full = 0xFF;
+for(uint8_t col = 0; col < 8; col++)
+{
+full = 0xFF;
+for(int8_t row = 16 - 1; row >= 0; row--)
+{
+if(full == 0xFF)
+{
+full = get_matrix_bit((uint8_t*)matrix->row, row, col);
+}
+else
+{
+if(get_matrix_bit((uint8_t*)matrix->row, row, col) == 1)
+{
+if(full == 0)
+{
+risk++;
+}
+}
+full = get_matrix_bit((uint8_t*)matrix->row, row, col);
+}
+}
+}
+do { if(0) { int n = sprintf(g_debug, "risk = %d""\r\n", risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+return risk;
+}
+uint16_t lg_get_weight(const MATRIX16x8* matrix)
+{
+uint8_t start;
+uint16_t risk = 0;
+uint8_t pre = 0xFF;
+for(uint8_t col = 0; col < 8; col++)
+{
+pre = 0xFF;
+start = 0;
+for(int8_t row = 16 - 1; row >= 0; row--)
+{
+if(pre == 0xFF)
+{
+pre = get_matrix_bit((uint8_t*)matrix->row, row, col);
+}
+else
+{
+if(pre != get_matrix_bit((uint8_t*)matrix->row, row, col))
+{
+pre = get_matrix_bit((uint8_t*)matrix->row, row, col);
+if(pre == 0)
+{
+start = 0;
+}
+else
+{
+start = 1;
+}
+}
+if(start == 1)
+{
+risk++;
+}
+}
+}
+}
+do { if(0) { int n = sprintf(g_debug, "risk = %d""\r\n", risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+return risk;
+}
+
+uint8_t lg_char_info_index_rand()
+{
+return (uint8_t)(rand()%9);
+}
+int8_t lg_left_most(int8_t x, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+while(1)
+{
+
+Seed++;
+
+if(lg_is_left_boundary(x, matrix4x4, matrix16x8) == ALIGN_LEFT_OVER_BOUNDARY)
+{
+do { if(0) { int n = sprintf(g_debug, "left_most = %d""\r\n", x + 1); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return x + 1;
+}
+x--;
+}
+}
+int8_t lg_right_most(int8_t x, const MATRIX4x4* matrix4x4, const MATRIX16x8* matrix16x8)
+{
+while(1)
+{
+
+Seed++;
+
+if(lg_is_right_boundary(x, matrix4x4, matrix16x8) == ALIGN_RIGHT_OVER_BOUNDARY)
+{
+do { if(0) { int n = sprintf(g_debug, "right_most = %d""\r\n", x - 1); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return x - 1;
+}
+x++;
+}
+}
+uint8_t lg_get_height(MATRIX16x8* matrix)
+{
+for(int8_t row = 16 - 1; row >= 0; row--)
+{
+if(lg_is_row_empty(matrix, row) == 1)
+{
+do { if(0) { int n = sprintf(g_debug, "lg_get_height height = %d""\r\n", 16 - row - 1); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return (uint8_t)(16 - row - 1);
+}
+}
+return 16;
+}
+uint8_t lg_get_height_after_merge(int8_t y, MATRIX4x4* matrix)
+{
+do { if(0) { int n = sprintf(g_debug, "lg_get_height_after_merge""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+for(int8_t row = 0; row < 4; row++)
+{
+for(int8_t col = 0; col < 4; col++)
+{
+if(get_matrix_bit((uint8_t*)matrix->row, row, col) == 1)
+{
+do { if(0) { int n = sprintf(g_debug, "y = %d""\r\n", y); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "row = %d""\r\n", row); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "height = %d""\r\n", 16 - y - row); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return (uint8_t)(16 - y - row);
+}
+}
+}
+}
+uint8_t lg_get_holes_after_merge(MATRIX16x8* matrix)
+{
+int8_t start = -1;
+int8_t stop = -1;
+uint8_t num_hole = 0;
+for(int8_t col = 0; col < 8; col++)
+{
+start = stop = -1;
+for(int8_t row = 0; row < 16; row++)
+{
+if(col == 0)
+{
+if((get_matrix_bit((uint8_t*)matrix->row, row, col) == 0) && (get_matrix_bit((uint8_t*)matrix->row, row, col + 1) == 1))
+{
+if(start == -1)
+{
+start = row;
+}
+}
+}
+else if(col == 8 - 1)
+{
+if((get_matrix_bit((uint8_t*)matrix->row, row, col) == 0) && (get_matrix_bit((uint8_t*)matrix->row, row, col - 1) == 1))
+{
+if(start == -1)
+{
+start = row;
+}
+}
+}
+else
+{
+if((get_matrix_bit((uint8_t*)matrix->row, row, col) == 0) && (get_matrix_bit((uint8_t*)matrix->row, row, col - 1) == 1) && (get_matrix_bit((uint8_t*)matrix->row, row, col + 1) == 1))
+{
+if(start == -1)
+{
+start = row;
+}
+}
+}
+if(start >= 0)
+{
+if(row == 16 - 1)
+{
+if(stop == -1)
+{
+stop = 16;
+}
+}
+else if(get_matrix_bit((uint8_t*)matrix->row, row + 1, col) == 1)
+{
+if(stop == -1)
+{
+stop = row + 1;
+}
+}
+}
+
+}
+if((start >= 0) && (stop >= 0) && (stop - start >= 3))
+{
+do { if(0) { int n = sprintf(g_debug, "col = %d""\r\n", col); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "start = %d""\r\n", start); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "stop = %d""\r\n", stop); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+num_hole++;
+}
+}
+do { if(0) { int n = sprintf(g_debug, "num_hole = %d""\r\n", num_hole); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+return num_hole;
+}
+MATRIX4x4* temp_cur_matrix4x4;
+MATRIX16x8 temp_matrix16x8;
+uint8_t lg_find_best_solution()
+{
+do { if(0) { int n = sprintf(g_debug, "===find_best_solution===""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+uint8_t res = 0;
+int8_t left_most_index, right_most_index;
+
+int8_t temp_pre_x = 0xF, tem_pre_sub_index = 0xF;
+int16_t temp_pre_risk = -30000;
+int8_t temp_y;
+int16_t temp_risk;
+uint16_t temp_high;
+
+for(uint8_t tem_sub_index = 0; tem_sub_index < g_char_info[g_char_info_index].num; tem_sub_index++)
+{
+temp_cur_matrix4x4 = &g_matrix4x4[g_char_info[g_char_info_index].start_index + tem_sub_index];
+left_most_index = lg_left_most(cur_x, temp_cur_matrix4x4, &g_matrix16x8);
+right_most_index = lg_right_most(cur_x, temp_cur_matrix4x4, &g_matrix16x8);
+
+for(int8_t temp_x = left_most_index; temp_x <= right_most_index; temp_x++)
+{
+temp_y = lg_fall_off(temp_x, cur_y, temp_cur_matrix4x4, &g_matrix16x8);
+
+dbg_print_MATRIX4x4(0, "After fall off", temp_x, temp_y, temp_cur_matrix4x4);
+dbg_print_Screen(0, "After fall off");
+
+if(lg_is_valid(temp_x, temp_y, temp_cur_matrix4x4, &g_matrix16x8) == 0)
+{
+continue;
+}
+res = 1;
+lg_merge1(temp_x, temp_y, temp_cur_matrix4x4, &g_matrix16x8, &temp_matrix16x8);
+temp_high = lg_get_height_after_merge(temp_y, temp_cur_matrix4x4);
+if((lg_get_height(&g_matrix16x8) <= 16/2 + 1)
+&& (temp_high <= 16/2 + 1))
+{
+temp_risk = (((int16_t)lg_get_num_removed_rows(&temp_matrix16x8)) << 10)
+- lg_get_num_of_orphan(&temp_matrix16x8)*4
+- temp_high*3
+- lg_get_holes_after_merge(&temp_matrix16x8)*2
+- lg_get_weight(&temp_matrix16x8);
+}
+else
+{
+temp_risk = (((int16_t)lg_get_num_removed_rows(&temp_matrix16x8)) << 10)
+- lg_get_num_of_orphan(&temp_matrix16x8)*2
+- temp_high*5
+- lg_get_holes_after_merge(&temp_matrix16x8)*3
+- lg_get_weight(&temp_matrix16x8);
+}
+dbg_print_MATRIX16x8(0, "Valid instance", &temp_matrix16x8);
+do { if(0) { int n = sprintf(g_debug, "Start evaluation""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(0) { int n = sprintf(g_debug, "temp_risk = %d""\r\n", temp_risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+if(temp_risk > temp_pre_risk)
+{
+do { if(0) { int n = sprintf(g_debug, "risk: (%d) > (%d)""\r\n", temp_risk, temp_pre_risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+temp_pre_risk = temp_risk;
+tem_pre_sub_index = tem_sub_index;
+temp_pre_x = temp_x;
+}
+
+
+do { if(0) { int n = sprintf(g_debug, "sub_index = %d, temp_pre_x = %d, temp_pre_risk = %d""\r\n", tem_pre_sub_index, temp_pre_x, temp_pre_risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+# 549
+}
+}
+if(res == 1)
+{
+g_char_info_sub_index = tem_pre_sub_index;
+cur_x = temp_pre_x;
+dbg_print_cur_MATRIX4x4(0, "Chosen", cur_x, cur_y);
+
+do { if(0) { int n = sprintf(g_debug, "chosen sub_index = %d, temp_pre_x = %d, temp_pre_risk = %d""\r\n", tem_pre_sub_index, temp_pre_x, temp_pre_risk); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+# 565
+}
+else
+{
+do { if(0) { int n = sprintf(g_debug, "GAME OVER!!!""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+}
+return res;
+}
+
+# 43 "../main.c"
+void dbg_print_all_MATRIX4x4(uint8_t enable)
+{
+if((1) && (enable))
+{
+MATRIX4x4* matrix;
+do { if(1) { int n = sprintf(g_debug, "printf_all_MATRIX4x4""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+do { if(1) { int n = sprintf(g_debug, "size = %d""\r\n", 9); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+for(uint8_t index = 0; index < 9; index++)
+{
+for(uint8_t sub_index = 0; sub_index < g_char_info[index].num; sub_index++)
+{
+do { if(1) { int n = sprintf(g_debug, "index = %d, sub_index = %d""\r\n", index, sub_index); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+
+matrix = lg_get_MATRIX4x4(index, sub_index);
+dbg_print_MATRIX4x4(1, (0), 0, 0, matrix);
+}
+}
+
+}
+}
+
+void main_init()
+{
+
+max7219_init1();
+
+dbg_init();
+
+
+
+
+Seed = eeprom_read_int(0);
+srand(Seed);
+
+}
+
+void main_close()
+{
+dbg_close();
+}
+
+int main()
+{
+main_init();
+
+uint8_t hit_res;
+__start:
+
+Seed++;
+eeprom_write_int(0, Seed);
+
+lg_clear_matrix();
+while(1)
+{
+cur_x = 2, cur_y = 0;
+g_char_info_index = lg_char_info_index_rand();
+g_char_info_sub_index = 0;
+
+do { if(1) { int n = sprintf(g_debug, "g_char_info_index = %d""\r\n", g_char_info_index); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+if(lg_find_best_solution() == 0)
+{
+do { if(1) { int n = sprintf(g_debug, "GAME OVER!!!""\r\n"); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+goto __start;
+}
+g_cur_matrix4x4 = &g_matrix4x4[g_char_info[g_char_info_index].start_index + g_char_info_sub_index];
+while(1)
+{
+
+Seed++;
+
+hit_res = lg_hit_land(cur_x, cur_y, g_cur_matrix4x4, &g_matrix16x8);
+do { if(0) { int n = sprintf(g_debug, "hit_res = %d""\r\n", hit_res); if(n > 64) { USARTWriteString("ERROR: g_debug is overflowed\r\n"); do { ((void)0); asm("ljmp $"); }while(0); } USARTWriteString(g_debug); } } while (0);;
+lg_merge(cur_x, cur_y, g_cur_matrix4x4, &g_matrix16x8);
+if(hit_res == 1)
+{
+hal_print_Screen();
+
+
+
+_delay((unsigned long)((100)*(20000000/4000.0)));
+
+lg_delete_matrix(&g_matrix16x8);
+}
+dbg_print_MATRIX16x8(1, "Main screen", &g_matrix16x8);
+hal_print_Screen();
+if(hit_res == 0)
+{
+lg_clear(cur_x, cur_y, g_cur_matrix4x4, &g_matrix16x8);
+}
+else
+{
+break;
+}
+
+
+
+_delay((unsigned long)((200)*(20000000/4000.0)));
+
+cur_y++;
+}
+}
+__exit:
+
+# 152
+return 0;
+
+}

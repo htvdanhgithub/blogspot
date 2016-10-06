@@ -1,0 +1,321 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 6 ]
+"7 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug.h
+[v _dbg_print_MATRIX88 dbg_print_MATRIX88 `(v  1 e 1 0 ]
+"57 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug_uart.h
+[v _dbg_init dbg_init `(v  1 e 1 0 ]
+"61
+[v _dbg_close dbg_close `(v  1 e 1 0 ]
+"7 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/hal.h
+[v _hal_print_Main_Screen hal_print_Main_Screen `(v  1 e 1 0 ]
+"6 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/hal_max7219.h
+[v _hal_MATRIX88_to_MATRIX7219 hal_MATRIX88_to_MATRIX7219 `(v  1 e 1 0 ]
+"24
+[v _hal_print_MATRIX7219 hal_print_MATRIX7219 `(v  1 e 1 0 ]
+"33
+[v _hal_print_MATRIX88 hal_print_MATRIX88 `(v  1 e 1 0 ]
+"18 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/main.c
+[v _main_init main_init `(v  1 e 1 0 ]
+"25
+[v _main_close main_close `(v  1 e 1 0 ]
+"29
+[v _main main `(i  1 e 2 0 ]
+"16 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/max7219.h
+[v _SPI1_write SPI1_write `(v  1 e 1 0 ]
+"41
+[v _Write_Byte Write_Byte `(v  1 e 1 0 ]
+"49
+[v _max7219_init1 max7219_init1 `(v  1 e 1 0 ]
+"31 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/usart_pic16.c
+[v _USARTInit USARTInit `(v  1 e 1 0 ]
+"70
+[v _USARTWriteChar USARTWriteChar `(v  1 e 1 0 ]
+"76
+[v _USARTWriteString USARTWriteString `(v  1 e 1 0 ]
+"117
+[v _USARTReadData USARTReadData `(uc  1 e 1 0 ]
+"140
+[v _USARTDataAvailable USARTDataAvailable `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"1 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug_uart.h
+[v _g_debug g_debug `[64]uc  1 e 64 0 ]
+[s S70 . 64 `[8][8]uc 1 data 64 0 ]
+"1 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/logic.h
+[v _g_matrix88 g_matrix88 `S70  1 e 64 0 ]
+"38 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/usart_pic16.h
+[v _URBuff URBuff `VE[32]uc  1 e 32 0 ]
+"39
+[v _UQFront UQFront `VEc  1 e 1 0 ]
+"40
+[v _UQEnd UQEnd `VEc  1 e 1 0 ]
+[s S246 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"462 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic16f886.h
+[u S254 . 1 `S246 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES254  1 e 1 @12 ]
+[s S199 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"963
+[s S208 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S212 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S215 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S218 . 1 `S199 1 . 1 0 `S208 1 . 1 0 `S212 1 . 1 0 `S215 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES218  1 e 1 @24 ]
+"1027
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1033
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+[s S28 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1318
+[u S37 . 1 `S28 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES37  1 e 1 @133 ]
+[s S162 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2371
+[s S171 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S175 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S178 . 1 `S162 1 . 1 0 `S171 1 . 1 0 `S175 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES178  1 e 1 @152 ]
+"2430
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+[s S49 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+]
+"3172
+[u S55 . 1 `S49 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES55  1 e 1 @392 ]
+"3526
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"3622
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"3650
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"3652
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"3654
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"3710
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"29 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"47
+} 0
+"18
+[v _main_init main_init `(v  1 e 1 0 ]
+{
+"24
+} 0
+"49 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/max7219.h
+[v _max7219_init1 max7219_init1 `(v  1 e 1 0 ]
+{
+"66
+} 0
+"57 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug_uart.h
+[v _dbg_init dbg_init `(v  1 e 1 0 ]
+{
+"60
+} 0
+"31 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/usart_pic16.c
+[v _USARTInit USARTInit `(v  1 e 1 0 ]
+{
+[v USARTInit@baud_rate baud_rate `ui  1 p 2 0 ]
+"68
+} 0
+"25 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/main.c
+[v _main_close main_close `(v  1 e 1 0 ]
+{
+"28
+} 0
+"61 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug_uart.h
+[v _dbg_close dbg_close `(v  1 e 1 0 ]
+{
+"63
+} 0
+"7 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/hal.h
+[v _hal_print_Main_Screen hal_print_Main_Screen `(v  1 e 1 0 ]
+{
+"10
+} 0
+"33 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/hal_max7219.h
+[v _hal_print_MATRIX88 hal_print_MATRIX88 `(v  1 e 1 0 ]
+{
+[s S70 . 64 `[8][8]uc 1 data 64 0 ]
+[v hal_print_MATRIX88@matrix88 matrix88 `*.5DCCS70  1 a 1 wreg ]
+[s S83 . 8 `[8]uc 1 col 8 0 ]
+"35
+[v hal_print_MATRIX88@matrix7219 matrix7219 `S83  1 a 8 1 ]
+"33
+[v hal_print_MATRIX88@matrix88 matrix88 `*.5DCCS70  1 a 1 wreg ]
+"36
+"33
+[v hal_print_MATRIX88@matrix88 matrix88 `*.5DCCS70  1 a 1 0 ]
+"38
+} 0
+"24
+[v _hal_print_MATRIX7219 hal_print_MATRIX7219 `(v  1 e 1 0 ]
+{
+[s S83 . 8 `[8]uc 1 col 8 0 ]
+[v hal_print_MATRIX7219@matrix matrix `*.4DCCS83  1 a 1 wreg ]
+"26
+[v hal_print_MATRIX7219@col col `uc  1 a 1 9 ]
+"24
+[v hal_print_MATRIX7219@matrix matrix `*.4DCCS83  1 a 1 wreg ]
+"28
+"24
+[v hal_print_MATRIX7219@matrix matrix `*.4DCCS83  1 a 1 8 ]
+"32
+} 0
+"41 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/max7219.h
+[v _Write_Byte Write_Byte `(v  1 e 1 0 ]
+{
+[v Write_Byte@myColumn myColumn `uc  1 a 1 wreg ]
+[v Write_Byte@myColumn myColumn `uc  1 a 1 wreg ]
+[v Write_Byte@myValue myValue `uc  1 p 1 4 ]
+"43
+[v Write_Byte@myColumn myColumn `uc  1 a 1 5 ]
+"47
+} 0
+"16
+[v _SPI1_write SPI1_write `(v  1 e 1 0 ]
+{
+[v SPI1_write@data data `uc  1 a 1 wreg ]
+"19
+[v SPI1_write@i i `uc  1 a 1 3 ]
+"18
+[v SPI1_write@mask mask `uc  1 a 1 2 ]
+"16
+[v SPI1_write@data data `uc  1 a 1 wreg ]
+"18
+[v SPI1_write@data data `uc  1 a 1 1 ]
+"38
+} 0
+"6 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/hal_max7219.h
+[v _hal_MATRIX88_to_MATRIX7219 hal_MATRIX88_to_MATRIX7219 `(v  1 e 1 0 ]
+{
+[s S70 . 64 `[8][8]uc 1 data 64 0 ]
+[v hal_MATRIX88_to_MATRIX7219@matrix88 matrix88 `*.5DCCS70  1 a 1 wreg ]
+"14
+[v hal_MATRIX88_to_MATRIX7219@row row `uc  1 a 1 6 ]
+"10
+[v hal_MATRIX88_to_MATRIX7219@col col `uc  1 a 1 7 ]
+"8
+[v hal_MATRIX88_to_MATRIX7219@mask mask `uc  1 a 1 5 ]
+"6
+[v hal_MATRIX88_to_MATRIX7219@matrix88 matrix88 `*.5DCCS70  1 a 1 wreg ]
+[s S83 . 8 `[8]uc 1 col 8 0 ]
+[v hal_MATRIX88_to_MATRIX7219@matrix7219 matrix7219 `*.4S83  1 p 1 0 ]
+"8
+"6
+[v hal_MATRIX88_to_MATRIX7219@matrix88 matrix88 `*.5DCCS70  1 a 1 4 ]
+"23
+} 0
+"7 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/debug.h
+[v _dbg_print_MATRIX88 dbg_print_MATRIX88 `(v  1 e 1 0 ]
+{
+[v dbg_print_MATRIX88@enable enable `uc  1 a 1 wreg ]
+"19
+[v dbg_print_MATRIX88@col col `uc  1 a 1 12 ]
+"17
+[v dbg_print_MATRIX88@row row `uc  1 a 1 11 ]
+"7
+[v dbg_print_MATRIX88@enable enable `uc  1 a 1 wreg ]
+[v dbg_print_MATRIX88@lable lable `*.24DCCuc  1 p 1 6 ]
+[s S70 . 64 `[8][8]uc 1 data 64 0 ]
+[v dbg_print_MATRIX88@matrix matrix `*.5DCCS70  1 p 1 7 ]
+"9
+[v dbg_print_MATRIX88@enable enable `uc  1 a 1 13 ]
+"34
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"499
+[v sprintf@c c `c  1 a 1 4 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 3 ]
+"494
+[v sprintf@ap ap `[1]*.1v  1 a 1 2 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCCuc  1 p 1 0 ]
+"533
+[v sprintf@sp sp `*.4uc  1 a 1 5 ]
+"1541
+} 0
+"76 D:\Working\working\MyLocalRepositorywc\micro_controller_framework\mplab/usart_pic16.c
+[v _USARTWriteString USARTWriteString `(v  1 e 1 0 ]
+{
+[v USARTWriteString@str str `*.4DCCuc  1 a 1 wreg ]
+[v USARTWriteString@str str `*.4DCCuc  1 a 1 wreg ]
+[v USARTWriteString@str str `*.4DCCuc  1 a 1 2 ]
+"81
+} 0
+"70
+[v _USARTWriteChar USARTWriteChar `(v  1 e 1 0 ]
+{
+[v USARTWriteChar@ch ch `uc  1 a 1 wreg ]
+[v USARTWriteChar@ch ch `uc  1 a 1 wreg ]
+[v USARTWriteChar@ch ch `uc  1 a 1 0 ]
+"74
+} 0

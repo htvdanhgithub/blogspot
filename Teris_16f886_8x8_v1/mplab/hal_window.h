@@ -1,0 +1,26 @@
+/*
+This file contains functions to simulate output on LED matrix on Window.
+Author: Danh Hoang (htvdanh@gmail.com, HCMC, VietNam)    
+Date: Sep 16th, 2016
+*/
+
+void hal_print_MATRIX8x8(const MATRIX8x8* matrix88)
+{
+    printf("<<<<<<<<<<<<<<<<<<<<MATRIX8x8\n");
+    for(uint8_t row = 0; row < MATRIX8x8_ROW_MAX; row++)
+    {
+        for(uint8_t col = 0; col < MATRIX8x8_COLUMN_MAX; col++)
+        {
+            if(get_matrix_bit((uint8_t*)matrix88->row, row, col) == 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("_");
+            }
+        }
+        printf("\n");
+    }
+    printf(">>>>>>>>>>>>>>>>>>>>\n");
+}
