@@ -1,0 +1,2 @@
+div_double x = 10.000000, y = 0.000000
+main.c:48 ERROR: divide by ZERO (x = 10.000000, y = 0.000000)

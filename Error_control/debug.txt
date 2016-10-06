@@ -1,0 +1,1 @@
+main.c:75 ERROR: buffer overflow (size(4) > dst_size(3))

@@ -1,0 +1,1 @@
+main.c:44 ERROR: out of bound (x = 4, max_x = 3)
