@@ -43,9 +43,9 @@ CallGSM call;
 char* STR_HELP = "";
 #else
 #if (FOR_MOTORBIKE)
-char* STR_HELP = "#K1: KHOA nguon. #M1: MO nguon. #Q1: Trang thai nguon. #Rxyz: Dang ky master xyz. #D: Xoa master. #N: Trang thai master. #H: Goi nho.";
+char* STR_HELP = "#K1: KHOA nguon. #M1: MO nguon. #Q1: Trang thai nguon. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Goi nho.";
 #else
-char* STR_HELP = "#M1: O cam 1 BAT. #T1: O cam 1 TAT. #Q1: Trang thai o cam 1. #Rxyz: Dang ky master xyz. #D: Xoa master. #N: Trang thai master. #H: Goi nho.";
+char* STR_HELP = "#M1: O cam 1 BAT. #T1: O cam 1 TAT. #Q1: Trang thai o cam 1. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Goi nho.";
 #endif
 #endif
 
@@ -171,16 +171,28 @@ void SENDSMS(char *phone_num, char *msg)
 #endif
 }
 bool is_valid_phone(const char* phone_num) {
+#if (DEBUG)
+  Serial.println(phone_num);
+#endif  
   uint8_t i = 0;
   while (phone_num[i] != 0) {
     if (!((phone_num[i] == '+') || ((phone_num[i] >= '0') && (phone_num[i] <= '9')))) {
+#if (DEBUG)
+      Serial.println("Not digit");
+#endif  
       return false;
     }
     i++;
   }
   if (i < 10) {
+#if (DEBUG)
+    Serial.println("< 10");
+#endif  
     return false;
   }
+#if (DEBUG)
+  Serial.println("Valid");
+#endif  
   return true;
 }
 void setup()
@@ -264,13 +276,14 @@ void loop()
     digitalWrite(LED_RECEIVED, HIGH);
     memset(sms_text, 0, SMS_TEXT_LEN);
     GETSMS(position, phone_num, sms_text, SMS_TEXT_LEN);
+#if (DEBUG)
+  Serial.print("Received sms: ");
+  Serial.println(phone_num);
+  Serial.println(sms_text);
+#endif  
     if (is_valid_phone(phone_num) == false) {
       goto __exit;
     }
-#if (DEBUG)
-  Serial.print("Received sms: ");
-  Serial.println(sms_text);
-#endif  
 
 #if (FOR_MOTORBIKE)
     if (strcmp(sms_text, "#K1") == 0)
@@ -334,25 +347,25 @@ void loop()
       master_active = true;
       sprintf(master_num, "%s", sms_text + 2);
       Save();
-      sprintf(temp_text, "Dang ky master number %s thanh cong", master_num);
+      sprintf(temp_text, "Dang ky SDT may chu %s thanh cong", master_num);
       SENDSMS(phone_num, temp_text);
     }
     else if (strcmp(sms_text, "#D") == 0)
     {
       master_active = false;
       Save();
-      sprintf(temp_text, "Xoa master number %s thanh cong", master_num);
+      sprintf(temp_text, "Xoa SDT may chu %s thanh cong", master_num);
       SENDSMS(phone_num, temp_text);
     }
     else if (strcmp(sms_text, "#N") == 0)
     {
       if (master_active == false)
       {
-        SENDSMS(phone_num, "Master number bi tat.");
+        SENDSMS(phone_num, "SDT may chu bi tat.");
       }
       else
       {
-        sprintf(temp_text, "Master number %s dang hoat dong", master_num);
+        sprintf(temp_text, "SDT may chu %s dang hoat dong", master_num);
         SENDSMS(phone_num, temp_text);
       }
     }
