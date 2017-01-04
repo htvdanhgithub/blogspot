@@ -7,7 +7,6 @@
 #define FOR_MOTORBIKE   0
 #define DEBUG           0
 
-
 //If not used, is better to exclude the HTTP library,
 //for RAM saving.
 //If your sketch reboots itself proprably you have finished,
@@ -31,36 +30,53 @@ CallGSM call;
 #if (SIMULATE)
 #define SMS_TEXT_LEN    40
 #else
-#define SMS_TEXT_LEN    80
+#define SMS_TEXT_LEN    40
 #endif
 
 #define LED_CONNECTED   7  // Green
 #define LED_RECEIVED    4  // Red
-#define LED_BAT_TAT      8  // Blue
-// #define SW_MANUAL      15  // Manual sw
+#define LED_BAT_TAT     8  // Blue
+// #define SW_MANUAL    15  // Manual sw
 
 #if (DEBUG)
 char* STR_HELP = "";
 #else
 #if (FOR_MOTORBIKE)
-char* STR_HELP = "#K1: KHOA nguon. #M1: MO nguon. #Q1: Trang thai nguon. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Goi nho.";
+char* STR_HELP = "#K1: KHOA nguon. #M1: MO nguon. #Q1: Trang thai nguon. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Tro giup.";
 #else
-char* STR_HELP = "#M1: O cam 1 BAT. #T1: O cam 1 TAT. #Q1: Trang thai o cam 1. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Goi nho.";
+char* STR_HELP = "#M1: BAT thiet bi. #T1: TAT thiet bi. #Q1: Trang thai thiet bi. #Axyz: dat ten thiet bi xyz. #Rxyz: Dang ky SDT may chu xyz. #D: Xoa SDT may chu. #N: Trang thai SDT may chu. #H: Tro giup.";
 #endif
 #endif
 
 uint8_t sw1 = LOW;
 boolean master_active = false;
+#if !(FOR_MOTORBIKE)
+#define DEVICE_LEN    16
+boolean device_name_active = false;
+char device_name[DEVICE_LEN] =    "O cam 1";
+#endif
+
+#define BASE_TEXT_LEN (PHONE_NUM_LEN + SMS_TEXT_LEN)
 
 char master_num[PHONE_NUM_LEN]; // array for the phone number string
 char phone_num[PHONE_NUM_LEN]; // array for the phone number string
-char base_text[PHONE_NUM_LEN + SMS_TEXT_LEN]; // array for the SMS text string
+char base_text[BASE_TEXT_LEN]; // array for the SMS text string
 char *sms_text = base_text + PHONE_NUM_LEN;
+
+uint32_t second_count = 0;
 void Save()
 {
   uint8_t start = 0;
 
-  EEPROM.write(start++, sw1);
+//  EEPROM.write(start++, sw1);
+#if !(FOR_MOTORBIKE)
+  EEPROM.write(start++, device_name_active);
+
+  for (uint8_t i = 0; i < DEVICE_LEN; i++)
+  {
+    EEPROM.write(start++, device_name[i]);
+  }
+#endif
 
   EEPROM.write(start++, master_active);
 
@@ -73,7 +89,15 @@ void Load()
 {
   uint8_t start = 0;
 
-  sw1 = EEPROM.read(start++);
+//  sw1 = EEPROM.read(start++);
+#if !(FOR_MOTORBIKE)
+  device_name_active = EEPROM.read(start++);
+
+  for (uint8_t i = 0; i < DEVICE_LEN; i++)
+  {
+    device_name[i] = EEPROM.read(start++);
+  }
+#endif
   master_active = EEPROM.read(start++);
 
   for (uint8_t i = 0; i < PHONE_NUM_LEN; i++)
@@ -133,7 +157,8 @@ void GETSMS(char position, char *phone_num, char *msg, uint8_t len)
 {
 #if (SIMULATE)
   ReadSerial(msg, len);
-  strcpy(phone_num, "+84000000000");
+  strncpy(phone_num, "+84000000000", PHONE_NUM_LEN - 1);
+  phone_num[PHONE_NUM_LEN - 1] = 0;
 #else
   sms.GetSMS(position, phone_num, msg, len);
 #if (DEBUG)
@@ -178,15 +203,22 @@ bool is_valid_phone(const char* phone_num) {
   while (phone_num[i] != 0) {
     if (!((phone_num[i] == '+') || ((phone_num[i] >= '0') && (phone_num[i] <= '9')))) {
 #if (DEBUG)
-      Serial.println("Not digit");
+      Serial.println("Invalid");
 #endif  
       return false;
     }
     i++;
+
+    if (i >= PHONE_NUM_LEN) {
+#if (DEBUG)
+      Serial.println("Invalid");
+#endif  
+      return false;      
+    }
   }
   if (i < 10) {
 #if (DEBUG)
-    Serial.println("< 10");
+    Serial.println("Invalid");
 #endif  
     return false;
   }
@@ -232,17 +264,37 @@ void setup()
 #endif
   digitalWrite(LED_BAT_TAT, sw1);
 
+#if !(FOR_MOTORBIKE)
+  if (device_name_active == false) {
+    strncpy(device_name, "O cam 1", DEVICE_LEN - 1); 
+    device_name[DEVICE_LEN - 1] = 0; 
+  }
+#if (DEBUG)
+  Serial.print("Device name: ");
+  Serial.println(device_name);
+#endif 
+#endif
+
+  
   if (master_active == true)
   {
-    SENDSMS(master_num, "He thong da khoi dong xong");
+    if (is_valid_phone(master_num) == true) {
+      SENDSMS(master_num, "He thong da khoi dong xong");
 
 #if (FOR_MOTORBIKE)
-    sprintf(sms_text, "Xe da duoc %s nguon", (sw1 == LOW) ? "MO" : "KHOA");
+      snprintf(sms_text, SMS_TEXT_LEN, "Xe da duoc %s nguon", (sw1 == LOW) ? "MO" : "KHOA");
 #else
-    sprintf(sms_text, "O cam 1 %s", (sw1 == LOW) ? "TAT" : "BAT");
+      snprintf(sms_text, SMS_TEXT_LEN,  "%s duoc %s", device_name, (sw1 == LOW) ? "TAT" : "BAT");
 #endif
-    SENDSMS(master_num, sms_text);
+      SENDSMS(master_num, sms_text);
+    } else {
+      master_active = false;
+    }
   };
+#if (DEBUG)
+  Serial.print("Master number: ");
+  Serial.println(master_num);
+#endif 
 };
 
 void SendSMSToMaster(char* msg)
@@ -253,16 +305,19 @@ void SendSMSToMaster(char* msg)
   }
 
 }
+
+#define TEMP_TEXT_LEN 60
 void loop()
 {
-  char temp_text[60];
+  char temp_text[TEMP_TEXT_LEN];
   char position;
+  uint8_t sms_len = 0;
 #if (SIMULATE)
   position = 1;
 #else
   position = sms.IsSMSPresent(SMS_UNREAD);
 #if (DEBUG)
-  sprintf(temp_text, "Received position = %d", position);
+  snprintf(temp_text, TEMP_TEXT_LEN, "Received position = %d", position);
   Serial.println(temp_text);
 #endif  
 
@@ -270,12 +325,13 @@ void loop()
   if ((char)position > 0)
   {
 #if (DEBUG)
-  sprintf(temp_text, "Received position1 = %d", position);
+  snprintf(temp_text, TEMP_TEXT_LEN, "Received position = %d", position);
   Serial.println(temp_text);
 #endif     
     digitalWrite(LED_RECEIVED, HIGH);
     memset(sms_text, 0, SMS_TEXT_LEN);
     GETSMS(position, phone_num, sms_text, SMS_TEXT_LEN);
+    sms_len = strlen(sms_text);
 #if (DEBUG)
   Serial.print("Received sms: ");
   Serial.println(phone_num);
@@ -296,7 +352,8 @@ void loop()
 #if (FOR_MOTORBIKE)
         SENDSMS(phone_num, "Xe da duoc KHOA nguon");
 #else
-        SENDSMS(phone_num, "O cam 1 hien dang BAT");
+        snprintf(temp_text, TEMP_TEXT_LEN, "%s hien da duoc BAT", device_name);
+        SENDSMS(phone_num, temp_text);
 #endif
       } else {
         sw1 = HIGH;
@@ -305,7 +362,8 @@ void loop()
 #if (FOR_MOTORBIKE)
         SENDSMS(phone_num, "Xe da duoc KHOA nguon");
 #else
-        SENDSMS(phone_num, "O cam 1 BAT");
+        snprintf(temp_text, TEMP_TEXT_LEN, "%s duoc BAT", device_name);
+        SENDSMS(phone_num, temp_text);
 #endif
       }
     }
@@ -320,7 +378,8 @@ void loop()
 #if (FOR_MOTORBIKE)
         SENDSMS(phone_num, "Xe da duoc MO nguon");
 #else
-        SENDSMS(phone_num, "O cam 1 hien dang TAT");
+        snprintf(temp_text, TEMP_TEXT_LEN, "%s hien da duoc TAT", device_name);
+        SENDSMS(phone_num, temp_text);
 #endif
       } else {
         sw1 = LOW;
@@ -329,32 +388,40 @@ void loop()
 #if (FOR_MOTORBIKE)
         SENDSMS(phone_num, "Xe da duoc MO nguon");
 #else
-        SENDSMS(phone_num, "O cam 1 TAT");
+        snprintf(temp_text, TEMP_TEXT_LEN, "%s duoc TAT", device_name);
+        SENDSMS(phone_num, temp_text);
 #endif
       }
     }
     else if (strcmp(sms_text, "#Q1") == 0)
     {
 #if (FOR_MOTORBIKE)
-      sprintf(temp_text, "Xe dang duoc %s nguon", (sw1 == LOW) ? "MO" : "KHOA");
+      snprintf(temp_text, TEMP_TEXT_LEN, "Xe dang duoc %s nguon", (sw1 == LOW) ? "MO" : "KHOA");
 #else
-      sprintf(temp_text, "O cam 1 hien dang %s", (sw1 == LOW) ? "TAT" : "BAT");
+      snprintf(temp_text, TEMP_TEXT_LEN, "%s hien dang duoc %s", device_name, (sw1 == LOW) ? "TAT" : "BAT");
 #endif
       SENDSMS(phone_num, temp_text);
     }
-    else if ((sms_text[0] == '#') && (sms_text[1] == 'R'))
+    else if ((sms_text[0] == '#') && (sms_text[1] == 'R') && (sms_len > 2))
     {
-      master_active = true;
-      sprintf(master_num, "%s", sms_text + 2);
-      Save();
-      sprintf(temp_text, "Dang ky SDT may chu %s thanh cong", master_num);
+      if (is_valid_phone(sms_text + 2) == false) {
+        snprintf(temp_text, TEMP_TEXT_LEN, "SDT %s khong hop le.", sms_text + 2);
+      } 
+      else
+      {
+        master_active = true;
+        snprintf(master_num, PHONE_NUM_LEN, "%s", sms_text + 2);
+        Save();
+        snprintf(temp_text, TEMP_TEXT_LEN, "Dang ky SDT may chu %s thanh cong", master_num);
+      }
+      
       SENDSMS(phone_num, temp_text);
     }
     else if (strcmp(sms_text, "#D") == 0)
     {
       master_active = false;
       Save();
-      sprintf(temp_text, "Xoa SDT may chu %s thanh cong", master_num);
+      snprintf(temp_text, TEMP_TEXT_LEN, "Xoa SDT may chu %s thanh cong", master_num);
       SENDSMS(phone_num, temp_text);
     }
     else if (strcmp(sms_text, "#N") == 0)
@@ -365,9 +432,38 @@ void loop()
       }
       else
       {
-        sprintf(temp_text, "SDT may chu %s dang hoat dong", master_num);
+        snprintf(temp_text, TEMP_TEXT_LEN, "SDT may chu %s dang hoat dong", master_num);
         SENDSMS(phone_num, temp_text);
       }
+    }
+#if !(FOR_MOTORBIKE)
+    else if ((sms_text[0] == '#') && (sms_text[1] == 'A') && (sms_len > 2))
+    {
+      strncpy(device_name, sms_text + 2, DEVICE_LEN - 1);
+      device_name[DEVICE_LEN - 1] = 0;
+      device_name_active = true;
+      Save();
+      snprintf(temp_text, TEMP_TEXT_LEN, "Thiet bi duoc dat ten: %s", device_name);
+      SENDSMS(phone_num, temp_text);
+    }
+#endif
+    else if ((sms_text[0] == '#') && (sms_text[1] == 'S') && (sms_len > 2))
+    {
+      char *s = strchr(sms_text, ':');
+      if (s == NULL)
+      {
+        SENDSMS(phone_num, "Yeu cau khong hop le...");
+      }
+      else
+      {
+        sms_text[s - sms_text] = 0;
+        SENDSMS(sms_text + 2, s + 1);
+        sms_text[s - sms_text] = ':';
+      }
+    }
+    else if ((sms_text[0] == '#') && (sms_text[1] == 'C') && (sms_len > 2))
+    {
+      CALL(sms_text + 2);
     }
     else if (strcmp(sms_text, "#H") == 0)
     {
@@ -378,19 +474,29 @@ void loop()
       SENDSMS(phone_num, "Yeu cau khong hop le...");
     }
 
-    sprintf(base_text, "%s gui: %s", phone_num, sms_text);
+    snprintf(base_text, BASE_TEXT_LEN, "%s gui: %s", phone_num, sms_text);
     SendSMSToMaster(base_text);
 __exit:
     char ret = sms.DeleteSMS(position);
 #if (DEBUG)
     if (ret == 1) {
-      sprintf(temp_text, "Sucessfully deleted position = %d", position);
+      snprintf(temp_text, TEMP_TEXT_LEN, "Sucessfully deleted position = %d", position);
     } else {
-      sprintf(temp_text, "NOT sucessfully deleted position = %d", position);
+      snprintf(temp_text, TEMP_TEXT_LEN, "NOT sucessfully deleted position = %d", position);
     }
     Serial.println(temp_text);
 #endif  
     digitalWrite(LED_RECEIVED, LOW);
   }
   delay(1000);
+
+  if (second_count == 604800) {// one week  60*60*24*7
+    SendSMSToMaster("Toi van khoe ne. Ong/Ba chu co khoe khong?");
+    second_count = 0;
+  }
+  second_count++;
+#if (DEBUG)
+    snprintf(temp_text, TEMP_TEXT_LEN, "second_count: %ld", second_count);
+    Serial.println(temp_text);
+#endif
 };
